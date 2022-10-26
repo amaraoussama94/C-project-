@@ -12,28 +12,8 @@ struct prod
  } ;
 
 
-//////////////////////////////////////
-// derniere modification:10/03/2017 //
-// fonction menu                    //
-/////////////////////////////////////
 
- int prod ()
-{ int choix ;
-
-system("cls");///clear screan
-     printf("\n -------------------------------------------------------------------- ");
-     printf("\n -- taper --> 1 pour l'ajout d'un produit                          --");
-     printf("\n -- taper --> 2 pour afficher le produit en cours                  --");
-     printf("\n -- taper --> 3 Lecture d'un produit a partir du fichier           --");
-     printf("\n -- taper --> 4 pour modifier                                      --");
-     printf("\n -- taper --> 5 pour  supprimer le fichier                         --");
-	 printf("\n -- taper --> 0 pour quitter l'application'                        --\n");
-     printf("\n -------------------------------------------------------------------- \n");
-     scanf("%d",&choix);
-getch();
-
-	return(choix);
- }
+ 
 
 //////////////////////////////////////
 // derniere modification:10/03/2017 //
@@ -85,61 +65,7 @@ system("cls");///clear screan
  getch();
 
  }
- //////////////////////////////////////////////////////////////
-// derniere modification:10/03/2017                         //
-// fonction rechercher apartir du fichier pour afficher .. //
-////////////////////////////////////////////////////////////
- int   MenuSup()
-{ int choixSup ;
-
-system("cls");///clear screan
-     printf("\n -------------------------------------------------------------------- ");
-     printf("\n -- taper --> 1 pour supprimer le fichier                          -- ");
-     printf("\n -- taper --> 2 pour supprimer un produit                          -- \n");
-     printf("\n -------------------------------------------------------------------- \n");
-     scanf("%d",&choixSup);
-getch();
-
-	return(choixSup);
- }
- //////////////////////////////////////////////////////////////
-// derniere modification:10/03/2017                         //
-// fonction rechercher apartir du fichier pour afficher .. //
-////////////////////////////////////////////////////////////
- int   SSMenuLectureFichier()
-{ int choixSS ;
-
-system("cls");///clear screan
-     printf("\n -------------------------------------------------------------------- ");
-     printf("\n -- taper --> 1 pour afficher produit par numero                   -- ");
-     printf("\n -- taper --> 2 pour recherche toouts les  produits                -- \n");
-     printf("\n -- taper --> 3 pour recherche un produit par son nom              -- \n");
-     printf("\n -------------------------------------------------------------------- \n");
-     scanf("%d",&choixSS);
-getch();
-
-	return(choixSS);
- }
-//////////////////////////////////////
-// derniere modification:10/03/2017 //
-// fonction Menu Modifier          //
-/////////////////////////////////////
-
-
-  int MenuModifier ()
-{ int l ;
-
-     system("cls");///clear screan
-     printf("\n --------------------------------------------------------------------");
-     printf("\n -- taper --> 1 pour modifier le nom du prooduit                   --");
-     printf("\n -- taper --> 2 pour modifier le nombre stock                      --");
-     printf("\n -- taper --> 3 pour modifier le prix d achat du prooduit          --");
-     printf("\n -- taper --> 4 pour modifier le prix du vente du prooduit         --");
-     printf("\n -- taper --> 5 pour modifier numero du prooduit                   --");
-     printf("\n -------------------------------------------------------------------- \n");
-     scanf("%d",&l);
-     return(l);
- }
+ 
 
  //////////////////////////////////////
 // derniere modification:10/03/2017  //
@@ -231,7 +157,7 @@ getch();
 						  memcpy(PointeurProduit, (PointeurMemDeStruct+i), TailleStructure+1);//permet de copy le continu de pointeur produit dan pointerMem
 						  AfficherProduit (*PointeurProduit );//si on met prduit encour rien ne fonctionne
 						                                      //car tt simplement ici aucun lien entre pointeur produit
-														      /// et produit en cour il sont 2 donée diif
+														      /// et produit en cour il sont 2 donï¿½e diif
 			               }
 
 	free(PointeurMemDeStruct);
@@ -377,14 +303,14 @@ PointeurProduit=&ProduitEncoure;
 				fseek(fichier, 0, SEEK_END);
 		    	len = ftell(fichier);
 
-			if(choixSS==1)	{   // entrée numéro du produit : lire une structure à partir du fichier
+			if(choixSS==1)	{   // entrï¿½e numï¿½ro du produit : lire une structure ï¿½ partir du fichier
                 Lecture1Structure( fichier, len ,TailleStructure ,PointeurProduit );
                 system("cls");///clear screan
 			 	AfficherProduit (ProduitEncoure );
 		                     }
-			else if(choixSS==2)// entrée nom du produit : lire une structure à partir du fichier
+			else if(choixSS==2)// entrï¿½e nom du produit : lire une structure ï¿½ partir du fichier
 					 		LectureDeTTStruct(fichier, len, TailleStructure,PointeurProduit,PointeurMemDeStruct);
-		     else if(choixSS==3){// rchercher un produit par nom: lire une structure à partir du fichier
+		     else if(choixSS==3){// rchercher un produit par nom: lire une structure ï¿½ partir du fichier
 					 	     RechPNom(fichier,TailleStructure,PointeurProduit) ;
 
              fclose(fichier);}
