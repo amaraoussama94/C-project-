@@ -2,8 +2,12 @@
 #include<stdlib.h>
 #include<string.h>
 #include<ctype.h>
-
-
+#include"add_prod.h"
+#include"delete.h"
+#include"disply.h"
+#include"menu.h"
+#include"modify.h"
+#include"read_element_of_database.h"
 
 struct prod
 {
