@@ -1,4 +1,23 @@
-// main.c
+/**
+ * @file main.c
+ * @brief Programme principal pour la gestion de stock de produits.
+ *
+ * Ce programme propose un menu interactif permettant à l'utilisateur de :
+ *   1. Ajouter un produit au stock
+ *   2. Afficher la liste des produits
+ *   3. Rechercher un produit spécifique
+ *   4. Modifier les informations d'un produit
+ *   5. Supprimer un produit du stock
+ *   0. Quitter l'application
+ *
+ * Les fonctionnalités sont implémentées dans les fonctions déclarées dans "produit.h".
+ * L'utilisateur interagit avec le programme via la console.
+ *
+ * @author Oussama
+ * @date 2024-06-09
+ * @version 1.0
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "produit.h"
