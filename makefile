@@ -15,7 +15,7 @@ SRC=$(SRC_MAIN) $(SRC_SRC)
 #SRC_MAIN est le fichier principal (main.c).
 SRC_MAIN=main.c
 #SRC_SRC contient tous les fichiers .c du dossier src.
-SRC_SRC=$(wildcard src/*.c)
+SRC_SRC=$(wildcard Src/*.c)
 
 #Convertit la liste de fichiers .c en fichiers .o (les objets intermédiaires).
 OBJ=$(SRC:.c=.o)
