@@ -22,9 +22,13 @@
 #include <stdlib.h>
 #include "produit.h"
 
+#ifndef VERSION
+#define VERSION "dev"
+#endif
+
 int main() {
     int choix;
-
+    printf("Gestion Stock - Version %s\n", VERSION);
     do {
         printf("\n===== GESTION STOCK =====\n");
         printf("1. Ajouter produit\n");

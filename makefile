@@ -1,6 +1,9 @@
 #Définit le compilateur utilisé (ici GCC).
 CC=gcc
 
+# Définit la version du programme.
+BIN=gestion_stock_v$(VERSION)
+
 #Options de compilation :
 #-Wall et -Wextra activent de nombreux avertissements utiles pour repérer les erreurs potentielles.
 #-g ajoute les symboles de débogage (utile avec GDB, par exemple).
@@ -42,3 +45,6 @@ clean:
 #Compile et lance ton programme en une seule commande : make run
 run: all
 	$(EXEC)
+# CI build with embedded version macro and versioned binary
+ci-build:
+	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -o gestion_stock_v$(VERSION) $(SRC)
