@@ -17,9 +17,14 @@ C-project-/
 
 ├── main.c # Point d'entrée du programme 
 
-├── produit.c/.h # Logique métier pour gérer les produits 
+├──src/
+    ├──produit.c  # Logique métier pour gérer les produits 
 
-├── fichier.c/.h # Lecture et écriture des produits sur fichier 
+    ├── fichier.c # Lecture et écriture des produits sur fichier 
+├──Inc/ 
+    ├──produit.h # Logique métier pour gérer les produits 
+
+    ├── fichier.h # Lecture et écriture des produits sur fichier    
 
 ├── Makefile # Script de compilation 
 
