@@ -1,0 +1,101 @@
+\doxysection{produit.\+h File Reference}
+\hypertarget{produit_8h}{}\label{produit_8h}\index{produit.h@{produit.h}}
+
+
+Déclarations des fonctions liées à la gestion des produits.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_produit}{Produit}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{produit_8h_af52335792a6c7d883b4fbb525859c740}{ajouter\+Produit}} (\mbox{\hyperlink{struct_produit}{Produit}} p)
+\begin{DoxyCompactList}\small\item\em Ajoute un produit au stock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produit_8h_a29f37b3dbdbdc8a1a48c1430dffcd915}{afficher\+Produits}} ()
+\begin{DoxyCompactList}\small\item\em Affiche la liste des produits disponibles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produit_8h_a53c7b7c97df84c76ca7c5feb7bfd0f28}{ajouter\+Produit}} ()
+\item 
+void \mbox{\hyperlink{produit_8h_a24826f66b22d9bbbd63a1fd884631609}{modifier\+Produit}} ()
+\item 
+void \mbox{\hyperlink{produit_8h_a4f133f17909cf38ef7e9fdfd91a88416}{supprimer\+Produit}} ()
+\item 
+void \mbox{\hyperlink{produit_8h_a4f7184e9bbb3dbe691a7b95f76aa2c5c}{chercher\+Produit}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Déclarations des fonctions liées à la gestion des produits. 
+
+Ce fichier contient les prototypes des fonctions permettant d\textquotesingle{}ajouter, modifier, supprimer et afficher les produits dans le système de gestion de stock.
+
+\begin{DoxyAuthor}{Author}
+Oussama 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/06-\/26 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{produit_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{produit_8h_a29f37b3dbdbdc8a1a48c1430dffcd915}\index{produit.h@{produit.h}!afficherProduits@{afficherProduits}}
+\index{afficherProduits@{afficherProduits}!produit.h@{produit.h}}
+\doxysubsubsection{\texorpdfstring{afficherProduits()}{afficherProduits()}}
+{\footnotesize\ttfamily \label{produit_8h_a29f37b3dbdbdc8a1a48c1430dffcd915} 
+void afficher\+Produits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Affiche la liste des produits disponibles. 
+
+Parcourt le fichier de données et affiche les informations de chaque produit. \Hypertarget{produit_8h_a53c7b7c97df84c76ca7c5feb7bfd0f28}\index{produit.h@{produit.h}!ajouterProduit@{ajouterProduit}}
+\index{ajouterProduit@{ajouterProduit}!produit.h@{produit.h}}
+\doxysubsubsection{\texorpdfstring{ajouterProduit()}{ajouterProduit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{produit_8h_a53c7b7c97df84c76ca7c5feb7bfd0f28} 
+void ajouter\+Produit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{produit_8h_af52335792a6c7d883b4fbb525859c740}\index{produit.h@{produit.h}!ajouterProduit@{ajouterProduit}}
+\index{ajouterProduit@{ajouterProduit}!produit.h@{produit.h}}
+\doxysubsubsection{\texorpdfstring{ajouterProduit()}{ajouterProduit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{produit_8h_af52335792a6c7d883b4fbb525859c740} 
+void ajouter\+Produit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_produit}{Produit}}}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Ajoute un produit au stock. 
+
+Cette fonction permet d\textquotesingle{}enregistrer un nouveau produit avec ses informations dans le fichier de données.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Le produit à ajouter. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{produit_8h_a4f7184e9bbb3dbe691a7b95f76aa2c5c}\index{produit.h@{produit.h}!chercherProduit@{chercherProduit}}
+\index{chercherProduit@{chercherProduit}!produit.h@{produit.h}}
+\doxysubsubsection{\texorpdfstring{chercherProduit()}{chercherProduit()}}
+{\footnotesize\ttfamily \label{produit_8h_a4f7184e9bbb3dbe691a7b95f76aa2c5c} 
+void chercher\+Produit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{produit_8h_a24826f66b22d9bbbd63a1fd884631609}\index{produit.h@{produit.h}!modifierProduit@{modifierProduit}}
+\index{modifierProduit@{modifierProduit}!produit.h@{produit.h}}
+\doxysubsubsection{\texorpdfstring{modifierProduit()}{modifierProduit()}}
+{\footnotesize\ttfamily \label{produit_8h_a24826f66b22d9bbbd63a1fd884631609} 
+void modifier\+Produit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{produit_8h_a4f133f17909cf38ef7e9fdfd91a88416}\index{produit.h@{produit.h}!supprimerProduit@{supprimerProduit}}
+\index{supprimerProduit@{supprimerProduit}!produit.h@{produit.h}}
+\doxysubsubsection{\texorpdfstring{supprimerProduit()}{supprimerProduit()}}
+{\footnotesize\ttfamily \label{produit_8h_a4f133f17909cf38ef7e9fdfd91a88416} 
+void supprimer\+Produit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
