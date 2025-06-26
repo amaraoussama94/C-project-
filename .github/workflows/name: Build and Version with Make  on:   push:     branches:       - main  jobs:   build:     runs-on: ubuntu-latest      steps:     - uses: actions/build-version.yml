@@ -3,7 +3,7 @@ name: Build and Version with Make
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
