@@ -18,13 +18,16 @@ C-project-/
 ├── main.c # Point d'entrée du programme 
 
 ├──src/
-    ├──produit.c  # Logique métier pour gérer les produits 
 
-    ├── fichier.c # Lecture et écriture des produits sur fichier 
+│   └── produit.c  # Logique métier pour gérer les produits 
+
+│   └── fichier.c # Lecture et écriture des produits sur fichier 
+
 ├──Inc/ 
-    ├──produit.h # Logique métier pour gérer les produits 
 
-    ├── fichier.h # Lecture et écriture des produits sur fichier    
+│  └── produit.h # Logique métier pour gérer les produits 
+
+│   └──  fichier.h # Lecture et écriture des produits sur fichier    
 
 ├── Makefile # Script de compilation 
 
@@ -55,6 +58,9 @@ C-project-/
 
 ### Instructions
 
-```bash
-make
-./gestion_stock
+Assurez-vous d’avoir gcc et make installés (via MinGW ou MSYS2).
+
+make        # Compile le projet
+make run    # Compile et exécute
+make clean  # Supprime les fichiers générés
+
