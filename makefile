@@ -47,4 +47,5 @@ run: all
 	$(EXEC)
 # CI build with embedded version macro and versioned binary
 ci-build:
-	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -o gestion_stock_v$(VERSION) $(SRC)
+	@echo "📂 Compiling sources: $(SRC_MAIN) $(SRC_SRC) all $(SRC)"
+	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -o gestion_stock_v$(VERSION) $(SRC_MAIN) $(SRC_SRC)
