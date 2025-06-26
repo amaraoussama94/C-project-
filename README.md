@@ -12,11 +12,17 @@ Ce projet est une application en langage **C** permettant la gestion simple et e
 ## 🛠️ Structure du projet
 
 C-project-/ 
+
 │ 
+
 ├── main.c # Point d'entrée du programme 
+
 ├── produit.c/.h # Logique métier pour gérer les produits 
+
 ├── fichier.c/.h # Lecture et écriture des produits sur fichier 
+
 ├── Makefile # Script de compilation 
+
 └── README.md # Documentation du projet
 
 
