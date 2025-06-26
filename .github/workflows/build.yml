@@ -1,0 +1,71 @@
+#Defines a job named build.
+
+#The job runs on a fresh Ubuntu environment provided by GitHub.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+#This starts the actual list of steps to run inside the job.
+    steps:
+    #Downloads your code from GitHub into the runner so all files 
+    #are accessible. Without this, there’d be no code to build.
+    - name: Checkout repository
+      uses: actions/checkout@v3
+#Installs all the tools you need (compiler, make, etc.) on the Ubuntu runner. 
+#This is your build environment setup.
+    - name: Install build tools
+      run: sudo apt-get update && sudo apt-get install -y build-essential make
+#Reads the current version from version.txt.
+
+#Parses and increments the minor version by 0.01.
+
+#Writes the new version back into version.txt.
+
+#Exposes the new version value using GITHUB_OUTPUT so you can use it later in the workflow 
+#(like in your commit message).
+    - name: Read and bump version
+      id: version
+      run: |
+        VERSION=$(cat version.txt | tr -d 'v')
+        MAJOR=$(echo "$VERSION" | cut -d. -f1)
+        MINOR=$(echo "$VERSION" | cut -d. -f2)
+        NEW_MINOR=$(printf "%02d" $((10#$MINOR + 1)))
+        NEW_VERSION="v$MAJOR.$NEW_MINOR"
+        echo "$NEW_VERSION" > version.txt
+        echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+#Runs your custom ci-build target from the Makefile, passing in the current version like 1.03. 
+#This generates a binary like gestion_stock_v1.03.
+    - name: Build with Makefile
+      run: |
+        VERSION=$(cat version.txt | tr -d 'v')
+        make ci-build VERSION=$VERSION
+#Configures Git with a bot identity.
+
+#Stages and commits the updated version.txt.
+
+#If the version changed, it pushes the new file back to your repository.
+
+#The || echo "No changes to commit" prevents the workflow from failing if the version didn’t 
+#actually change (for example, if the same push runs twice).
+    - name: Commit updated version
+      run: |
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+        git add version.txt
+        git commit -m "CI: bump version to ${{ steps.version.outputs.new_version }}" || echo "No changes to commit"
+        git push
+
+    - name: Create Git tag for release
+      run: |
+      #Fetches existing tags to make sure we don't duplicate them.
+        git fetch --tags
+      #Formats the tag name (e.g. v1.05 → PROD_VERSION_1.05).
+        VERSION=${{ steps.version.outputs.new_version }}
+        TAG_NAME="PROD_VERSION_${VERSION#v}"
+        #Checks if the tag already exists. If not, it creates and pushes it. 
+        #If it does, it safely skips it.
+        if ! git rev-parse "$TAG_NAME" >/dev/null 2>&1; then
+          git tag -a "$TAG_NAME" -m "Release $TAG_NAME"
+          git push origin "$TAG_NAME"
+        else
+          echo "Tag $TAG_NAME already exists. Skipping tag creation."
+        fi
