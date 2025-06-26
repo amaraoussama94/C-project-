@@ -64,3 +64,17 @@ make        # Compile le projet
 make run    # Compile et exécute
 make clean  # Supprime les fichiers générés
 
+## 🔧 Auto Build Process
+
+This project leverages an automated build pipeline to ensure every change is compiled, tested, and deployed efficiently. Here’s how it works:
+
+1. **Trigger**: The build process is automatically triggered by a push to the `main` branch or upon the creation of a pull request.
+2. **Build Environment**: A pre-configured virtual environment installs all necessary dependencies as specified in `requirements.txt` or `environment.yml`.
+3. **Validation & Tests**: Linting and unit tests are run to catch errors early and maintain code quality.
+4. **Build & Package**: The application is compiled (if necessary) and bundled for deployment.
+5. **Deploy (Optional)**: If the build passes, the code is deployed to the specified environment (e.g. GitHub Pages, Docker Hub, or a cloud platform).
+
+All steps are defined in the `.github/workflows` directory using YAML configuration files. Comments within those files explain each stage of the pipeline.
+
+
+
