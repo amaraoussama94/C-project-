@@ -5,5 +5,7 @@ var database_8c =
     [ "db_init", "database_8c.html#a408750fcc9af8d14bd2bbf287b584b67", null ],
     [ "db_lister_produits", "database_8c.html#a42195505d310a0a6d65a715385f7e546", null ],
     [ "db_modifier_produit", "database_8c.html#a432b4c1d45194b5c16adb90c6f9217af", null ],
+    [ "db_produit_existe", "database_8c.html#a1b127f7a31176dc99d8bc3997a7a0951", null ],
+    [ "db_produit_existe_par_id", "database_8c.html#adc59c9044805a2f56b1edde9d0c54794", null ],
     [ "db_supprimer_produit", "database_8c.html#aa82e22b7b47ca0e7dad3a757763259f7", null ]
 ];

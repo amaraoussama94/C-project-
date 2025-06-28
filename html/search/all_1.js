@@ -4,7 +4,7 @@ var searchData=
   ['agginfo_1',['AggInfo',['../struct_agg_info.html',1,'']]],
   ['agginfo_5fcol_2',['AggInfo_col',['../struct_agg_info_1_1_agg_info__col.html',1,'AggInfo']]],
   ['agginfo_5ffunc_3',['AggInfo_func',['../struct_agg_info_1_1_agg_info__func.html',1,'AggInfo']]],
-  ['ajouter_5fproduit_5finteractif_4',['ajouter_produit_interactif',['../main_8c.html#a2c493ad541bb67f70d15da9641fb125d',1,'ajouter_produit_interactif(sqlite3 *db):&#160;produit.c'],['../produit_8h.html#a2c493ad541bb67f70d15da9641fb125d',1,'ajouter_produit_interactif(sqlite3 *db):&#160;produit.c'],['../produit_8c.html#a2c493ad541bb67f70d15da9641fb125d',1,'ajouter_produit_interactif(sqlite3 *db):&#160;produit.c']]],
+  ['ajouter_5fproduit_5finteractif_4',['ajouter_produit_interactif',['../produit_8h.html#a2c493ad541bb67f70d15da9641fb125d',1,'ajouter_produit_interactif(sqlite3 *db):&#160;produit.c'],['../produit_8c.html#a2c493ad541bb67f70d15da9641fb125d',1,'ajouter_produit_interactif(sqlite3 *db):&#160;produit.c']]],
   ['améliorées_5',['🧪 Fonctionnalités améliorées',['../md__r_e_a_d_m_e.html#autotoc_md7',1,'']]],
   ['analysisinfo_6',['analysisInfo',['../structanalysis_info.html',1,'']]],
   ['apndfile_7',['ApndFile',['../struct_apnd_file.html',1,'']]],

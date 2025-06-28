@@ -59,5 +59,5 @@ var searchData=
   ['subrtnsig_56',['SubrtnSig',['../struct_subrtn_sig.html',1,'']]],
   ['substcontext_57',['SubstContext',['../struct_subst_context.html',1,'']]],
   ['sumctx_58',['SumCtx',['../struct_sum_ctx.html',1,'']]],
-  ['supprimer_5fproduit_5finteractif_59',['supprimer_produit_interactif',['../main_8c.html#a8c71446fe932bf9b2dbc80629b4c264e',1,'supprimer_produit_interactif(sqlite3 *db):&#160;produit.c'],['../produit_8h.html#a8c71446fe932bf9b2dbc80629b4c264e',1,'supprimer_produit_interactif(sqlite3 *db):&#160;produit.c'],['../produit_8c.html#a8c71446fe932bf9b2dbc80629b4c264e',1,'supprimer_produit_interactif(sqlite3 *db):&#160;produit.c']]]
+  ['supprimer_5fproduit_5finteractif_59',['supprimer_produit_interactif',['../produit_8h.html#a8c71446fe932bf9b2dbc80629b4c264e',1,'supprimer_produit_interactif(sqlite3 *db):&#160;produit.c'],['../produit_8c.html#a8c71446fe932bf9b2dbc80629b4c264e',1,'supprimer_produit_interactif(sqlite3 *db):&#160;produit.c']]]
 ];

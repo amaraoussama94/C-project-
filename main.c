@@ -12,7 +12,8 @@
 #include <stdio.h>
 #include "database.h"
 #include "produit.h"
-
+#include <stdlib.h>
+#include "utils.h"
 /**
  * @brief Displays the main menu for the stock management system.
  * 
@@ -80,8 +81,7 @@ int main() {
     do {
         clear_screen(); // ← Efface l'écran à chaque itération du menu
         afficher_menu();
-        scanf("%d", &choix);
-        getchar(); // consommer le \n
+        choix = lire_entier();
 
         switch (choix) {
             case 1:
@@ -97,18 +97,22 @@ int main() {
             case 3:
                 clear_screen(); // Efface l'écran avant de supprimer un produit
                 supprimer_produit_interactif(db);
+                pause_console(); // Pause pour permettre à l'utilisateur de lire la liste
                 break;
             case 4:
                 clear_screen(); // Efface l'écran avant de modifier un produit
                 modifier_produit_interactif(db);
+                pause_console(); // Pause pour permettre à l'utilisateur de lire la liste
                 break;
             case 0:
                 clear_screen(); // Efface l'écran avant de quitter
                 printf("Au revoir !\n");
+                pause_console(); // Pause pour permettre à l'utilisateur de lire la liste
                 break;
             default:
                 clear_screen(); // Efface l'écran avant d'afficher le message d'erreur
                 printf("Choix invalide.\n");
+                pause_console(); // Pause pour permettre à l'utilisateur de lire la liste
         }
     } while (choix != 0);
 

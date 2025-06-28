@@ -137,3 +137,58 @@ int db_modifier_produit(sqlite3 *db, const Produit *p) {
     sqlite3_finalize(stmt);
     return rc == SQLITE_DONE ? 0 : -1;
 }
+
+/**
+ * @brief Vérifie si un produit avec l'ID donné existe dans la base de données.
+ *
+ * @param db Pointeur vers la base de données SQLite.
+ * @param id Identifiant du produit à vérifier.
+ * @return 1 si le produit existe, 0 sinon.
+ */
+int db_produit_existe_par_id(sqlite3 *db, int id) {
+    const char *sql = "SELECT COUNT(*) FROM produits WHERE id = ?;";
+    sqlite3_stmt *stmt;
+    int existe = 0;
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) != SQLITE_OK)
+        return 0;
+
+    sqlite3_bind_int(stmt, 1, id);
+
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        existe = sqlite3_column_int(stmt, 0) > 0;
+    }
+
+    sqlite3_finalize(stmt);
+    return existe;
+}
+
+/**
+ * @brief Vérifie si un produit avec le nom donné existe dans la base de données.
+ *
+ * Cette fonction interroge la base de données pour vérifier si un produit
+ * avec le nom spécifié existe déjà. Elle retourne 1 si le produit existe,
+ * 0 sinon.
+ *
+ * @param db Pointeur vers la base de données SQLite.
+ * @param nom Nom du produit à vérifier.
+ * @return 1 si le produit existe, 0 sinon.
+ */
+int db_produit_existe(sqlite3 *db, const char *nom) {
+    const char *sql = "SELECT COUNT(*) FROM produits WHERE nom = ?";
+    sqlite3_stmt *stmt;
+    int existe = 0;
+// Préparation de la requête SQL
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) != SQLITE_OK)
+        return 0;
+// Liaison du paramètre
+    sqlite3_bind_text(stmt, 1, nom, -1, SQLITE_STATIC);
+// Exécution de la requête
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        existe = sqlite3_column_int(stmt, 0) > 0;
+    }
+// Libération des ressources
+    sqlite3_finalize(stmt);
+    return existe;
+}
+

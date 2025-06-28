@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gestion de stock: Inc/produit.h Source File</title>
+<title>gestion_de_stock: Inc/produit.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Gestion de stock
+   <div id="projectname">gestion_de_stock
    </div>
   </td>
  </tr>
@@ -98,21 +98,23 @@ $(function(){initNavTree('produit_8h_source.html','',''); });
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define PRODUIT_H</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;sqlite3.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="produit_8h.html#a2c493ad541bb67f70d15da9641fb125d">ajouter_produit_interactif</a>(<a class="code hl_struct" href="structsqlite3.html">sqlite3</a> *db);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="produit_8h.html#ac14335164caf5461f506e1597dadfeea">modifier_produit_interactif</a>(<a class="code hl_struct" href="structsqlite3.html">sqlite3</a> *db);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="produit_8h.html#a8c71446fe932bf9b2dbc80629b4c264e">supprimer_produit_interactif</a>(<a class="code hl_struct" href="structsqlite3.html">sqlite3</a> *db);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="produit_8h.html#a75079172a17ab0dfbd145be61cc895fa">lister_produits_interactif</a>(<a class="code hl_struct" href="structsqlite3.html">sqlite3</a> *db);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="database_8h.html">database.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="produit_8h.html#a2c493ad541bb67f70d15da9641fb125d">ajouter_produit_interactif</a>(<a class="code hl_struct" href="structsqlite3.html">sqlite3</a> *db);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> <a class="code hl_function" href="produit_8h.html#ac14335164caf5461f506e1597dadfeea">modifier_produit_interactif</a>(<a class="code hl_struct" href="structsqlite3.html">sqlite3</a> *db);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> <a class="code hl_function" href="produit_8h.html#a8c71446fe932bf9b2dbc80629b4c264e">supprimer_produit_interactif</a>(<a class="code hl_struct" href="structsqlite3.html">sqlite3</a> *db);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="produit_8h.html#a75079172a17ab0dfbd145be61cc895fa">lister_produits_interactif</a>(<a class="code hl_struct" href="structsqlite3.html">sqlite3</a> *db);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="ttc" id="adatabase_8h_html"><div class="ttname"><a href="database_8h.html">database.h</a></div><div class="ttdoc">Interface pour la gestion de la base de données SQLite des produits.</div></div>
 <div class="ttc" id="aproduit_8h_html_a2c493ad541bb67f70d15da9641fb125d"><div class="ttname"><a href="produit_8h.html#a2c493ad541bb67f70d15da9641fb125d">ajouter_produit_interactif</a></div><div class="ttdeci">void ajouter_produit_interactif(sqlite3 *db)</div><div class="ttdoc">Demande à l&#39;utilisateur les informations d&#39;un produit et l&#39;ajoute à la base.</div><div class="ttdef"><b>Definition</b> produit.c:24</div></div>
-<div class="ttc" id="aproduit_8h_html_a75079172a17ab0dfbd145be61cc895fa"><div class="ttname"><a href="produit_8h.html#a75079172a17ab0dfbd145be61cc895fa">lister_produits_interactif</a></div><div class="ttdeci">void lister_produits_interactif(sqlite3 *db)</div><div class="ttdoc">Affiche tous les produits de la base de données.</div><div class="ttdef"><b>Definition</b> produit.c:94</div></div>
-<div class="ttc" id="aproduit_8h_html_a8c71446fe932bf9b2dbc80629b4c264e"><div class="ttname"><a href="produit_8h.html#a8c71446fe932bf9b2dbc80629b4c264e">supprimer_produit_interactif</a></div><div class="ttdeci">void supprimer_produit_interactif(sqlite3 *db)</div><div class="ttdoc">Demande à l&#39;utilisateur un ID et supprime le produit correspondant.</div><div class="ttdef"><b>Definition</b> produit.c:74</div></div>
-<div class="ttc" id="aproduit_8h_html_ac14335164caf5461f506e1597dadfeea"><div class="ttname"><a href="produit_8h.html#ac14335164caf5461f506e1597dadfeea">modifier_produit_interactif</a></div><div class="ttdeci">void modifier_produit_interactif(sqlite3 *db)</div><div class="ttdoc">Demande à l&#39;utilisateur un ID et les nouvelles infos, puis modifie le produit.</div><div class="ttdef"><b>Definition</b> produit.c:48</div></div>
+<div class="ttc" id="aproduit_8h_html_a75079172a17ab0dfbd145be61cc895fa"><div class="ttname"><a href="produit_8h.html#a75079172a17ab0dfbd145be61cc895fa">lister_produits_interactif</a></div><div class="ttdeci">void lister_produits_interactif(sqlite3 *db)</div><div class="ttdoc">Affiche tous les produits de la base de données.</div><div class="ttdef"><b>Definition</b> produit.c:135</div></div>
+<div class="ttc" id="aproduit_8h_html_a8c71446fe932bf9b2dbc80629b4c264e"><div class="ttname"><a href="produit_8h.html#a8c71446fe932bf9b2dbc80629b4c264e">supprimer_produit_interactif</a></div><div class="ttdeci">void supprimer_produit_interactif(sqlite3 *db)</div><div class="ttdoc">Demande à l&#39;utilisateur un ID et supprime le produit correspondant.</div><div class="ttdef"><b>Definition</b> produit.c:110</div></div>
+<div class="ttc" id="aproduit_8h_html_ac14335164caf5461f506e1597dadfeea"><div class="ttname"><a href="produit_8h.html#ac14335164caf5461f506e1597dadfeea">modifier_produit_interactif</a></div><div class="ttdeci">void modifier_produit_interactif(sqlite3 *db)</div><div class="ttdoc">Demande à l&#39;utilisateur un ID et les nouvelles infos, puis modifie le produit.</div><div class="ttdef"><b>Definition</b> produit.c:67</div></div>
 <div class="ttc" id="astructsqlite3_html"><div class="ttname"><a href="structsqlite3.html">sqlite3</a></div><div class="ttdef"><b>Definition</b> sqlite3.c:18032</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
