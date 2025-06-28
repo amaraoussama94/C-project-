@@ -84,7 +84,7 @@ jobs:
         fi
     - name: Check binary exists
       run: |
-        FILE="bin/gestion_stock_v${{ steps.version.outputs.new_version }}"
+        FILE="build/gestion_stock_v${{ steps.version.outputs.new_version }}"
         if [ ! -f "$FILE" ]; then
           echo "Binary not found: $FILE"
           exit 1
