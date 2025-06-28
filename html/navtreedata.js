@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Gestion de stock", "index.html", [
+  [ "gestion_de_stock", "index.html", [
     [ "📦 Projet C - Gestion de Stock", "md__r_e_a_d_m_e.html", [
       [ "🎯 Objectifs", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
       [ "🛠️ Structure du projet", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
@@ -38,7 +38,9 @@ var NAVTREE =
         [ "Pré-requis", "md__r_e_a_d_m_e.html#autotoc_md9", null ],
         [ "Instructions", "md__r_e_a_d_m_e.html#autotoc_md10", null ]
       ] ],
-      [ "🔧 Auto Build Process", "md__r_e_a_d_m_e.html#autotoc_md11", null ]
+      [ "🔧 Auto Build Process", "md__r_e_a_d_m_e.html#autotoc_md11", null ],
+      [ "⚙️ Intégration Continue", "md__r_e_a_d_m_e.html#autotoc_md12", null ],
+      [ "Téléchargement des binaires", "md__r_e_a_d_m_e.html#autotoc_md13", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -61,7 +63,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"struct_wal_index_hdr.html"
+"struct_vtab_ctx.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

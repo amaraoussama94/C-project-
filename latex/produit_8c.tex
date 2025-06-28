@@ -7,12 +7,13 @@ fonctions de gestion des produits pour un système de gestion de stock. Les opé
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include "{}database.\+h"{}}\newline
+{\ttfamily \#include "{}produit.\+h"{}}\newline
+{\ttfamily \#include "{}utils.\+h"{}}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{produit_8c_a2c493ad541bb67f70d15da9641fb125d}{ajouter\+\_\+produit\+\_\+interactif}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
-\begin{DoxyCompactList}\small\item\em Interactively adds a new product to the database. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Adds a new product to the database interactively. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{produit_8c_ac14335164caf5461f506e1597dadfeea}{modifier\+\_\+produit\+\_\+interactif}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
 \begin{DoxyCompactList}\small\item\em Interactively modifies the details of a product in the database. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{produit_8c_a8c71446fe932bf9b2dbc80629b4c264e}{supprimer\+\_\+produit\+\_\+interactif}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
@@ -46,17 +47,15 @@ void ajouter\+\_\+produit\+\_\+interactif (\begin{DoxyParamCaption}\item[{\mbox{
 
 
 
-Interactively adds a new product to the database. 
+Adds a new product to the database interactively. 
 
 Demande à l\textquotesingle{}utilisateur les informations d\textquotesingle{}un produit et l\textquotesingle{}ajoute à la base.
 
-Adds a new product to the database interactively.
-
-Prompts the user to enter the product\textquotesingle{}s name, quantity, and price via standard input, then attempts to add the product to the database using \doxylink{database_8h_a24f87cdb18f19d2c7ce064f6a56421ba}{db\+\_\+ajouter\+\_\+produit()}. Displays a success or error message based on the result.
+Prompts the user for product details and inserts the new product into the database.
 
 
 \begin{DoxyParams}{Parameters}
-{\em db} & Pointer to the opened SQLite database connection. \\
+{\em db} & Pointer to the SQLite database connection. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{produit_8c_a75079172a17ab0dfbd145be61cc895fa}\index{produit.c@{produit.c}!lister\_produits\_interactif@{lister\_produits\_interactif}}
@@ -70,8 +69,6 @@ void lister\+\_\+produits\+\_\+interactif (\begin{DoxyParamCaption}\item[{\mbox{
 Affiche la liste des produits de manière interactive. 
 
 Affiche tous les produits de la base de données.
-
-Lists all products in the database interactively.
 
 Cette fonction appelle db\+\_\+lister\+\_\+produits pour afficher tous les produits présents dans la base de données SQLite passée en paramètre. Si une erreur survient lors de l\textquotesingle{}affichage, un message d\textquotesingle{}erreur est affiché à l\textquotesingle{}utilisateur.
 
@@ -92,8 +89,6 @@ Interactively modifies the details of a product in the database.
 
 Demande à l\textquotesingle{}utilisateur un ID et les nouvelles infos, puis modifie le produit.
 
-Modifies an existing product in the database interactively.
-
 Prompts the user to enter the ID of the product to modify, then asks for the new name, quantity, and price. Updates the product in the database using the provided information. Displays a success or error message based on the outcome.
 
 
@@ -112,8 +107,6 @@ void supprimer\+\_\+produit\+\_\+interactif (\begin{DoxyParamCaption}\item[{\mbo
 Supprime un produit de la base de données de manière interactive. 
 
 Demande à l\textquotesingle{}utilisateur un ID et supprime le produit correspondant.
-
-Deletes a product from the database interactively.
 
 Cette fonction demande à l\textquotesingle{}utilisateur de saisir l\textquotesingle{}identifiant (ID) du produit à supprimer, puis appelle la fonction db\+\_\+supprimer\+\_\+produit pour effectuer la suppression dans la base de données SQLite. Elle affiche un message indiquant si la suppression a réussi ou échoué.
 

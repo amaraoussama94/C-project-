@@ -97,10 +97,12 @@ int main() {
             case 3:
                 clear_screen(); // Efface l'écran avant de supprimer un produit
                 supprimer_produit_interactif(db);
+                pause_console(); // Pause pour permettre à l'utilisateur de lire la liste
                 break;
             case 4:
                 clear_screen(); // Efface l'écran avant de modifier un produit
                 modifier_produit_interactif(db);
+                pause_console(); // Pause pour permettre à l'utilisateur de lire la liste
                 break;
             case 0:
                 clear_screen(); // Efface l'écran avant de quitter

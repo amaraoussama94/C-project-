@@ -7,19 +7,18 @@ Ce programme permet à l\textquotesingle{}utilisateur d\textquotesingle{}ajouter
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include "{}database.\+h"{}}\newline
+{\ttfamily \#include "{}produit.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}utils.\+h"{}}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{main_8c_a2c493ad541bb67f70d15da9641fb125d}{ajouter\+\_\+produit\+\_\+interactif}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
-\begin{DoxyCompactList}\small\item\em Adds a new product to the database interactively. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{main_8c_ac14335164caf5461f506e1597dadfeea}{modifier\+\_\+produit\+\_\+interactif}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
-\begin{DoxyCompactList}\small\item\em Modifies an existing product in the database interactively. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{main_8c_a8c71446fe932bf9b2dbc80629b4c264e}{supprimer\+\_\+produit\+\_\+interactif}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
-\begin{DoxyCompactList}\small\item\em Deletes a product from the database interactively. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{main_8c_a75079172a17ab0dfbd145be61cc895fa}{lister\+\_\+produits\+\_\+interactif}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
-\begin{DoxyCompactList}\small\item\em Lists all products in the database interactively. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8c_a26f23b0a449e679f092983b1ef986fa2}{afficher\+\_\+menu}} ()
 \begin{DoxyCompactList}\small\item\em Displays the main menu for the stock management system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a4953d1edcbbfc7e420c423ded1d5621a}{clear\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Clears the terminal screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a5ce7464bfaea97ff6484a00d78b150a3}{pause\+\_\+console}} ()
+\begin{DoxyCompactList}\small\item\em Pauses the console and waits for the user to press a key before continuing. \end{DoxyCompactList}\item 
 \Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
 int {\bfseries main} ()
 \end{DoxyCompactItemize}
@@ -52,107 +51,33 @@ void afficher\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Displays the main menu for the stock management system. 
 
-Shows options for adding, listing, deleting, and modifying products, as well as an option to exit the program. \Hypertarget{main_8c_a2c493ad541bb67f70d15da9641fb125d}\index{main.c@{main.c}!ajouter\_produit\_interactif@{ajouter\_produit\_interactif}}
-\index{ajouter\_produit\_interactif@{ajouter\_produit\_interactif}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{ajouter\_produit\_interactif()}{ajouter\_produit\_interactif()}}
-{\footnotesize\ttfamily \label{main_8c_a2c493ad541bb67f70d15da9641fb125d} 
-void ajouter\+\_\+produit\+\_\+interactif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+Shows options for adding, listing, deleting, and modifying products, as well as an option to exit the program. \Hypertarget{main_8c_a4953d1edcbbfc7e420c423ded1d5621a}\index{main.c@{main.c}!clear\_screen@{clear\_screen}}
+\index{clear\_screen@{clear\_screen}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{clear\_screen()}{clear\_screen()}}
+{\footnotesize\ttfamily \label{main_8c_a4953d1edcbbfc7e420c423ded1d5621a} 
+void clear\+\_\+screen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Adds a new product to the database interactively. 
+Clears the terminal screen. 
 
-Prompts the user for product details and inserts the new product into the database.
+This function clears the console screen using the appropriate system command depending on the operating system. On Windows systems, it uses "{}cls"{}, while on other systems (e.\+g., Linux, mac\+OS), it uses "{}clear"{}.
 
-
-\begin{DoxyParams}{Parameters}
-{\em db} & Pointer to the SQLite database connection.\\
-\hline
-\end{DoxyParams}
-Adds a new product to the database interactively.
-
-Prompts the user to enter the product\textquotesingle{}s name, quantity, and price via standard input, then attempts to add the product to the database using \doxylink{database_8h_a24f87cdb18f19d2c7ce064f6a56421ba}{db\+\_\+ajouter\+\_\+produit()}. Displays a success or error message based on the result.
-
-
-\begin{DoxyParams}{Parameters}
-{\em db} & Pointer to the opened SQLite database connection. \\
-\hline
-\end{DoxyParams}
-\Hypertarget{main_8c_a75079172a17ab0dfbd145be61cc895fa}\index{main.c@{main.c}!lister\_produits\_interactif@{lister\_produits\_interactif}}
-\index{lister\_produits\_interactif@{lister\_produits\_interactif}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{lister\_produits\_interactif()}{lister\_produits\_interactif()}}
-{\footnotesize\ttfamily \label{main_8c_a75079172a17ab0dfbd145be61cc895fa} 
-void lister\+\_\+produits\+\_\+interactif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+\begin{DoxyNote}{Note}
+This function relies on the system() call, which may have security implications. 
+\end{DoxyNote}
+\Hypertarget{main_8c_a5ce7464bfaea97ff6484a00d78b150a3}\index{main.c@{main.c}!pause\_console@{pause\_console}}
+\index{pause\_console@{pause\_console}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{pause\_console()}{pause\_console()}}
+{\footnotesize\ttfamily \label{main_8c_a5ce7464bfaea97ff6484a00d78b150a3} 
+void pause\+\_\+console (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Lists all products in the database interactively. 
+Pauses the console and waits for the user to press a key before continuing. 
 
-Retrieves and displays all products stored in the database.
-
-
-\begin{DoxyParams}{Parameters}
-{\em db} & Pointer to the SQLite database connection.\\
-\hline
-\end{DoxyParams}
-Lists all products in the database interactively.
-
-Cette fonction appelle db\+\_\+lister\+\_\+produits pour afficher tous les produits présents dans la base de données SQLite passée en paramètre. Si une erreur survient lors de l\textquotesingle{}affichage, un message d\textquotesingle{}erreur est affiché à l\textquotesingle{}utilisateur.
-
-
-\begin{DoxyParams}{Parameters}
-{\em db} & Pointeur vers la base de données SQLite. \\
-\hline
-\end{DoxyParams}
-\Hypertarget{main_8c_ac14335164caf5461f506e1597dadfeea}\index{main.c@{main.c}!modifier\_produit\_interactif@{modifier\_produit\_interactif}}
-\index{modifier\_produit\_interactif@{modifier\_produit\_interactif}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{modifier\_produit\_interactif()}{modifier\_produit\_interactif()}}
-{\footnotesize\ttfamily \label{main_8c_ac14335164caf5461f506e1597dadfeea} 
-void modifier\+\_\+produit\+\_\+interactif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
-
-
-
-Modifies an existing product in the database interactively. 
-
-Prompts the user to select and update product details in the database.
-
-
-\begin{DoxyParams}{Parameters}
-{\em db} & Pointer to the SQLite database connection.\\
-\hline
-\end{DoxyParams}
-Modifies an existing product in the database interactively.
-
-Prompts the user to enter the ID of the product to modify, then asks for the new name, quantity, and price. Updates the product in the database using the provided information. Displays a success or error message based on the outcome.
-
-
-\begin{DoxyParams}{Parameters}
-{\em db} & Pointer to the opened SQLite database connection. \\
-\hline
-\end{DoxyParams}
-\Hypertarget{main_8c_a8c71446fe932bf9b2dbc80629b4c264e}\index{main.c@{main.c}!supprimer\_produit\_interactif@{supprimer\_produit\_interactif}}
-\index{supprimer\_produit\_interactif@{supprimer\_produit\_interactif}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{supprimer\_produit\_interactif()}{supprimer\_produit\_interactif()}}
-{\footnotesize\ttfamily \label{main_8c_a8c71446fe932bf9b2dbc80629b4c264e} 
-void supprimer\+\_\+produit\+\_\+interactif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
-
-
-
-Deletes a product from the database interactively. 
-
-Prompts the user to select a product to remove from the database.
-
-
-\begin{DoxyParams}{Parameters}
-{\em db} & Pointer to the SQLite database connection.\\
-\hline
-\end{DoxyParams}
-Deletes a product from the database interactively.
-
-Cette fonction demande à l\textquotesingle{}utilisateur de saisir l\textquotesingle{}identifiant (ID) du produit à supprimer, puis appelle la fonction db\+\_\+supprimer\+\_\+produit pour effectuer la suppression dans la base de données SQLite. Elle affiche un message indiquant si la suppression a réussi ou échoué.
-
-
-\begin{DoxyParams}{Parameters}
-{\em db} & Pointeur vers la base de données SQLite ouverte. \\
-\hline
-\end{DoxyParams}
+This function displays a prompt message asking the user to press any key to return to the menu. It uses platform-\/specific commands to wait for a key press\+:
+\begin{DoxyItemize}
+\item On Windows systems, it uses the "{}pause"{} command with output redirected to null.
+\item On other systems (e.\+g., Linux, mac\+OS), it uses the "{}read"{} command to wait for a single key press. 
+\end{DoxyItemize}

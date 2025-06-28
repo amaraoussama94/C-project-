@@ -23,7 +23,11 @@ int \mbox{\hyperlink{database_8c_a42195505d310a0a6d65a715385f7e546}{db\+\_\+list
 int \mbox{\hyperlink{database_8c_aa82e22b7b47ca0e7dad3a757763259f7}{db\+\_\+supprimer\+\_\+produit}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db, int id)
 \begin{DoxyCompactList}\small\item\em Supprime un produit de la base de données. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{database_8c_a432b4c1d45194b5c16adb90c6f9217af}{db\+\_\+modifier\+\_\+produit}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db, const \mbox{\hyperlink{struct_produit}{Produit}} \texorpdfstring{$\ast$}{*}p)
-\begin{DoxyCompactList}\small\item\em Modifie un produit existant dans la base de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Modifie un produit existant dans la base de données. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{database_8c_adc59c9044805a2f56b1edde9d0c54794}{db\+\_\+produit\+\_\+existe\+\_\+par\+\_\+id}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db, int id)
+\begin{DoxyCompactList}\small\item\em Vérifie si un produit avec l\textquotesingle{}ID donné existe dans la base de données. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{database_8c_a1b127f7a31176dc99d8bc3997a7a0951}{db\+\_\+produit\+\_\+existe}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db, const char \texorpdfstring{$\ast$}{*}nom)
+\begin{DoxyCompactList}\small\item\em Vérifie si un produit avec le nom donné existe dans la base de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -135,6 +139,48 @@ Modifie un produit existant dans la base de données.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 0 en cas de succès, -\/1 sinon. 
+\end{DoxyReturn}
+\Hypertarget{database_8c_a1b127f7a31176dc99d8bc3997a7a0951}\index{database.c@{database.c}!db\_produit\_existe@{db\_produit\_existe}}
+\index{db\_produit\_existe@{db\_produit\_existe}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{db\_produit\_existe()}{db\_produit\_existe()}}
+{\footnotesize\ttfamily \label{database_8c_a1b127f7a31176dc99d8bc3997a7a0951} 
+int db\+\_\+produit\+\_\+existe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{nom}{}\end{DoxyParamCaption})}
+
+
+
+Vérifie si un produit avec le nom donné existe dans la base de données. 
+
+Cette fonction interroge la base de données pour vérifier si un produit avec le nom spécifié existe déjà. Elle retourne 1 si le produit existe, 0 sinon.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers la base de données SQLite. \\
+\hline
+{\em nom} & Nom du produit à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si le produit existe, 0 sinon. 
+\end{DoxyReturn}
+\Hypertarget{database_8c_adc59c9044805a2f56b1edde9d0c54794}\index{database.c@{database.c}!db\_produit\_existe\_par\_id@{db\_produit\_existe\_par\_id}}
+\index{db\_produit\_existe\_par\_id@{db\_produit\_existe\_par\_id}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{db\_produit\_existe\_par\_id()}{db\_produit\_existe\_par\_id()}}
+{\footnotesize\ttfamily \label{database_8c_adc59c9044805a2f56b1edde9d0c54794} 
+int db\+\_\+produit\+\_\+existe\+\_\+par\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Vérifie si un produit avec l\textquotesingle{}ID donné existe dans la base de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers la base de données SQLite. \\
+\hline
+{\em id} & Identifiant du produit à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si le produit existe, 0 sinon. 
 \end{DoxyReturn}
 \Hypertarget{database_8c_aa82e22b7b47ca0e7dad3a757763259f7}\index{database.c@{database.c}!db\_supprimer\_produit@{db\_supprimer\_produit}}
 \index{db\_supprimer\_produit@{db\_supprimer\_produit}!database.c@{database.c}}

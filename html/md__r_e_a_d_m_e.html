@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gestion de stock: 📦 Projet C - Gestion de Stock</title>
+<title>gestion_de_stock: 📦 Projet C - Gestion de Stock</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Gestion de stock
+   <div id="projectname">gestion_de_stock
    </div>
   </td>
  </tr>
@@ -124,11 +124,11 @@ documentation générée avec Doxygen
 <h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 ✨ Fonctionnalités principales</h1>
 <ul>
-<li>Ajouter un produit</li>
-<li>Afficher la liste des produits</li>
-<li>Rechercher un produit par ID</li>
-<li>Supprimer ou modifier un produit existant</li>
-<li>Persistance des données dans un fichier structuré</li>
+<li>Ajout, suppression et modification de produits</li>
+<li>Gestion des quantités et des prix</li>
+<li>Sauvegarde des données via SQLite3</li>
+<li>Interface console simple et efficace</li>
+<li>Compilation multiplateforme (Linux &amp; Windows)</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
 🔄 Changements récents (Branche <span class="tt">dev_RefactorSqlite</span>)</h1>
@@ -182,7 +182,18 @@ Instructions</h2>
 <li><b>Build &amp; Package</b>: The application is compiled (if necessary) and bundled for deployment.</li>
 <li><b>Deploy (Optional)</b>: If the build passes, the code is deployed to the specified environment (e.g. GitHub Pages, Docker Hub, or a cloud platform).</li>
 </ol>
-<p>All steps are defined in the <span class="tt">.github/workflows</span> directory using YAML configuration files. Comments within those files explain each stage of the pipeline. </p>
+<p>All steps are defined in the <span class="tt">.github/workflows</span> directory using YAML configuration files. Comments within those files explain each stage of the pipeline.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+⚙️ Intégration Continue</h1>
+<p>Ce projet utilise GitHub Actions pour :</p>
+<p>Compiler automatiquement les binaires Linux et Windows</p>
+<p>Générer un tag Git (PROD_VERSION_x.xx)</p>
+<p>Publier les binaires dans les Releases GitHub</p>
+<p>Uploader les artefacts dans l’onglet Actions</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
+Téléchargement des binaires</h1>
+<p>Les dernières versions compilées sont disponibles ici :</p>
+<p>👉 <a href="https://github.com/amaraoussama94/gestion_stock_c/releases">Voir les Releases</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

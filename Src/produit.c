@@ -71,6 +71,7 @@ void modifier_produit_interactif(sqlite3 *db) {
     if (p.id < 0 || !db_produit_existe_par_id(db, p.id)) {
         printf("ID invalide ou produit inexistant.\n");
         return;
+    }
     printf("Nouveau nom : ");
     if (lire_chaine(p.nom, sizeof(p.nom)) != 0) {
         printf("Erreur de lecture du nom.\n");
@@ -107,13 +108,15 @@ void modifier_produit_interactif(sqlite3 *db) {
  * @param db Pointeur vers la base de données SQLite ouverte.
  */
 void supprimer_produit_interactif(sqlite3 *db) {
-    int id;
+    
+    Produit p;
     printf("ID du produit à supprimer : ");
     p.id = lire_entier();
     if (p.id < 0 || !db_produit_existe_par_id(db, p.id)) {
         printf("ID invalide ou produit inexistant.\n");
         return;
-
+    }
+    int id= p.id;
     if (db_supprimer_produit(db, id) == 0)
         printf("Produit supprimé.\n");
     else

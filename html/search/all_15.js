@@ -7,5 +7,7 @@ var searchData=
   ['unixshmnode_4',['unixShmNode',['../structunix_shm_node.html',1,'']]],
   ['unixunusedfd_5',['UnixUnusedFd',['../struct_unix_unused_fd.html',1,'']]],
   ['unpackedrecord_6',['UnpackedRecord',['../struct_unpacked_record.html',1,'']]],
-  ['upsert_7',['Upsert',['../struct_upsert.html',1,'']]]
+  ['upsert_7',['Upsert',['../struct_upsert.html',1,'']]],
+  ['utils_2ec_8',['utils.c',['../utils_8c.html',1,'']]],
+  ['utils_2eh_9',['utils.h',['../utils_8h.html',1,'']]]
 ];

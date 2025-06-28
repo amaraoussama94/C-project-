@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gestion de stock: main.c File Reference</title>
+<title>gestion_de_stock: main.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Gestion de stock
+   <div id="projectname">gestion_de_stock
    </div>
   </td>
  </tr>
@@ -96,19 +96,18 @@ $(function(){initNavTree('main_8c.html','',''); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="database_8h_source.html">database.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="produit_8h_source.html">produit.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2c493ad541bb67f70d15da9641fb125d" id="r_a2c493ad541bb67f70d15da9641fb125d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c493ad541bb67f70d15da9641fb125d">ajouter_produit_interactif</a> (<a class="el" href="structsqlite3.html">sqlite3</a> *db)</td></tr>
-<tr class="memdesc:a2c493ad541bb67f70d15da9641fb125d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new product to the database interactively.  <br /></td></tr>
-<tr class="memitem:ac14335164caf5461f506e1597dadfeea" id="r_ac14335164caf5461f506e1597dadfeea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac14335164caf5461f506e1597dadfeea">modifier_produit_interactif</a> (<a class="el" href="structsqlite3.html">sqlite3</a> *db)</td></tr>
-<tr class="memdesc:ac14335164caf5461f506e1597dadfeea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies an existing product in the database interactively.  <br /></td></tr>
-<tr class="memitem:a8c71446fe932bf9b2dbc80629b4c264e" id="r_a8c71446fe932bf9b2dbc80629b4c264e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c71446fe932bf9b2dbc80629b4c264e">supprimer_produit_interactif</a> (<a class="el" href="structsqlite3.html">sqlite3</a> *db)</td></tr>
-<tr class="memdesc:a8c71446fe932bf9b2dbc80629b4c264e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a product from the database interactively.  <br /></td></tr>
-<tr class="memitem:a75079172a17ab0dfbd145be61cc895fa" id="r_a75079172a17ab0dfbd145be61cc895fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75079172a17ab0dfbd145be61cc895fa">lister_produits_interactif</a> (<a class="el" href="structsqlite3.html">sqlite3</a> *db)</td></tr>
-<tr class="memdesc:a75079172a17ab0dfbd145be61cc895fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lists all products in the database interactively.  <br /></td></tr>
 <tr class="memitem:a26f23b0a449e679f092983b1ef986fa2" id="r_a26f23b0a449e679f092983b1ef986fa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26f23b0a449e679f092983b1ef986fa2">afficher_menu</a> ()</td></tr>
 <tr class="memdesc:a26f23b0a449e679f092983b1ef986fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the main menu for the stock management system.  <br /></td></tr>
+<tr class="memitem:a4953d1edcbbfc7e420c423ded1d5621a" id="r_a4953d1edcbbfc7e420c423ded1d5621a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4953d1edcbbfc7e420c423ded1d5621a">clear_screen</a> ()</td></tr>
+<tr class="memdesc:a4953d1edcbbfc7e420c423ded1d5621a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the terminal screen.  <br /></td></tr>
+<tr class="memitem:a5ce7464bfaea97ff6484a00d78b150a3" id="r_a5ce7464bfaea97ff6484a00d78b150a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ce7464bfaea97ff6484a00d78b150a3">pause_console</a> ()</td></tr>
+<tr class="memdesc:a5ce7464bfaea97ff6484a00d78b150a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses the console and waits for the user to press a key before continuing.  <br /></td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
 </table>
@@ -138,139 +137,47 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
 
 </div>
 </div>
-<a id="a2c493ad541bb67f70d15da9641fb125d" name="a2c493ad541bb67f70d15da9641fb125d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c493ad541bb67f70d15da9641fb125d">&#9670;&#160;</a></span>ajouter_produit_interactif()</h2>
+<a id="a4953d1edcbbfc7e420c423ded1d5621a" name="a4953d1edcbbfc7e420c423ded1d5621a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4953d1edcbbfc7e420c423ded1d5621a">&#9670;&#160;</a></span>clear_screen()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ajouter_produit_interactif </td>
+          <td class="memname">void clear_screen </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structsqlite3.html">sqlite3</a> *</td>          <td class="paramname"><span class="paramname"><em>db</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds a new product to the database interactively. </p>
-<p>Prompts the user for product details and inserts the new product into the database.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">db</td><td>Pointer to the SQLite database connection.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Adds a new product to the database interactively.</p>
-<p>Prompts the user to enter the product's name, quantity, and price via standard input, then attempts to add the product to the database using <a class="el" href="database_8h.html#a24f87cdb18f19d2c7ce064f6a56421ba" title="Ajoute un produit à la base de données.">db_ajouter_produit()</a>. Displays a success or error message based on the result.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">db</td><td>Pointer to the opened SQLite database connection. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Clears the terminal screen. </p>
+<p>This function clears the console screen using the appropriate system command depending on the operating system. On Windows systems, it uses "cls", while on other systems (e.g., Linux, macOS), it uses "clear".</p>
+<dl class="section note"><dt>Note</dt><dd>This function relies on the system() call, which may have security implications. </dd></dl>
 
 </div>
 </div>
-<a id="a75079172a17ab0dfbd145be61cc895fa" name="a75079172a17ab0dfbd145be61cc895fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75079172a17ab0dfbd145be61cc895fa">&#9670;&#160;</a></span>lister_produits_interactif()</h2>
+<a id="a5ce7464bfaea97ff6484a00d78b150a3" name="a5ce7464bfaea97ff6484a00d78b150a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce7464bfaea97ff6484a00d78b150a3">&#9670;&#160;</a></span>pause_console()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void lister_produits_interactif </td>
+          <td class="memname">void pause_console </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structsqlite3.html">sqlite3</a> *</td>          <td class="paramname"><span class="paramname"><em>db</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Lists all products in the database interactively. </p>
-<p>Retrieves and displays all products stored in the database.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">db</td><td>Pointer to the SQLite database connection.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Lists all products in the database interactively.</p>
-<p>Cette fonction appelle db_lister_produits pour afficher tous les produits présents dans la base de données SQLite passée en paramètre. Si une erreur survient lors de l'affichage, un message d'erreur est affiché à l'utilisateur.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">db</td><td>Pointeur vers la base de données SQLite. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ac14335164caf5461f506e1597dadfeea" name="ac14335164caf5461f506e1597dadfeea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac14335164caf5461f506e1597dadfeea">&#9670;&#160;</a></span>modifier_produit_interactif()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void modifier_produit_interactif </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structsqlite3.html">sqlite3</a> *</td>          <td class="paramname"><span class="paramname"><em>db</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Modifies an existing product in the database interactively. </p>
-<p>Prompts the user to select and update product details in the database.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">db</td><td>Pointer to the SQLite database connection.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Modifies an existing product in the database interactively.</p>
-<p>Prompts the user to enter the ID of the product to modify, then asks for the new name, quantity, and price. Updates the product in the database using the provided information. Displays a success or error message based on the outcome.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">db</td><td>Pointer to the opened SQLite database connection. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a8c71446fe932bf9b2dbc80629b4c264e" name="a8c71446fe932bf9b2dbc80629b4c264e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c71446fe932bf9b2dbc80629b4c264e">&#9670;&#160;</a></span>supprimer_produit_interactif()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void supprimer_produit_interactif </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structsqlite3.html">sqlite3</a> *</td>          <td class="paramname"><span class="paramname"><em>db</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Deletes a product from the database interactively. </p>
-<p>Prompts the user to select a product to remove from the database.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">db</td><td>Pointer to the SQLite database connection.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Deletes a product from the database interactively.</p>
-<p>Cette fonction demande à l'utilisateur de saisir l'identifiant (ID) du produit à supprimer, puis appelle la fonction db_supprimer_produit pour effectuer la suppression dans la base de données SQLite. Elle affiche un message indiquant si la suppression a réussi ou échoué.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">db</td><td>Pointeur vers la base de données SQLite ouverte. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Pauses the console and waits for the user to press a key before continuing. </p>
+<p>This function displays a prompt message asking the user to press any key to return to the menu. It uses platform-specific commands to wait for a key press:</p><ul>
+<li>On Windows systems, it uses the "pause" command with output redirected to null.</li>
+<li>On other systems (e.g., Linux, macOS), it uses the "read" command to wait for a single key press. </li>
+</ul>
 
 </div>
 </div>

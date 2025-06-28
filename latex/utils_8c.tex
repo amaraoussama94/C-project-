@@ -1,0 +1,97 @@
+\doxysection{Src/utils.c File Reference}
+\hypertarget{utils_8c}{}\label{utils_8c}\index{Src/utils.c@{Src/utils.c}}
+
+
+Fonctions utilitaires pour la gestion des entrées utilisateur.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}utils.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{utils_8c_af5aeb846f6b77b1b15012baa2d8a9d75}{lire\+\_\+chaine}} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t taille)
+\begin{DoxyCompactList}\small\item\em Lit une chaîne de caractères depuis l\textquotesingle{}entrée standard. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{utils_8c_a5e80e00de7657974e371872ae7e53a44}{lire\+\_\+entier}} ()
+\begin{DoxyCompactList}\small\item\em Reads an integer from standard input. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{utils_8c_ab5ece65f60f62ae2c1da43371361871d}{lire\+\_\+flottant}} ()
+\begin{DoxyCompactList}\small\item\em Reads a floating-\/point number from standard input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fonctions utilitaires pour la gestion des entrées utilisateur. 
+
+\begin{DoxyAuthor}{Author}
+Oussama Amara 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/06-\/28 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\label{doc-func-members}
+\Hypertarget{utils_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{utils_8c_af5aeb846f6b77b1b15012baa2d8a9d75}\index{utils.c@{utils.c}!lire\_chaine@{lire\_chaine}}
+\index{lire\_chaine@{lire\_chaine}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{lire\_chaine()}{lire\_chaine()}}
+{\footnotesize\ttfamily \label{utils_8c_af5aeb846f6b77b1b15012baa2d8a9d75} 
+int lire\+\_\+chaine (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{taille}{}\end{DoxyParamCaption})}
+
+
+
+Lit une chaîne de caractères depuis l\textquotesingle{}entrée standard. 
+
+Cette fonction lit une ligne de texte, supprime le caractère \textquotesingle{}~\newline
+\textquotesingle{} s\textquotesingle{}il est présent, et vide le tampon si l\textquotesingle{}entrée dépasse la taille du buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Le tableau où stocker la chaîne lue. \\
+\hline
+{\em taille} & La taille maximale du buffer (incluant le \textquotesingle{}\textbackslash{}0\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si la lecture est réussie, -\/1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\Hypertarget{utils_8c_a5e80e00de7657974e371872ae7e53a44}\index{utils.c@{utils.c}!lire\_entier@{lire\_entier}}
+\index{lire\_entier@{lire\_entier}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{lire\_entier()}{lire\_entier()}}
+{\footnotesize\ttfamily \label{utils_8c_a5e80e00de7657974e371872ae7e53a44} 
+int lire\+\_\+entier (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reads an integer from standard input. 
+
+Lit un entier positif depuis l\textquotesingle{}entrée standard avec validation.
+
+This function reads a line from stdin, removes the trailing newline character, and checks if the input consists only of digit characters. If the input is valid, it converts the string to an integer and returns it. If the input is invalid or reading fails, it returns -\/1.
+
+\begin{DoxyReturn}{Returns}
+The integer value read from input, or -\/1 if input is invalid or reading fails. 
+\end{DoxyReturn}
+\Hypertarget{utils_8c_ab5ece65f60f62ae2c1da43371361871d}\index{utils.c@{utils.c}!lire\_flottant@{lire\_flottant}}
+\index{lire\_flottant@{lire\_flottant}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{lire\_flottant()}{lire\_flottant()}}
+{\footnotesize\ttfamily \label{utils_8c_ab5ece65f60f62ae2c1da43371361871d} 
+float lire\+\_\+flottant (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reads a floating-\/point number from standard input. 
+
+Lit un flottant positif depuis l\textquotesingle{}entrée standard avec validation.
+
+This function prompts the user to enter a floating-\/point number as a string, validates the input to ensure it contains only digits and at most one decimal point, and then converts it to a float. If the input is invalid or reading fails, the function returns -\/1.\+0f.
+
+\begin{DoxyReturn}{Returns}
+The floating-\/point value entered by the user, or -\/1.\+0f if input is invalid. 
+\end{DoxyReturn}

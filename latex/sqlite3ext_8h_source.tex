@@ -34,8 +34,8 @@
 \DoxyCodeLine{00030\ \textcolor{comment}{**\ libraries!}}
 \DoxyCodeLine{00031\ \textcolor{comment}{*/}}
 \DoxyCodeLine{00032\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsqlite3__api__routines}{sqlite3\_api\_routines}}\ \{}
-\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{void}\ *\ (*aggregate\_context)(sqlite3\_context*,\textcolor{keywordtype}{int}\ nBytes);}
-\DoxyCodeLine{00034\ \ \ int\ \ (*aggregate\_count)(sqlite3\_context*);}
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{void}\ *\ (*aggregate\_context)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\textcolor{keywordtype}{int}\ nBytes);}
+\DoxyCodeLine{00034\ \ \ int\ \ (*aggregate\_count)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*);}
 \DoxyCodeLine{00035\ \ \ int\ \ (*bind\_blob)(sqlite3\_stmt*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,\textcolor{keywordtype}{int}\ n,void(*)(\textcolor{keywordtype}{void}*));}
 \DoxyCodeLine{00036\ \ \ int\ \ (*bind\_double)(sqlite3\_stmt*,int,double);}
 \DoxyCodeLine{00037\ \ \ int\ \ (*bind\_int)(sqlite3\_stmt*,int,int);}
@@ -46,14 +46,14 @@
 \DoxyCodeLine{00042\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ (*bind\_parameter\_name)(sqlite3\_stmt*,int);}
 \DoxyCodeLine{00043\ \ \ int\ \ (*bind\_text)(sqlite3\_stmt*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keywordtype}{int}\ n,void(*)(\textcolor{keywordtype}{void}*));}
 \DoxyCodeLine{00044\ \ \ int\ \ (*bind\_text16)(sqlite3\_stmt*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,void(*)(\textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00045\ \ \ int\ \ (*bind\_value)(sqlite3\_stmt*,int,\textcolor{keyword}{const}\ sqlite3\_value*);}
-\DoxyCodeLine{00046\ \ \ int\ \ (*busy\_handler)(sqlite3*,int(*)(\textcolor{keywordtype}{void}*,int),\textcolor{keywordtype}{void}*);}
-\DoxyCodeLine{00047\ \ \ int\ \ (*busy\_timeout)(sqlite3*,\textcolor{keywordtype}{int}\ ms);}
-\DoxyCodeLine{00048\ \ \ int\ \ (*changes)(sqlite3*);}
-\DoxyCodeLine{00049\ \ \ int\ \ (*close)(sqlite3*);}
-\DoxyCodeLine{00050\ \ \ int\ \ (*collation\_needed)(sqlite3*,\textcolor{keywordtype}{void}*,void(*)(\textcolor{keywordtype}{void}*,sqlite3*,}
+\DoxyCodeLine{00045\ \ \ int\ \ (*bind\_value)(sqlite3\_stmt*,int,\textcolor{keyword}{const}\ \mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00046\ \ \ int\ \ (*busy\_handler)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,int(*)(\textcolor{keywordtype}{void}*,int),\textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00047\ \ \ int\ \ (*busy\_timeout)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keywordtype}{int}\ ms);}
+\DoxyCodeLine{00048\ \ \ int\ \ (*changes)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
+\DoxyCodeLine{00049\ \ \ int\ \ (*close)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
+\DoxyCodeLine{00050\ \ \ int\ \ (*collation\_needed)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keywordtype}{void}*,void(*)(\textcolor{keywordtype}{void}*,\mbox{\hyperlink{structsqlite3}{sqlite3}}*,}
 \DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ eTextRep,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*));}
-\DoxyCodeLine{00052\ \ \ int\ \ (*collation\_needed16)(sqlite3*,\textcolor{keywordtype}{void}*,void(*)(\textcolor{keywordtype}{void}*,sqlite3*,}
+\DoxyCodeLine{00052\ \ \ int\ \ (*collation\_needed16)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keywordtype}{void}*,void(*)(\textcolor{keywordtype}{void}*,\mbox{\hyperlink{structsqlite3}{sqlite3}}*,}
 \DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ eTextRep,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*));}
 \DoxyCodeLine{00054\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ (*column\_blob)(sqlite3\_stmt*,\textcolor{keywordtype}{int}\ iCol);}
 \DoxyCodeLine{00055\ \ \ int\ \ (*column\_bytes)(sqlite3\_stmt*,\textcolor{keywordtype}{int}\ iCol);}
@@ -75,174 +75,174 @@
 \DoxyCodeLine{00071\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\ (*column\_text)(sqlite3\_stmt*,\textcolor{keywordtype}{int}\ iCol);}
 \DoxyCodeLine{00072\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ (*column\_text16)(sqlite3\_stmt*,\textcolor{keywordtype}{int}\ iCol);}
 \DoxyCodeLine{00073\ \ \ int\ \ (*column\_type)(sqlite3\_stmt*,\textcolor{keywordtype}{int}\ iCol);}
-\DoxyCodeLine{00074\ \ \ sqlite3\_value*\ (*column\_value)(sqlite3\_stmt*,\textcolor{keywordtype}{int}\ iCol);}
-\DoxyCodeLine{00075\ \ \ \textcolor{keywordtype}{void}\ *\ (*commit\_hook)(sqlite3*,int(*)(\textcolor{keywordtype}{void}*),\textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00074\ \ \ \mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*\ (*column\_value)(sqlite3\_stmt*,\textcolor{keywordtype}{int}\ iCol);}
+\DoxyCodeLine{00075\ \ \ \textcolor{keywordtype}{void}\ *\ (*commit\_hook)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,int(*)(\textcolor{keywordtype}{void}*),\textcolor{keywordtype}{void}*);}
 \DoxyCodeLine{00076\ \ \ int\ \ (*complete)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*sql);}
 \DoxyCodeLine{00077\ \ \ int\ \ (*complete16)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*sql);}
-\DoxyCodeLine{00078\ \ \ int\ \ (*create\_collation)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,\textcolor{keywordtype}{void}*,}
+\DoxyCodeLine{00078\ \ \ int\ \ (*create\_collation)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,\textcolor{keywordtype}{void}*,}
 \DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int(*)(\textcolor{keywordtype}{void}*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00080\ \ \ int\ \ (*create\_collation16)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,\textcolor{keywordtype}{void}*,}
+\DoxyCodeLine{00080\ \ \ int\ \ (*create\_collation16)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,\textcolor{keywordtype}{void}*,}
 \DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int(*)(\textcolor{keywordtype}{void}*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00082\ \ \ int\ \ (*create\_function)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,int,\textcolor{keywordtype}{void}*,}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void\ (*xFunc)(sqlite3\_context*,int,sqlite3\_value**),}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xStep)(sqlite3\_context*,int,sqlite3\_value**),}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xFinal)(sqlite3\_context*));}
-\DoxyCodeLine{00086\ \ \ int\ \ (*create\_function16)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,int,\textcolor{keywordtype}{void}*,}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void\ (*xFunc)(sqlite3\_context*,int,sqlite3\_value**),}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xStep)(sqlite3\_context*,int,sqlite3\_value**),}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xFinal)(sqlite3\_context*));}
-\DoxyCodeLine{00090\ \ \ int\ (*create\_module)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ sqlite3\_module*,\textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00082\ \ \ int\ \ (*create\_function)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,int,\textcolor{keywordtype}{void}*,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void\ (*xFunc)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}**),}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xStep)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}**),}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xFinal)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*));}
+\DoxyCodeLine{00086\ \ \ int\ \ (*create\_function16)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,int,\textcolor{keywordtype}{void}*,}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void\ (*xFunc)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}**),}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xStep)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}**),}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xFinal)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*));}
+\DoxyCodeLine{00090\ \ \ int\ (*create\_module)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \mbox{\hyperlink{structsqlite3__module}{sqlite3\_module}}*,\textcolor{keywordtype}{void}*);}
 \DoxyCodeLine{00091\ \ \ int\ \ (*data\_count)(sqlite3\_stmt*pStmt);}
-\DoxyCodeLine{00092\ \ \ sqlite3\ *\ (*db\_handle)(sqlite3\_stmt*);}
-\DoxyCodeLine{00093\ \ \ int\ (*declare\_vtab)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00092\ \ \ \mbox{\hyperlink{structsqlite3}{sqlite3}}\ *\ (*db\_handle)(sqlite3\_stmt*);}
+\DoxyCodeLine{00093\ \ \ int\ (*declare\_vtab)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
 \DoxyCodeLine{00094\ \ \ int\ \ (*enable\_shared\_cache)(int);}
-\DoxyCodeLine{00095\ \ \ int\ \ (*errcode)(sqlite3*db);}
-\DoxyCodeLine{00096\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ (*errmsg)(sqlite3*);}
-\DoxyCodeLine{00097\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ (*errmsg16)(sqlite3*);}
-\DoxyCodeLine{00098\ \ \ int\ \ (*exec)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite3\_callback,\textcolor{keywordtype}{void}*,\textcolor{keywordtype}{char}**);}
+\DoxyCodeLine{00095\ \ \ int\ \ (*errcode)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*db);}
+\DoxyCodeLine{00096\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ (*errmsg)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
+\DoxyCodeLine{00097\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ (*errmsg16)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
+\DoxyCodeLine{00098\ \ \ int\ \ (*exec)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite3\_callback,\textcolor{keywordtype}{void}*,\textcolor{keywordtype}{char}**);}
 \DoxyCodeLine{00099\ \ \ int\ \ (*expired)(sqlite3\_stmt*);}
 \DoxyCodeLine{00100\ \ \ int\ \ (*finalize)(sqlite3\_stmt*pStmt);}
 \DoxyCodeLine{00101\ \ \ void\ \ (*free)(\textcolor{keywordtype}{void}*);}
 \DoxyCodeLine{00102\ \ \ void\ \ (*free\_table)(\textcolor{keywordtype}{char}**result);}
-\DoxyCodeLine{00103\ \ \ int\ \ (*get\_autocommit)(sqlite3*);}
-\DoxyCodeLine{00104\ \ \ \textcolor{keywordtype}{void}\ *\ (*get\_auxdata)(sqlite3\_context*,int);}
-\DoxyCodeLine{00105\ \ \ int\ \ (*get\_table)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keywordtype}{char}***,\textcolor{keywordtype}{int}*,\textcolor{keywordtype}{int}*,\textcolor{keywordtype}{char}**);}
+\DoxyCodeLine{00103\ \ \ int\ \ (*get\_autocommit)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordtype}{void}\ *\ (*get\_auxdata)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int);}
+\DoxyCodeLine{00105\ \ \ int\ \ (*get\_table)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keywordtype}{char}***,\textcolor{keywordtype}{int}*,\textcolor{keywordtype}{int}*,\textcolor{keywordtype}{char}**);}
 \DoxyCodeLine{00106\ \ \ int\ \ (*global\_recover)(void);}
-\DoxyCodeLine{00107\ \ \ void\ \ (*interruptx)(sqlite3*);}
-\DoxyCodeLine{00108\ \ \ sqlite\_int64\ \ (*last\_insert\_rowid)(sqlite3*);}
+\DoxyCodeLine{00107\ \ \ void\ \ (*interruptx)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
+\DoxyCodeLine{00108\ \ \ sqlite\_int64\ \ (*last\_insert\_rowid)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
 \DoxyCodeLine{00109\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ (*libversion)(void);}
 \DoxyCodeLine{00110\ \ \ int\ \ (*libversion\_number)(void);}
 \DoxyCodeLine{00111\ \ \ \textcolor{keywordtype}{void}\ *(*malloc)(int);}
 \DoxyCodeLine{00112\ \ \ \textcolor{keywordtype}{char}\ *\ (*mprintf)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,...);}
-\DoxyCodeLine{00113\ \ \ int\ \ (*open)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite3**);}
-\DoxyCodeLine{00114\ \ \ int\ \ (*open16)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,sqlite3**);}
-\DoxyCodeLine{00115\ \ \ int\ \ (*prepare)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,sqlite3\_stmt**,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}**);}
-\DoxyCodeLine{00116\ \ \ int\ \ (*prepare16)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,sqlite3\_stmt**,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}**);}
-\DoxyCodeLine{00117\ \ \ \textcolor{keywordtype}{void}\ *\ (*profile)(sqlite3*,void(*)(\textcolor{keywordtype}{void}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite\_uint64),\textcolor{keywordtype}{void}*);}
-\DoxyCodeLine{00118\ \ \ void\ \ (*progress\_handler)(sqlite3*,int,int(*)(\textcolor{keywordtype}{void}*),\textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00113\ \ \ int\ \ (*open)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\mbox{\hyperlink{structsqlite3}{sqlite3}}**);}
+\DoxyCodeLine{00114\ \ \ int\ \ (*open16)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,\mbox{\hyperlink{structsqlite3}{sqlite3}}**);}
+\DoxyCodeLine{00115\ \ \ int\ \ (*prepare)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,sqlite3\_stmt**,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}**);}
+\DoxyCodeLine{00116\ \ \ int\ \ (*prepare16)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,sqlite3\_stmt**,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}**);}
+\DoxyCodeLine{00117\ \ \ \textcolor{keywordtype}{void}\ *\ (*profile)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,void(*)(\textcolor{keywordtype}{void}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite\_uint64),\textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00118\ \ \ void\ \ (*progress\_handler)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,int,int(*)(\textcolor{keywordtype}{void}*),\textcolor{keywordtype}{void}*);}
 \DoxyCodeLine{00119\ \ \ \textcolor{keywordtype}{void}\ *(*realloc)(\textcolor{keywordtype}{void}*,int);}
 \DoxyCodeLine{00120\ \ \ int\ \ (*reset)(sqlite3\_stmt*pStmt);}
-\DoxyCodeLine{00121\ \ \ void\ \ (*result\_blob)(sqlite3\_context*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,void(*)(\textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00122\ \ \ void\ \ (*result\_double)(sqlite3\_context*,double);}
-\DoxyCodeLine{00123\ \ \ void\ \ (*result\_error)(sqlite3\_context*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int);}
-\DoxyCodeLine{00124\ \ \ void\ \ (*result\_error16)(sqlite3\_context*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int);}
-\DoxyCodeLine{00125\ \ \ void\ \ (*result\_int)(sqlite3\_context*,int);}
-\DoxyCodeLine{00126\ \ \ void\ \ (*result\_int64)(sqlite3\_context*,sqlite\_int64);}
-\DoxyCodeLine{00127\ \ \ void\ \ (*result\_null)(sqlite3\_context*);}
-\DoxyCodeLine{00128\ \ \ void\ \ (*result\_text)(sqlite3\_context*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,void(*)(\textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00129\ \ \ void\ \ (*result\_text16)(sqlite3\_context*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,void(*)(\textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00130\ \ \ void\ \ (*result\_text16be)(sqlite3\_context*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,void(*)(\textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00131\ \ \ void\ \ (*result\_text16le)(sqlite3\_context*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,void(*)(\textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00132\ \ \ void\ \ (*result\_value)(sqlite3\_context*,sqlite3\_value*);}
-\DoxyCodeLine{00133\ \ \ \textcolor{keywordtype}{void}\ *\ (*rollback\_hook)(sqlite3*,void(*)(\textcolor{keywordtype}{void}*),\textcolor{keywordtype}{void}*);}
-\DoxyCodeLine{00134\ \ \ int\ \ (*set\_authorizer)(sqlite3*,int(*)(\textcolor{keywordtype}{void}*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,}
+\DoxyCodeLine{00121\ \ \ void\ \ (*result\_blob)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,void(*)(\textcolor{keywordtype}{void}*));}
+\DoxyCodeLine{00122\ \ \ void\ \ (*result\_double)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,double);}
+\DoxyCodeLine{00123\ \ \ void\ \ (*result\_error)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int);}
+\DoxyCodeLine{00124\ \ \ void\ \ (*result\_error16)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int);}
+\DoxyCodeLine{00125\ \ \ void\ \ (*result\_int)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int);}
+\DoxyCodeLine{00126\ \ \ void\ \ (*result\_int64)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,sqlite\_int64);}
+\DoxyCodeLine{00127\ \ \ void\ \ (*result\_null)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*);}
+\DoxyCodeLine{00128\ \ \ void\ \ (*result\_text)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,void(*)(\textcolor{keywordtype}{void}*));}
+\DoxyCodeLine{00129\ \ \ void\ \ (*result\_text16)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,void(*)(\textcolor{keywordtype}{void}*));}
+\DoxyCodeLine{00130\ \ \ void\ \ (*result\_text16be)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,void(*)(\textcolor{keywordtype}{void}*));}
+\DoxyCodeLine{00131\ \ \ void\ \ (*result\_text16le)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,void(*)(\textcolor{keywordtype}{void}*));}
+\DoxyCodeLine{00132\ \ \ void\ \ (*result\_value)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00133\ \ \ \textcolor{keywordtype}{void}\ *\ (*rollback\_hook)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,void(*)(\textcolor{keywordtype}{void}*),\textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00134\ \ \ int\ \ (*set\_authorizer)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,int(*)(\textcolor{keywordtype}{void}*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,}
 \DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*),\textcolor{keywordtype}{void}*);}
-\DoxyCodeLine{00136\ \ \ void\ \ (*set\_auxdata)(sqlite3\_context*,int,\textcolor{keywordtype}{void}*,void\ (*)(\textcolor{keywordtype}{void}*));}
+\DoxyCodeLine{00136\ \ \ void\ \ (*set\_auxdata)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int,\textcolor{keywordtype}{void}*,void\ (*)(\textcolor{keywordtype}{void}*));}
 \DoxyCodeLine{00137\ \ \ \textcolor{keywordtype}{char}\ *\ (*xsnprintf)(int,\textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,...);}
 \DoxyCodeLine{00138\ \ \ int\ \ (*step)(sqlite3\_stmt*);}
-\DoxyCodeLine{00139\ \ \ int\ \ (*table\_column\_metadata)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,}
+\DoxyCodeLine{00139\ \ \ int\ \ (*table\_column\_metadata)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,}
 \DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}**,\textcolor{keywordtype}{char}\ \textcolor{keyword}{const}**,\textcolor{keywordtype}{int}*,\textcolor{keywordtype}{int}*,\textcolor{keywordtype}{int}*);}
 \DoxyCodeLine{00141\ \ \ void\ \ (*thread\_cleanup)(void);}
-\DoxyCodeLine{00142\ \ \ int\ \ (*total\_changes)(sqlite3*);}
-\DoxyCodeLine{00143\ \ \ \textcolor{keywordtype}{void}\ *\ (*trace)(sqlite3*,void(*xTrace)(\textcolor{keywordtype}{void}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*),\textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00142\ \ \ int\ \ (*total\_changes)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
+\DoxyCodeLine{00143\ \ \ \textcolor{keywordtype}{void}\ *\ (*trace)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,void(*xTrace)(\textcolor{keywordtype}{void}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*),\textcolor{keywordtype}{void}*);}
 \DoxyCodeLine{00144\ \ \ int\ \ (*transfer\_bindings)(sqlite3\_stmt*,sqlite3\_stmt*);}
-\DoxyCodeLine{00145\ \ \ \textcolor{keywordtype}{void}\ *\ (*update\_hook)(sqlite3*,void(*)(\textcolor{keywordtype}{void}*,int\ ,\textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*,\textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*,}
+\DoxyCodeLine{00145\ \ \ \textcolor{keywordtype}{void}\ *\ (*update\_hook)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,void(*)(\textcolor{keywordtype}{void}*,int\ ,\textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*,\textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*,}
 \DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sqlite\_int64),\textcolor{keywordtype}{void}*);}
-\DoxyCodeLine{00147\ \ \ \textcolor{keywordtype}{void}\ *\ (*user\_data)(sqlite3\_context*);}
-\DoxyCodeLine{00148\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ (*value\_blob)(sqlite3\_value*);}
-\DoxyCodeLine{00149\ \ \ int\ \ (*value\_bytes)(sqlite3\_value*);}
-\DoxyCodeLine{00150\ \ \ int\ \ (*value\_bytes16)(sqlite3\_value*);}
-\DoxyCodeLine{00151\ \ \ double\ \ (*value\_double)(sqlite3\_value*);}
-\DoxyCodeLine{00152\ \ \ int\ \ (*value\_int)(sqlite3\_value*);}
-\DoxyCodeLine{00153\ \ \ sqlite\_int64\ \ (*value\_int64)(sqlite3\_value*);}
-\DoxyCodeLine{00154\ \ \ int\ \ (*value\_numeric\_type)(sqlite3\_value*);}
-\DoxyCodeLine{00155\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\ (*value\_text)(sqlite3\_value*);}
-\DoxyCodeLine{00156\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ (*value\_text16)(sqlite3\_value*);}
-\DoxyCodeLine{00157\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ (*value\_text16be)(sqlite3\_value*);}
-\DoxyCodeLine{00158\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ (*value\_text16le)(sqlite3\_value*);}
-\DoxyCodeLine{00159\ \ \ int\ \ (*value\_type)(sqlite3\_value*);}
+\DoxyCodeLine{00147\ \ \ \textcolor{keywordtype}{void}\ *\ (*user\_data)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*);}
+\DoxyCodeLine{00148\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ (*value\_blob)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00149\ \ \ int\ \ (*value\_bytes)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00150\ \ \ int\ \ (*value\_bytes16)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00151\ \ \ double\ \ (*value\_double)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00152\ \ \ int\ \ (*value\_int)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00153\ \ \ sqlite\_int64\ \ (*value\_int64)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00154\ \ \ int\ \ (*value\_numeric\_type)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00155\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\ (*value\_text)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00156\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ (*value\_text16)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00157\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ (*value\_text16be)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00158\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ (*value\_text16le)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00159\ \ \ int\ \ (*value\_type)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
 \DoxyCodeLine{00160\ \ \ \textcolor{keywordtype}{char}\ *(*vmprintf)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,va\_list);}
 \DoxyCodeLine{00161\ \ \ \textcolor{comment}{/*\ Added\ ???\ */}}
-\DoxyCodeLine{00162\ \ \ int\ (*overload\_function)(sqlite3*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zFuncName,\ \textcolor{keywordtype}{int}\ nArg);}
+\DoxyCodeLine{00162\ \ \ int\ (*overload\_function)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zFuncName,\ \textcolor{keywordtype}{int}\ nArg);}
 \DoxyCodeLine{00163\ \ \ \textcolor{comment}{/*\ Added\ by\ 3.3.13\ */}}
-\DoxyCodeLine{00164\ \ \ int\ (*prepare\_v2)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,sqlite3\_stmt**,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}**);}
-\DoxyCodeLine{00165\ \ \ int\ (*prepare16\_v2)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,sqlite3\_stmt**,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}**);}
+\DoxyCodeLine{00164\ \ \ int\ (*prepare\_v2)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,sqlite3\_stmt**,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}**);}
+\DoxyCodeLine{00165\ \ \ int\ (*prepare16\_v2)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,sqlite3\_stmt**,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}**);}
 \DoxyCodeLine{00166\ \ \ int\ (*clear\_bindings)(sqlite3\_stmt*);}
 \DoxyCodeLine{00167\ \ \ \textcolor{comment}{/*\ Added\ by\ 3.4.1\ */}}
-\DoxyCodeLine{00168\ \ \ int\ (*create\_module\_v2)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ sqlite3\_module*,\textcolor{keywordtype}{void}*,}
+\DoxyCodeLine{00168\ \ \ int\ (*create\_module\_v2)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \mbox{\hyperlink{structsqlite3__module}{sqlite3\_module}}*,\textcolor{keywordtype}{void}*,}
 \DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void\ (*xDestroy)(\textcolor{keywordtype}{void}\ *));}
 \DoxyCodeLine{00170\ \ \ \textcolor{comment}{/*\ Added\ by\ 3.5.0\ */}}
 \DoxyCodeLine{00171\ \ \ int\ (*bind\_zeroblob)(sqlite3\_stmt*,int,int);}
 \DoxyCodeLine{00172\ \ \ int\ (*blob\_bytes)(sqlite3\_blob*);}
 \DoxyCodeLine{00173\ \ \ int\ (*blob\_close)(sqlite3\_blob*);}
-\DoxyCodeLine{00174\ \ \ int\ (*blob\_open)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite3\_int64,}
+\DoxyCodeLine{00174\ \ \ int\ (*blob\_open)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite3\_int64,}
 \DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int,sqlite3\_blob**);}
 \DoxyCodeLine{00176\ \ \ int\ (*blob\_read)(sqlite3\_blob*,\textcolor{keywordtype}{void}*,int,int);}
 \DoxyCodeLine{00177\ \ \ int\ (*blob\_write)(sqlite3\_blob*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,int);}
-\DoxyCodeLine{00178\ \ \ int\ (*create\_collation\_v2)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,\textcolor{keywordtype}{void}*,}
+\DoxyCodeLine{00178\ \ \ int\ (*create\_collation\_v2)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,\textcolor{keywordtype}{void}*,}
 \DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int(*)(\textcolor{keywordtype}{void}*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*),}
 \DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}(*)(\textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00181\ \ \ int\ (*file\_control)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,\textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00181\ \ \ int\ (*file\_control)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,\textcolor{keywordtype}{void}*);}
 \DoxyCodeLine{00182\ \ \ sqlite3\_int64\ (*memory\_highwater)(int);}
 \DoxyCodeLine{00183\ \ \ sqlite3\_int64\ (*memory\_used)(void);}
-\DoxyCodeLine{00184\ \ \ sqlite3\_mutex\ *(*mutex\_alloc)(int);}
-\DoxyCodeLine{00185\ \ \ void\ (*mutex\_enter)(sqlite3\_mutex*);}
-\DoxyCodeLine{00186\ \ \ void\ (*mutex\_free)(sqlite3\_mutex*);}
-\DoxyCodeLine{00187\ \ \ void\ (*mutex\_leave)(sqlite3\_mutex*);}
-\DoxyCodeLine{00188\ \ \ int\ (*mutex\_try)(sqlite3\_mutex*);}
-\DoxyCodeLine{00189\ \ \ int\ (*open\_v2)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite3**,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00184\ \ \ \mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}\ *(*mutex\_alloc)(int);}
+\DoxyCodeLine{00185\ \ \ void\ (*mutex\_enter)(\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}*);}
+\DoxyCodeLine{00186\ \ \ void\ (*mutex\_free)(\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}*);}
+\DoxyCodeLine{00187\ \ \ void\ (*mutex\_leave)(\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}*);}
+\DoxyCodeLine{00188\ \ \ int\ (*mutex\_try)(\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}*);}
+\DoxyCodeLine{00189\ \ \ int\ (*open\_v2)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\mbox{\hyperlink{structsqlite3}{sqlite3}}**,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
 \DoxyCodeLine{00190\ \ \ int\ (*release\_memory)(int);}
-\DoxyCodeLine{00191\ \ \ void\ (*result\_error\_nomem)(sqlite3\_context*);}
-\DoxyCodeLine{00192\ \ \ void\ (*result\_error\_toobig)(sqlite3\_context*);}
+\DoxyCodeLine{00191\ \ \ void\ (*result\_error\_nomem)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*);}
+\DoxyCodeLine{00192\ \ \ void\ (*result\_error\_toobig)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*);}
 \DoxyCodeLine{00193\ \ \ int\ (*sleep)(int);}
 \DoxyCodeLine{00194\ \ \ void\ (*soft\_heap\_limit)(int);}
-\DoxyCodeLine{00195\ \ \ sqlite3\_vfs\ *(*vfs\_find)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
-\DoxyCodeLine{00196\ \ \ int\ (*vfs\_register)(sqlite3\_vfs*,int);}
-\DoxyCodeLine{00197\ \ \ int\ (*vfs\_unregister)(sqlite3\_vfs*);}
+\DoxyCodeLine{00195\ \ \ \mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}\ *(*vfs\_find)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00196\ \ \ int\ (*vfs\_register)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,int);}
+\DoxyCodeLine{00197\ \ \ int\ (*vfs\_unregister)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*);}
 \DoxyCodeLine{00198\ \ \ int\ (*xthreadsafe)(void);}
-\DoxyCodeLine{00199\ \ \ void\ (*result\_zeroblob)(sqlite3\_context*,int);}
-\DoxyCodeLine{00200\ \ \ void\ (*result\_error\_code)(sqlite3\_context*,int);}
+\DoxyCodeLine{00199\ \ \ void\ (*result\_zeroblob)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int);}
+\DoxyCodeLine{00200\ \ \ void\ (*result\_error\_code)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int);}
 \DoxyCodeLine{00201\ \ \ int\ (*test\_control)(int,\ ...);}
 \DoxyCodeLine{00202\ \ \ void\ (*randomness)(int,\textcolor{keywordtype}{void}*);}
-\DoxyCodeLine{00203\ \ \ sqlite3\ *(*context\_db\_handle)(sqlite3\_context*);}
-\DoxyCodeLine{00204\ \ \ int\ (*extended\_result\_codes)(sqlite3*,int);}
-\DoxyCodeLine{00205\ \ \ int\ (*limit)(sqlite3*,int,int);}
-\DoxyCodeLine{00206\ \ \ sqlite3\_stmt\ *(*next\_stmt)(sqlite3*,sqlite3\_stmt*);}
+\DoxyCodeLine{00203\ \ \ \mbox{\hyperlink{structsqlite3}{sqlite3}}\ *(*context\_db\_handle)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*);}
+\DoxyCodeLine{00204\ \ \ int\ (*extended\_result\_codes)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,int);}
+\DoxyCodeLine{00205\ \ \ int\ (*limit)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,int,int);}
+\DoxyCodeLine{00206\ \ \ sqlite3\_stmt\ *(*next\_stmt)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,sqlite3\_stmt*);}
 \DoxyCodeLine{00207\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*sql)(sqlite3\_stmt*);}
 \DoxyCodeLine{00208\ \ \ int\ (*status)(int,\textcolor{keywordtype}{int}*,\textcolor{keywordtype}{int}*,int);}
-\DoxyCodeLine{00209\ \ \ int\ (*backup\_finish)(sqlite3\_backup*);}
-\DoxyCodeLine{00210\ \ \ sqlite3\_backup\ *(*backup\_init)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
-\DoxyCodeLine{00211\ \ \ int\ (*backup\_pagecount)(sqlite3\_backup*);}
-\DoxyCodeLine{00212\ \ \ int\ (*backup\_remaining)(sqlite3\_backup*);}
-\DoxyCodeLine{00213\ \ \ int\ (*backup\_step)(sqlite3\_backup*,int);}
+\DoxyCodeLine{00209\ \ \ int\ (*backup\_finish)(\mbox{\hyperlink{structsqlite3__backup}{sqlite3\_backup}}*);}
+\DoxyCodeLine{00210\ \ \ \mbox{\hyperlink{structsqlite3__backup}{sqlite3\_backup}}\ *(*backup\_init)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00211\ \ \ int\ (*backup\_pagecount)(\mbox{\hyperlink{structsqlite3__backup}{sqlite3\_backup}}*);}
+\DoxyCodeLine{00212\ \ \ int\ (*backup\_remaining)(\mbox{\hyperlink{structsqlite3__backup}{sqlite3\_backup}}*);}
+\DoxyCodeLine{00213\ \ \ int\ (*backup\_step)(\mbox{\hyperlink{structsqlite3__backup}{sqlite3\_backup}}*,int);}
 \DoxyCodeLine{00214\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*compileoption\_get)(int);}
 \DoxyCodeLine{00215\ \ \ int\ (*compileoption\_used)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
-\DoxyCodeLine{00216\ \ \ int\ (*create\_function\_v2)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,int,\textcolor{keywordtype}{void}*,}
-\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void\ (*xFunc)(sqlite3\_context*,int,sqlite3\_value**),}
-\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xStep)(sqlite3\_context*,int,sqlite3\_value**),}
-\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xFinal)(sqlite3\_context*),}
+\DoxyCodeLine{00216\ \ \ int\ (*create\_function\_v2)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,int,\textcolor{keywordtype}{void}*,}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void\ (*xFunc)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}**),}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xStep)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}**),}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xFinal)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*),}
 \DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}(*xDestroy)(\textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00221\ \ \ int\ (*db\_config)(sqlite3*,int,...);}
-\DoxyCodeLine{00222\ \ \ sqlite3\_mutex\ *(*db\_mutex)(sqlite3*);}
-\DoxyCodeLine{00223\ \ \ int\ (*db\_status)(sqlite3*,int,\textcolor{keywordtype}{int}*,\textcolor{keywordtype}{int}*,int);}
-\DoxyCodeLine{00224\ \ \ int\ (*extended\_errcode)(sqlite3*);}
+\DoxyCodeLine{00221\ \ \ int\ (*db\_config)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,int,...);}
+\DoxyCodeLine{00222\ \ \ \mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}\ *(*db\_mutex)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
+\DoxyCodeLine{00223\ \ \ int\ (*db\_status)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,int,\textcolor{keywordtype}{int}*,\textcolor{keywordtype}{int}*,int);}
+\DoxyCodeLine{00224\ \ \ int\ (*extended\_errcode)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
 \DoxyCodeLine{00225\ \ \ void\ (*log)(int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,...);}
 \DoxyCodeLine{00226\ \ \ sqlite3\_int64\ (*soft\_heap\_limit64)(sqlite3\_int64);}
 \DoxyCodeLine{00227\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*sourceid)(void);}
 \DoxyCodeLine{00228\ \ \ int\ (*stmt\_status)(sqlite3\_stmt*,int,int);}
 \DoxyCodeLine{00229\ \ \ int\ (*strnicmp)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int);}
-\DoxyCodeLine{00230\ \ \ int\ (*unlock\_notify)(sqlite3*,void(*)(\textcolor{keywordtype}{void}**,int),\textcolor{keywordtype}{void}*);}
-\DoxyCodeLine{00231\ \ \ int\ (*wal\_autocheckpoint)(sqlite3*,int);}
-\DoxyCodeLine{00232\ \ \ int\ (*wal\_checkpoint)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
-\DoxyCodeLine{00233\ \ \ \textcolor{keywordtype}{void}\ *(*wal\_hook)(sqlite3*,int(*)(\textcolor{keywordtype}{void}*,sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int),\textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00230\ \ \ int\ (*unlock\_notify)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,void(*)(\textcolor{keywordtype}{void}**,int),\textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00231\ \ \ int\ (*wal\_autocheckpoint)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,int);}
+\DoxyCodeLine{00232\ \ \ int\ (*wal\_checkpoint)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00233\ \ \ \textcolor{keywordtype}{void}\ *(*wal\_hook)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,int(*)(\textcolor{keywordtype}{void}*,\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int),\textcolor{keywordtype}{void}*);}
 \DoxyCodeLine{00234\ \ \ int\ (*blob\_reopen)(sqlite3\_blob*,sqlite3\_int64);}
-\DoxyCodeLine{00235\ \ \ int\ (*vtab\_config)(sqlite3*,\textcolor{keywordtype}{int}\ op,...);}
-\DoxyCodeLine{00236\ \ \ int\ (*vtab\_on\_conflict)(sqlite3*);}
+\DoxyCodeLine{00235\ \ \ int\ (*vtab\_config)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keywordtype}{int}\ op,...);}
+\DoxyCodeLine{00236\ \ \ int\ (*vtab\_on\_conflict)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
 \DoxyCodeLine{00237\ \ \ \textcolor{comment}{/*\ Version\ 3.7.16\ and\ later\ */}}
-\DoxyCodeLine{00238\ \ \ int\ (*close\_v2)(sqlite3*);}
-\DoxyCodeLine{00239\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*db\_filename)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
-\DoxyCodeLine{00240\ \ \ int\ (*db\_readonly)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
-\DoxyCodeLine{00241\ \ \ int\ (*db\_release\_memory)(sqlite3*);}
+\DoxyCodeLine{00238\ \ \ int\ (*close\_v2)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
+\DoxyCodeLine{00239\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*db\_filename)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00240\ \ \ int\ (*db\_readonly)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00241\ \ \ int\ (*db\_release\_memory)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
 \DoxyCodeLine{00242\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*errstr)(int);}
 \DoxyCodeLine{00243\ \ \ int\ (*stmt\_busy)(sqlite3\_stmt*);}
 \DoxyCodeLine{00244\ \ \ int\ (*stmt\_readonly)(sqlite3\_stmt*);}
@@ -251,7 +251,7 @@
 \DoxyCodeLine{00247\ \ \ sqlite3\_int64\ (*uri\_int64)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite3\_int64);}
 \DoxyCodeLine{00248\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*uri\_parameter)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
 \DoxyCodeLine{00249\ \ \ \textcolor{keywordtype}{char}\ *(*xvsnprintf)(int,\textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,va\_list);}
-\DoxyCodeLine{00250\ \ \ int\ (*wal\_checkpoint\_v2)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,\textcolor{keywordtype}{int}*,\textcolor{keywordtype}{int}*);}
+\DoxyCodeLine{00250\ \ \ int\ (*wal\_checkpoint\_v2)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,\textcolor{keywordtype}{int}*,\textcolor{keywordtype}{int}*);}
 \DoxyCodeLine{00251\ \ \ \textcolor{comment}{/*\ Version\ 3.8.7\ and\ later\ */}}
 \DoxyCodeLine{00252\ \ \ int\ (*auto\_extension)(void(*)(void));}
 \DoxyCodeLine{00253\ \ \ int\ (*bind\_blob64)(sqlite3\_stmt*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,sqlite3\_uint64,}
@@ -259,75 +259,75 @@
 \DoxyCodeLine{00255\ \ \ int\ (*bind\_text64)(sqlite3\_stmt*,int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite3\_uint64,}
 \DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void(*)(\textcolor{keywordtype}{void}*),\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char});}
 \DoxyCodeLine{00257\ \ \ int\ (*cancel\_auto\_extension)(void(*)(void));}
-\DoxyCodeLine{00258\ \ \ int\ (*load\_extension)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keywordtype}{char}**);}
+\DoxyCodeLine{00258\ \ \ int\ (*load\_extension)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keywordtype}{char}**);}
 \DoxyCodeLine{00259\ \ \ \textcolor{keywordtype}{void}\ *(*malloc64)(sqlite3\_uint64);}
 \DoxyCodeLine{00260\ \ \ sqlite3\_uint64\ (*msize)(\textcolor{keywordtype}{void}*);}
 \DoxyCodeLine{00261\ \ \ \textcolor{keywordtype}{void}\ *(*realloc64)(\textcolor{keywordtype}{void}*,sqlite3\_uint64);}
 \DoxyCodeLine{00262\ \ \ void\ (*reset\_auto\_extension)(void);}
-\DoxyCodeLine{00263\ \ \ void\ (*result\_blob64)(sqlite3\_context*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,sqlite3\_uint64,}
+\DoxyCodeLine{00263\ \ \ void\ (*result\_blob64)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,sqlite3\_uint64,}
 \DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void(*)(\textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00265\ \ \ void\ (*result\_text64)(sqlite3\_context*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite3\_uint64,}
+\DoxyCodeLine{00265\ \ \ void\ (*result\_text64)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,sqlite3\_uint64,}
 \DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void(*)(\textcolor{keywordtype}{void}*),\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char});}
 \DoxyCodeLine{00267\ \ \ int\ (*strglob)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
 \DoxyCodeLine{00268\ \ \ \textcolor{comment}{/*\ Version\ 3.8.11\ and\ later\ */}}
-\DoxyCodeLine{00269\ \ \ sqlite3\_value\ *(*value\_dup)(\textcolor{keyword}{const}\ sqlite3\_value*);}
-\DoxyCodeLine{00270\ \ \ void\ (*value\_free)(sqlite3\_value*);}
-\DoxyCodeLine{00271\ \ \ int\ (*result\_zeroblob64)(sqlite3\_context*,sqlite3\_uint64);}
+\DoxyCodeLine{00269\ \ \ \mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}\ *(*value\_dup)(\textcolor{keyword}{const}\ \mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00270\ \ \ void\ (*value\_free)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00271\ \ \ int\ (*result\_zeroblob64)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,sqlite3\_uint64);}
 \DoxyCodeLine{00272\ \ \ int\ (*bind\_zeroblob64)(sqlite3\_stmt*,\ int,\ sqlite3\_uint64);}
 \DoxyCodeLine{00273\ \ \ \textcolor{comment}{/*\ Version\ 3.9.0\ and\ later\ */}}
-\DoxyCodeLine{00274\ \ \ \textcolor{keywordtype}{unsigned}\ int\ (*value\_subtype)(sqlite3\_value*);}
-\DoxyCodeLine{00275\ \ \ void\ (*result\_subtype)(sqlite3\_context*,\textcolor{keywordtype}{unsigned}\ int);}
+\DoxyCodeLine{00274\ \ \ \textcolor{keywordtype}{unsigned}\ int\ (*value\_subtype)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00275\ \ \ void\ (*result\_subtype)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\textcolor{keywordtype}{unsigned}\ int);}
 \DoxyCodeLine{00276\ \ \ \textcolor{comment}{/*\ Version\ 3.10.0\ and\ later\ */}}
 \DoxyCodeLine{00277\ \ \ int\ (*status64)(int,sqlite3\_int64*,sqlite3\_int64*,int);}
 \DoxyCodeLine{00278\ \ \ int\ (*strlike)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keywordtype}{unsigned}\ int);}
-\DoxyCodeLine{00279\ \ \ int\ (*db\_cacheflush)(sqlite3*);}
+\DoxyCodeLine{00279\ \ \ int\ (*db\_cacheflush)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
 \DoxyCodeLine{00280\ \ \ \textcolor{comment}{/*\ Version\ 3.12.0\ and\ later\ */}}
-\DoxyCodeLine{00281\ \ \ int\ (*system\_errno)(sqlite3*);}
+\DoxyCodeLine{00281\ \ \ int\ (*system\_errno)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
 \DoxyCodeLine{00282\ \ \ \textcolor{comment}{/*\ Version\ 3.14.0\ and\ later\ */}}
-\DoxyCodeLine{00283\ \ \ int\ (*trace\_v2)(sqlite3*,unsigned,int(*)(unsigned,\textcolor{keywordtype}{void}*,\textcolor{keywordtype}{void}*,\textcolor{keywordtype}{void}*),\textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00283\ \ \ int\ (*trace\_v2)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,unsigned,int(*)(unsigned,\textcolor{keywordtype}{void}*,\textcolor{keywordtype}{void}*,\textcolor{keywordtype}{void}*),\textcolor{keywordtype}{void}*);}
 \DoxyCodeLine{00284\ \ \ \textcolor{keywordtype}{char}\ *(*expanded\_sql)(sqlite3\_stmt*);}
 \DoxyCodeLine{00285\ \ \ \textcolor{comment}{/*\ Version\ 3.18.0\ and\ later\ */}}
-\DoxyCodeLine{00286\ \ \ void\ (*set\_last\_insert\_rowid)(sqlite3*,sqlite3\_int64);}
+\DoxyCodeLine{00286\ \ \ void\ (*set\_last\_insert\_rowid)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,sqlite3\_int64);}
 \DoxyCodeLine{00287\ \ \ \textcolor{comment}{/*\ Version\ 3.20.0\ and\ later\ */}}
-\DoxyCodeLine{00288\ \ \ int\ (*prepare\_v3)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,\textcolor{keywordtype}{unsigned}\ int,}
+\DoxyCodeLine{00288\ \ \ int\ (*prepare\_v3)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,\textcolor{keywordtype}{unsigned}\ int,}
 \DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sqlite3\_stmt**,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}**);}
-\DoxyCodeLine{00290\ \ \ int\ (*prepare16\_v3)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,\textcolor{keywordtype}{unsigned}\ int,}
+\DoxyCodeLine{00290\ \ \ int\ (*prepare16\_v3)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,int,\textcolor{keywordtype}{unsigned}\ int,}
 \DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sqlite3\_stmt**,\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}**);}
 \DoxyCodeLine{00292\ \ \ int\ (*bind\_pointer)(sqlite3\_stmt*,int,\textcolor{keywordtype}{void}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,void(*)(\textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00293\ \ \ void\ (*result\_pointer)(sqlite3\_context*,\textcolor{keywordtype}{void}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,void(*)(\textcolor{keywordtype}{void}*));}
-\DoxyCodeLine{00294\ \ \ \textcolor{keywordtype}{void}\ *(*value\_pointer)(sqlite3\_value*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
-\DoxyCodeLine{00295\ \ \ int\ (*vtab\_nochange)(sqlite3\_context*);}
-\DoxyCodeLine{00296\ \ \ int\ (*value\_nochange)(sqlite3\_value*);}
-\DoxyCodeLine{00297\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*vtab\_collation)(sqlite3\_index\_info*,int);}
+\DoxyCodeLine{00293\ \ \ void\ (*result\_pointer)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\textcolor{keywordtype}{void}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,void(*)(\textcolor{keywordtype}{void}*));}
+\DoxyCodeLine{00294\ \ \ \textcolor{keywordtype}{void}\ *(*value\_pointer)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00295\ \ \ int\ (*vtab\_nochange)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*);}
+\DoxyCodeLine{00296\ \ \ int\ (*value\_nochange)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
+\DoxyCodeLine{00297\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*vtab\_collation)(\mbox{\hyperlink{structsqlite3__index__info}{sqlite3\_index\_info}}*,int);}
 \DoxyCodeLine{00298\ \ \ \textcolor{comment}{/*\ Version\ 3.24.0\ and\ later\ */}}
 \DoxyCodeLine{00299\ \ \ int\ (*keyword\_count)(void);}
 \DoxyCodeLine{00300\ \ \ int\ (*keyword\_name)(int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}**,\textcolor{keywordtype}{int}*);}
 \DoxyCodeLine{00301\ \ \ int\ (*keyword\_check)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int);}
-\DoxyCodeLine{00302\ \ \ sqlite3\_str\ *(*str\_new)(sqlite3*);}
-\DoxyCodeLine{00303\ \ \ \textcolor{keywordtype}{char}\ *(*str\_finish)(sqlite3\_str*);}
-\DoxyCodeLine{00304\ \ \ void\ (*str\_appendf)(sqlite3\_str*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zFormat,\ ...);}
-\DoxyCodeLine{00305\ \ \ void\ (*str\_vappendf)(sqlite3\_str*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zFormat,\ va\_list);}
-\DoxyCodeLine{00306\ \ \ void\ (*str\_append)(sqlite3\_str*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zIn,\ \textcolor{keywordtype}{int}\ N);}
-\DoxyCodeLine{00307\ \ \ void\ (*str\_appendall)(sqlite3\_str*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zIn);}
-\DoxyCodeLine{00308\ \ \ void\ (*str\_appendchar)(sqlite3\_str*,\ \textcolor{keywordtype}{int}\ N,\ \textcolor{keywordtype}{char}\ C);}
-\DoxyCodeLine{00309\ \ \ void\ (*str\_reset)(sqlite3\_str*);}
-\DoxyCodeLine{00310\ \ \ int\ (*str\_errcode)(sqlite3\_str*);}
-\DoxyCodeLine{00311\ \ \ int\ (*str\_length)(sqlite3\_str*);}
-\DoxyCodeLine{00312\ \ \ \textcolor{keywordtype}{char}\ *(*str\_value)(sqlite3\_str*);}
+\DoxyCodeLine{00302\ \ \ \mbox{\hyperlink{structsqlite3__str}{sqlite3\_str}}\ *(*str\_new)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
+\DoxyCodeLine{00303\ \ \ \textcolor{keywordtype}{char}\ *(*str\_finish)(\mbox{\hyperlink{structsqlite3__str}{sqlite3\_str}}*);}
+\DoxyCodeLine{00304\ \ \ void\ (*str\_appendf)(\mbox{\hyperlink{structsqlite3__str}{sqlite3\_str}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zFormat,\ ...);}
+\DoxyCodeLine{00305\ \ \ void\ (*str\_vappendf)(\mbox{\hyperlink{structsqlite3__str}{sqlite3\_str}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zFormat,\ va\_list);}
+\DoxyCodeLine{00306\ \ \ void\ (*str\_append)(\mbox{\hyperlink{structsqlite3__str}{sqlite3\_str}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zIn,\ \textcolor{keywordtype}{int}\ N);}
+\DoxyCodeLine{00307\ \ \ void\ (*str\_appendall)(\mbox{\hyperlink{structsqlite3__str}{sqlite3\_str}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zIn);}
+\DoxyCodeLine{00308\ \ \ void\ (*str\_appendchar)(\mbox{\hyperlink{structsqlite3__str}{sqlite3\_str}}*,\ \textcolor{keywordtype}{int}\ N,\ \textcolor{keywordtype}{char}\ C);}
+\DoxyCodeLine{00309\ \ \ void\ (*str\_reset)(\mbox{\hyperlink{structsqlite3__str}{sqlite3\_str}}*);}
+\DoxyCodeLine{00310\ \ \ int\ (*str\_errcode)(\mbox{\hyperlink{structsqlite3__str}{sqlite3\_str}}*);}
+\DoxyCodeLine{00311\ \ \ int\ (*str\_length)(\mbox{\hyperlink{structsqlite3__str}{sqlite3\_str}}*);}
+\DoxyCodeLine{00312\ \ \ \textcolor{keywordtype}{char}\ *(*str\_value)(\mbox{\hyperlink{structsqlite3__str}{sqlite3\_str}}*);}
 \DoxyCodeLine{00313\ \ \ \textcolor{comment}{/*\ Version\ 3.25.0\ and\ later\ */}}
-\DoxyCodeLine{00314\ \ \ int\ (*create\_window\_function)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,int,\textcolor{keywordtype}{void}*,}
-\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void\ (*xStep)(sqlite3\_context*,int,sqlite3\_value**),}
-\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xFinal)(sqlite3\_context*),}
-\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xValue)(sqlite3\_context*),}
-\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xInv)(sqlite3\_context*,int,sqlite3\_value**),}
+\DoxyCodeLine{00314\ \ \ int\ (*create\_window\_function)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int,int,\textcolor{keywordtype}{void}*,}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void\ (*xStep)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}**),}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xFinal)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*),}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xValue)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*),}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*xInv)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}**),}
 \DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}(*xDestroy)(\textcolor{keywordtype}{void}*));}
 \DoxyCodeLine{00320\ \ \ \textcolor{comment}{/*\ Version\ 3.26.0\ and\ later\ */}}
 \DoxyCodeLine{00321\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*normalized\_sql)(sqlite3\_stmt*);}
 \DoxyCodeLine{00322\ \ \ \textcolor{comment}{/*\ Version\ 3.28.0\ and\ later\ */}}
 \DoxyCodeLine{00323\ \ \ int\ (*stmt\_isexplain)(sqlite3\_stmt*);}
-\DoxyCodeLine{00324\ \ \ int\ (*value\_frombind)(sqlite3\_value*);}
+\DoxyCodeLine{00324\ \ \ int\ (*value\_frombind)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
 \DoxyCodeLine{00325\ \ \ \textcolor{comment}{/*\ Version\ 3.30.0\ and\ later\ */}}
-\DoxyCodeLine{00326\ \ \ int\ (*drop\_modules)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}**);}
+\DoxyCodeLine{00326\ \ \ int\ (*drop\_modules)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}**);}
 \DoxyCodeLine{00327\ \ \ \textcolor{comment}{/*\ Version\ 3.31.0\ and\ later\ */}}
 \DoxyCodeLine{00328\ \ \ sqlite3\_int64\ (*hard\_heap\_limit64)(sqlite3\_int64);}
 \DoxyCodeLine{00329\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*uri\_key)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,int);}
@@ -338,40 +338,40 @@
 \DoxyCodeLine{00334\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*create\_filename)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,}
 \DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}**);}
 \DoxyCodeLine{00336\ \ \ void\ (*free\_filename)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
-\DoxyCodeLine{00337\ \ \ sqlite3\_file\ *(*database\_file\_object)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00337\ \ \ \mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}\ *(*database\_file\_object)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
 \DoxyCodeLine{00338\ \ \ \textcolor{comment}{/*\ Version\ 3.34.0\ and\ later\ */}}
-\DoxyCodeLine{00339\ \ \ int\ (*txn\_state)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00339\ \ \ int\ (*txn\_state)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
 \DoxyCodeLine{00340\ \ \ \textcolor{comment}{/*\ Version\ 3.36.1\ and\ later\ */}}
-\DoxyCodeLine{00341\ \ \ sqlite3\_int64\ (*changes64)(sqlite3*);}
-\DoxyCodeLine{00342\ \ \ sqlite3\_int64\ (*total\_changes64)(sqlite3*);}
+\DoxyCodeLine{00341\ \ \ sqlite3\_int64\ (*changes64)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
+\DoxyCodeLine{00342\ \ \ sqlite3\_int64\ (*total\_changes64)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
 \DoxyCodeLine{00343\ \ \ \textcolor{comment}{/*\ Version\ 3.37.0\ and\ later\ */}}
-\DoxyCodeLine{00344\ \ \ int\ (*autovacuum\_pages)(sqlite3*,}
+\DoxyCodeLine{00344\ \ \ int\ (*autovacuum\_pages)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,}
 \DoxyCodeLine{00345\ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ int(*)(\textcolor{keywordtype}{void}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keywordtype}{unsigned}\ int,\textcolor{keywordtype}{unsigned}\ int,\textcolor{keywordtype}{unsigned}\ int),}
 \DoxyCodeLine{00346\ \ \ \ \ \ \textcolor{keywordtype}{void}*,\ \textcolor{keywordtype}{void}(*)(\textcolor{keywordtype}{void}*));}
 \DoxyCodeLine{00347\ \ \ \textcolor{comment}{/*\ Version\ 3.38.0\ and\ later\ */}}
-\DoxyCodeLine{00348\ \ \ int\ (*error\_offset)(sqlite3*);}
-\DoxyCodeLine{00349\ \ \ int\ (*vtab\_rhs\_value)(sqlite3\_index\_info*,int,sqlite3\_value**);}
-\DoxyCodeLine{00350\ \ \ int\ (*vtab\_distinct)(sqlite3\_index\_info*);}
-\DoxyCodeLine{00351\ \ \ int\ (*vtab\_in)(sqlite3\_index\_info*,int,int);}
-\DoxyCodeLine{00352\ \ \ int\ (*vtab\_in\_first)(sqlite3\_value*,sqlite3\_value**);}
-\DoxyCodeLine{00353\ \ \ int\ (*vtab\_in\_next)(sqlite3\_value*,sqlite3\_value**);}
+\DoxyCodeLine{00348\ \ \ int\ (*error\_offset)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
+\DoxyCodeLine{00349\ \ \ int\ (*vtab\_rhs\_value)(\mbox{\hyperlink{structsqlite3__index__info}{sqlite3\_index\_info}}*,int,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}**);}
+\DoxyCodeLine{00350\ \ \ int\ (*vtab\_distinct)(\mbox{\hyperlink{structsqlite3__index__info}{sqlite3\_index\_info}}*);}
+\DoxyCodeLine{00351\ \ \ int\ (*vtab\_in)(\mbox{\hyperlink{structsqlite3__index__info}{sqlite3\_index\_info}}*,int,int);}
+\DoxyCodeLine{00352\ \ \ int\ (*vtab\_in\_first)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}**);}
+\DoxyCodeLine{00353\ \ \ int\ (*vtab\_in\_next)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}**);}
 \DoxyCodeLine{00354\ \ \ \textcolor{comment}{/*\ Version\ 3.39.0\ and\ later\ */}}
-\DoxyCodeLine{00355\ \ \ int\ (*deserialize)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*,}
+\DoxyCodeLine{00355\ \ \ int\ (*deserialize)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*,}
 \DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sqlite3\_int64,sqlite3\_int64,unsigned);}
-\DoxyCodeLine{00357\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *(*serialize)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *,sqlite3\_int64*,}
+\DoxyCodeLine{00357\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *(*serialize)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *,sqlite3\_int64*,}
 \DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ int);}
-\DoxyCodeLine{00359\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*db\_name)(sqlite3*,int);}
+\DoxyCodeLine{00359\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*db\_name)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,int);}
 \DoxyCodeLine{00360\ \ \ \textcolor{comment}{/*\ Version\ 3.40.0\ and\ later\ */}}
-\DoxyCodeLine{00361\ \ \ int\ (*value\_encoding)(sqlite3\_value*);}
+\DoxyCodeLine{00361\ \ \ int\ (*value\_encoding)(\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}*);}
 \DoxyCodeLine{00362\ \ \ \textcolor{comment}{/*\ Version\ 3.41.0\ and\ later\ */}}
-\DoxyCodeLine{00363\ \ \ int\ (*is\_interrupted)(sqlite3*);}
+\DoxyCodeLine{00363\ \ \ int\ (*is\_interrupted)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*);}
 \DoxyCodeLine{00364\ \ \ \textcolor{comment}{/*\ Version\ 3.43.0\ and\ later\ */}}
 \DoxyCodeLine{00365\ \ \ int\ (*stmt\_explain)(sqlite3\_stmt*,int);}
 \DoxyCodeLine{00366\ \ \ \textcolor{comment}{/*\ Version\ 3.44.0\ and\ later\ */}}
-\DoxyCodeLine{00367\ \ \ \textcolor{keywordtype}{void}\ *(*get\_clientdata)(sqlite3*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
-\DoxyCodeLine{00368\ \ \ int\ (*set\_clientdata)(sqlite3*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\ \textcolor{keywordtype}{void}*,\ void(*)(\textcolor{keywordtype}{void}*));}
+\DoxyCodeLine{00367\ \ \ \textcolor{keywordtype}{void}\ *(*get\_clientdata)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{00368\ \ \ int\ (*set\_clientdata)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\ \textcolor{keywordtype}{void}*,\ void(*)(\textcolor{keywordtype}{void}*));}
 \DoxyCodeLine{00369\ \ \ \textcolor{comment}{/*\ Version\ 3.50.0\ and\ later\ */}}
-\DoxyCodeLine{00370\ \ \ int\ (*setlk\_timeout)(sqlite3*,int,int);}
+\DoxyCodeLine{00370\ \ \ int\ (*setlk\_timeout)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,int,int);}
 \DoxyCodeLine{00371\ \};}
 \DoxyCodeLine{00372\ }
 \DoxyCodeLine{00373\ \textcolor{comment}{/*}}

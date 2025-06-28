@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gestion de stock: Inc/database.h Source File</title>
+<title>gestion_de_stock: Inc/database.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Gestion de stock
+   <div id="projectname">gestion_de_stock
    </div>
   </td>
  </tr>
@@ -118,13 +118,19 @@ $(function(){initNavTree('database_8h_source.html','',''); });
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">int</span> <a class="code hl_function" href="database_8h.html#aa82e22b7b47ca0e7dad3a757763259f7">db_supprimer_produit</a>(<a class="code hl_struct" href="structsqlite3.html">sqlite3</a> *db, <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">int</span> <a class="code hl_function" href="database_8h.html#a432b4c1d45194b5c16adb90c6f9217af">db_modifier_produit</a>(<a class="code hl_struct" href="structsqlite3.html">sqlite3</a> *db, <span class="keyword">const</span> <a class="code hl_struct" href="struct_produit.html">Produit</a> *p);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">int</span> <a class="code hl_function" href="database_8h.html#adc59c9044805a2f56b1edde9d0c54794">db_produit_existe_par_id</a>(<a class="code hl_struct" href="structsqlite3.html">sqlite3</a> *db, <span class="keywordtype">int</span> <span class="keywordtype">id</span>) ;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keywordtype">int</span> <a class="code hl_function" href="database_8h.html#a1b127f7a31176dc99d8bc3997a7a0951">db_produit_existe</a>(<a class="code hl_struct" href="structsqlite3.html">sqlite3</a> *db, <span class="keyword">const</span> <span class="keywordtype">char</span> *nom) ;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="adatabase_8h_html_a1b127f7a31176dc99d8bc3997a7a0951"><div class="ttname"><a href="database_8h.html#a1b127f7a31176dc99d8bc3997a7a0951">db_produit_existe</a></div><div class="ttdeci">int db_produit_existe(sqlite3 *db, const char *nom)</div><div class="ttdoc">Vérifie si un produit avec le nom donné existe dans la base de données.</div><div class="ttdef"><b>Definition</b> database.c:177</div></div>
 <div class="ttc" id="adatabase_8h_html_a24f87cdb18f19d2c7ce064f6a56421ba"><div class="ttname"><a href="database_8h.html#a24f87cdb18f19d2c7ce064f6a56421ba">db_ajouter_produit</a></div><div class="ttdeci">int db_ajouter_produit(sqlite3 *db, const Produit *p)</div><div class="ttdoc">Ajoute un produit à la base de données.</div><div class="ttdef"><b>Definition</b> database.c:61</div></div>
 <div class="ttc" id="adatabase_8h_html_a408750fcc9af8d14bd2bbf287b584b67"><div class="ttname"><a href="database_8h.html#a408750fcc9af8d14bd2bbf287b584b67">db_init</a></div><div class="ttdeci">int db_init(sqlite3 **db, const char *filename)</div><div class="ttdoc">Initialise la base de données SQLite.</div><div class="ttdef"><b>Definition</b> database.c:22</div></div>
 <div class="ttc" id="adatabase_8h_html_a42195505d310a0a6d65a715385f7e546"><div class="ttname"><a href="database_8h.html#a42195505d310a0a6d65a715385f7e546">db_lister_produits</a></div><div class="ttdeci">int db_lister_produits(sqlite3 *db)</div><div class="ttdoc">Affiche tous les produits de la base de données.</div><div class="ttdef"><b>Definition</b> database.c:81</div></div>
 <div class="ttc" id="adatabase_8h_html_a432b4c1d45194b5c16adb90c6f9217af"><div class="ttname"><a href="database_8h.html#a432b4c1d45194b5c16adb90c6f9217af">db_modifier_produit</a></div><div class="ttdeci">int db_modifier_produit(sqlite3 *db, const Produit *p)</div><div class="ttdoc">Modifie un produit existant dans la base de données.</div><div class="ttdef"><b>Definition</b> database.c:126</div></div>
 <div class="ttc" id="adatabase_8h_html_aa82e22b7b47ca0e7dad3a757763259f7"><div class="ttname"><a href="database_8h.html#aa82e22b7b47ca0e7dad3a757763259f7">db_supprimer_produit</a></div><div class="ttdeci">int db_supprimer_produit(sqlite3 *db, int id)</div><div class="ttdoc">Supprime un produit de la base de données.</div><div class="ttdef"><b>Definition</b> database.c:107</div></div>
+<div class="ttc" id="adatabase_8h_html_adc59c9044805a2f56b1edde9d0c54794"><div class="ttname"><a href="database_8h.html#adc59c9044805a2f56b1edde9d0c54794">db_produit_existe_par_id</a></div><div class="ttdeci">int db_produit_existe_par_id(sqlite3 *db, int id)</div><div class="ttdoc">Vérifie si un produit avec l&#39;ID donné existe dans la base de données.</div><div class="ttdef"><b>Definition</b> database.c:148</div></div>
 <div class="ttc" id="adatabase_8h_html_ae07af262c608d2e3de291268d923d24a"><div class="ttname"><a href="database_8h.html#ae07af262c608d2e3de291268d923d24a">db_close</a></div><div class="ttdeci">void db_close(sqlite3 *db)</div><div class="ttdoc">Ferme la connexion à la base de données.</div><div class="ttdef"><b>Definition</b> database.c:50</div></div>
 <div class="ttc" id="astruct_produit_html"><div class="ttname"><a href="struct_produit.html">Produit</a></div><div class="ttdoc">Structure représentant un produit en stock.</div><div class="ttdef"><b>Definition</b> database.h:18</div></div>
 <div class="ttc" id="astruct_produit_html_a42ef1d4887be85e601553ad082096263"><div class="ttname"><a href="struct_produit.html#a42ef1d4887be85e601553ad082096263">Produit::prix</a></div><div class="ttdeci">float prix</div><div class="ttdef"><b>Definition</b> database.h:22</div></div>

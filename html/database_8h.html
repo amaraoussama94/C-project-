@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gestion de stock: Inc/database.h File Reference</title>
+<title>gestion_de_stock: Inc/database.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Gestion de stock
+   <div id="projectname">gestion_de_stock
    </div>
   </td>
  </tr>
@@ -117,6 +117,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:aa82e22b7b47ca0e7dad3a757763259f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprime un produit de la base de données.  <br /></td></tr>
 <tr class="memitem:a432b4c1d45194b5c16adb90c6f9217af" id="r_a432b4c1d45194b5c16adb90c6f9217af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a432b4c1d45194b5c16adb90c6f9217af">db_modifier_produit</a> (<a class="el" href="structsqlite3.html">sqlite3</a> *db, const <a class="el" href="struct_produit.html">Produit</a> *p)</td></tr>
 <tr class="memdesc:a432b4c1d45194b5c16adb90c6f9217af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie un produit existant dans la base de données.  <br /></td></tr>
+<tr class="memitem:adc59c9044805a2f56b1edde9d0c54794" id="r_adc59c9044805a2f56b1edde9d0c54794"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc59c9044805a2f56b1edde9d0c54794">db_produit_existe_par_id</a> (<a class="el" href="structsqlite3.html">sqlite3</a> *db, int id)</td></tr>
+<tr class="memdesc:adc59c9044805a2f56b1edde9d0c54794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si un produit avec l'ID donné existe dans la base de données.  <br /></td></tr>
+<tr class="memitem:a1b127f7a31176dc99d8bc3997a7a0951" id="r_a1b127f7a31176dc99d8bc3997a7a0951"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b127f7a31176dc99d8bc3997a7a0951">db_produit_existe</a> (<a class="el" href="structsqlite3.html">sqlite3</a> *db, const char *nom)</td></tr>
+<tr class="memdesc:a1b127f7a31176dc99d8bc3997a7a0951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si un produit avec le nom donné existe dans la base de données.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface pour la gestion de la base de données SQLite des produits. </p>
@@ -265,6 +269,69 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 en cas de succès, -1 sinon. </dd></dl>
+
+</div>
+</div>
+<a id="a1b127f7a31176dc99d8bc3997a7a0951" name="a1b127f7a31176dc99d8bc3997a7a0951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b127f7a31176dc99d8bc3997a7a0951">&#9670;&#160;</a></span>db_produit_existe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int db_produit_existe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsqlite3.html">sqlite3</a> *</td>          <td class="paramname"><span class="paramname"><em>db</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>nom</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie si un produit avec le nom donné existe dans la base de données. </p>
+<p>Cette fonction interroge la base de données pour vérifier si un produit avec le nom spécifié existe déjà. Elle retourne 1 si le produit existe, 0 sinon.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">db</td><td>Pointeur vers la base de données SQLite. </td></tr>
+    <tr><td class="paramname">nom</td><td>Nom du produit à vérifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 si le produit existe, 0 sinon. </dd></dl>
+
+</div>
+</div>
+<a id="adc59c9044805a2f56b1edde9d0c54794" name="adc59c9044805a2f56b1edde9d0c54794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc59c9044805a2f56b1edde9d0c54794">&#9670;&#160;</a></span>db_produit_existe_par_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int db_produit_existe_par_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsqlite3.html">sqlite3</a> *</td>          <td class="paramname"><span class="paramname"><em>db</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie si un produit avec l'ID donné existe dans la base de données. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">db</td><td>Pointeur vers la base de données SQLite. </td></tr>
+    <tr><td class="paramname">id</td><td>Identifiant du produit à vérifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 si le produit existe, 0 sinon. </dd></dl>
 
 </div>
 </div>

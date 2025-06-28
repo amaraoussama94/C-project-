@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gestion de stock: Inc/produit.h File Reference</title>
+<title>gestion_de_stock: Inc/produit.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Gestion de stock
+   <div id="projectname">gestion_de_stock
    </div>
   </td>
  </tr>
@@ -95,6 +95,7 @@ $(function(){initNavTree('produit_8h.html','',''); });
 <p>Interface utilisateur pour la gestion interactive des produits.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;sqlite3.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="database_8h_source.html">database.h</a>&quot;</code><br />
 </div>
 <p><a href="produit_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -138,11 +139,10 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Demande à l'utilisateur les informations d'un produit et l'ajoute à la base.</p>
-<p>Adds a new product to the database interactively.</p>
-<p>Prompts the user to enter the product's name, quantity, and price via standard input, then attempts to add the product to the database using <a class="el" href="database_8h.html#a24f87cdb18f19d2c7ce064f6a56421ba" title="Ajoute un produit à la base de données.">db_ajouter_produit()</a>. Displays a success or error message based on the result.</p>
+<p>Prompts the user for product details and inserts the new product into the database.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">db</td><td>Pointer to the opened SQLite database connection. </td></tr>
+    <tr><td class="paramname">db</td><td>Pointer to the SQLite database connection. </td></tr>
   </table>
   </dd>
 </dl>
@@ -172,7 +172,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Affiche tous les produits de la base de données.</p>
-<p>Lists all products in the database interactively.</p>
 <p>Cette fonction appelle db_lister_produits pour afficher tous les produits présents dans la base de données SQLite passée en paramètre. Si une erreur survient lors de l'affichage, un message d'erreur est affiché à l'utilisateur.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -206,7 +205,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Demande à l'utilisateur un ID et les nouvelles infos, puis modifie le produit.</p>
-<p>Modifies an existing product in the database interactively.</p>
 <p>Prompts the user to enter the ID of the product to modify, then asks for the new name, quantity, and price. Updates the product in the database using the provided information. Displays a success or error message based on the outcome.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -240,7 +238,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Demande à l'utilisateur un ID et supprime le produit correspondant.</p>
-<p>Deletes a product from the database interactively.</p>
 <p>Cette fonction demande à l'utilisateur de saisir l'identifiant (ID) du produit à supprimer, puis appelle la fonction db_supprimer_produit pour effectuer la suppression dans la base de données SQLite. Elle affiche un message indiquant si la suppression a réussi ou échoué.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

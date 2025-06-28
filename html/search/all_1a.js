@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🎯_20objectifs_0',['🎯 Objectifs',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]]
+  ['✨_20fonctionnalités_20principales_0',['✨ Fonctionnalités principales',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]]
 ];

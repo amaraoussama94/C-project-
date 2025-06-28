@@ -741,7 +741,7 @@
 \DoxyCodeLine{00737\ \textcolor{comment}{*/}}
 \DoxyCodeLine{00738\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}\ \mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}};}
 \DoxyCodeLine{00739\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}\ \{}
-\DoxyCodeLine{00740\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }sqlite3\_io\_methods\ *pMethods;\ \ \textcolor{comment}{/*\ Methods\ for\ an\ open\ file\ */}}
+\DoxyCodeLine{00740\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsqlite3__io__methods}{sqlite3\_io\_methods}}\ *pMethods;\ \ \textcolor{comment}{/*\ Methods\ for\ an\ open\ file\ */}}
 \DoxyCodeLine{00741\ \};}
 \DoxyCodeLine{00742\ }
 \DoxyCodeLine{00743\ \textcolor{comment}{/*}}
@@ -849,26 +849,26 @@
 \DoxyCodeLine{00845\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsqlite3__io__methods}{sqlite3\_io\_methods}}\ \mbox{\hyperlink{structsqlite3__io__methods}{sqlite3\_io\_methods}};}
 \DoxyCodeLine{00846\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsqlite3__io__methods}{sqlite3\_io\_methods}}\ \{}
 \DoxyCodeLine{00847\ \ \ \textcolor{keywordtype}{int}\ iVersion;}
-\DoxyCodeLine{00848\ \ \ int\ (*xClose)(sqlite3\_file*);}
-\DoxyCodeLine{00849\ \ \ int\ (*xRead)(sqlite3\_file*,\ \textcolor{keywordtype}{void}*,\ \textcolor{keywordtype}{int}\ iAmt,\ sqlite3\_int64\ iOfst);}
-\DoxyCodeLine{00850\ \ \ int\ (*xWrite)(sqlite3\_file*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,\ \textcolor{keywordtype}{int}\ iAmt,\ sqlite3\_int64\ iOfst);}
-\DoxyCodeLine{00851\ \ \ int\ (*xTruncate)(sqlite3\_file*,\ sqlite3\_int64\ size);}
-\DoxyCodeLine{00852\ \ \ int\ (*xSync)(sqlite3\_file*,\ \textcolor{keywordtype}{int}\ flags);}
-\DoxyCodeLine{00853\ \ \ int\ (*xFileSize)(sqlite3\_file*,\ sqlite3\_int64\ *pSize);}
-\DoxyCodeLine{00854\ \ \ int\ (*xLock)(sqlite3\_file*,\ int);}
-\DoxyCodeLine{00855\ \ \ int\ (*xUnlock)(sqlite3\_file*,\ int);}
-\DoxyCodeLine{00856\ \ \ int\ (*xCheckReservedLock)(sqlite3\_file*,\ \textcolor{keywordtype}{int}\ *pResOut);}
-\DoxyCodeLine{00857\ \ \ int\ (*xFileControl)(sqlite3\_file*,\ \textcolor{keywordtype}{int}\ op,\ \textcolor{keywordtype}{void}\ *pArg);}
-\DoxyCodeLine{00858\ \ \ int\ (*xSectorSize)(sqlite3\_file*);}
-\DoxyCodeLine{00859\ \ \ int\ (*xDeviceCharacteristics)(sqlite3\_file*);}
+\DoxyCodeLine{00848\ \ \ int\ (*xClose)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*);}
+\DoxyCodeLine{00849\ \ \ int\ (*xRead)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ \textcolor{keywordtype}{void}*,\ \textcolor{keywordtype}{int}\ iAmt,\ sqlite3\_int64\ iOfst);}
+\DoxyCodeLine{00850\ \ \ int\ (*xWrite)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,\ \textcolor{keywordtype}{int}\ iAmt,\ sqlite3\_int64\ iOfst);}
+\DoxyCodeLine{00851\ \ \ int\ (*xTruncate)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ sqlite3\_int64\ size);}
+\DoxyCodeLine{00852\ \ \ int\ (*xSync)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ \textcolor{keywordtype}{int}\ flags);}
+\DoxyCodeLine{00853\ \ \ int\ (*xFileSize)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ sqlite3\_int64\ *pSize);}
+\DoxyCodeLine{00854\ \ \ int\ (*xLock)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ int);}
+\DoxyCodeLine{00855\ \ \ int\ (*xUnlock)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ int);}
+\DoxyCodeLine{00856\ \ \ int\ (*xCheckReservedLock)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ \textcolor{keywordtype}{int}\ *pResOut);}
+\DoxyCodeLine{00857\ \ \ int\ (*xFileControl)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ \textcolor{keywordtype}{int}\ op,\ \textcolor{keywordtype}{void}\ *pArg);}
+\DoxyCodeLine{00858\ \ \ int\ (*xSectorSize)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*);}
+\DoxyCodeLine{00859\ \ \ int\ (*xDeviceCharacteristics)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*);}
 \DoxyCodeLine{00860\ \ \ \textcolor{comment}{/*\ Methods\ above\ are\ valid\ for\ version\ 1\ */}}
-\DoxyCodeLine{00861\ \ \ int\ (*xShmMap)(sqlite3\_file*,\ \textcolor{keywordtype}{int}\ iPg,\ \textcolor{keywordtype}{int}\ pgsz,\ int,\ \textcolor{keywordtype}{void}\ \textcolor{keyword}{volatile}**);}
-\DoxyCodeLine{00862\ \ \ int\ (*xShmLock)(sqlite3\_file*,\ \textcolor{keywordtype}{int}\ offset,\ \textcolor{keywordtype}{int}\ n,\ \textcolor{keywordtype}{int}\ flags);}
-\DoxyCodeLine{00863\ \ \ void\ (*xShmBarrier)(sqlite3\_file*);}
-\DoxyCodeLine{00864\ \ \ int\ (*xShmUnmap)(sqlite3\_file*,\ \textcolor{keywordtype}{int}\ deleteFlag);}
+\DoxyCodeLine{00861\ \ \ int\ (*xShmMap)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ \textcolor{keywordtype}{int}\ iPg,\ \textcolor{keywordtype}{int}\ pgsz,\ int,\ \textcolor{keywordtype}{void}\ \textcolor{keyword}{volatile}**);}
+\DoxyCodeLine{00862\ \ \ int\ (*xShmLock)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ \textcolor{keywordtype}{int}\ offset,\ \textcolor{keywordtype}{int}\ n,\ \textcolor{keywordtype}{int}\ flags);}
+\DoxyCodeLine{00863\ \ \ void\ (*xShmBarrier)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*);}
+\DoxyCodeLine{00864\ \ \ int\ (*xShmUnmap)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ \textcolor{keywordtype}{int}\ deleteFlag);}
 \DoxyCodeLine{00865\ \ \ \textcolor{comment}{/*\ Methods\ above\ are\ valid\ for\ version\ 2\ */}}
-\DoxyCodeLine{00866\ \ \ int\ (*xFetch)(sqlite3\_file*,\ sqlite3\_int64\ iOfst,\ \textcolor{keywordtype}{int}\ iAmt,\ \textcolor{keywordtype}{void}\ **pp);}
-\DoxyCodeLine{00867\ \ \ int\ (*xUnfetch)(sqlite3\_file*,\ sqlite3\_int64\ iOfst,\ \textcolor{keywordtype}{void}\ *p);}
+\DoxyCodeLine{00866\ \ \ int\ (*xFetch)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ sqlite3\_int64\ iOfst,\ \textcolor{keywordtype}{int}\ iAmt,\ \textcolor{keywordtype}{void}\ **pp);}
+\DoxyCodeLine{00867\ \ \ int\ (*xUnfetch)(\mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,\ sqlite3\_int64\ iOfst,\ \textcolor{keywordtype}{void}\ *p);}
 \DoxyCodeLine{00868\ \ \ \textcolor{comment}{/*\ Methods\ above\ are\ valid\ for\ version\ 3\ */}}
 \DoxyCodeLine{00869\ \ \ \textcolor{comment}{/*\ Additional\ methods\ may\ be\ added\ in\ future\ releases\ */}}
 \DoxyCodeLine{00870\ \};}
@@ -1494,34 +1494,34 @@
 \DoxyCodeLine{01490\ \ \ \textcolor{keywordtype}{int}\ iVersion;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Structure\ version\ number\ (currently\ 3)\ */}}
 \DoxyCodeLine{01491\ \ \ \textcolor{keywordtype}{int}\ szOsFile;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Size\ of\ subclassed\ sqlite3\_file\ */}}
 \DoxyCodeLine{01492\ \ \ \textcolor{keywordtype}{int}\ mxPathname;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Maximum\ file\ pathname\ length\ */}}
-\DoxyCodeLine{01493\ \ \ sqlite3\_vfs\ *pNext;\ \ \ \ \ \ \textcolor{comment}{/*\ Next\ registered\ VFS\ */}}
+\DoxyCodeLine{01493\ \ \ \mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}\ *pNext;\ \ \ \ \ \ \textcolor{comment}{/*\ Next\ registered\ VFS\ */}}
 \DoxyCodeLine{01494\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName;\ \ \ \ \ \ \ \textcolor{comment}{/*\ Name\ of\ this\ virtual\ file\ system\ */}}
 \DoxyCodeLine{01495\ \ \ \textcolor{keywordtype}{void}\ *pAppData;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Pointer\ to\ application-\/specific\ data\ */}}
-\DoxyCodeLine{01496\ \ \ int\ (*xOpen)(sqlite3\_vfs*,\ sqlite3\_filename\ zName,\ sqlite3\_file*,}
+\DoxyCodeLine{01496\ \ \ int\ (*xOpen)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ sqlite3\_filename\ zName,\ \mbox{\hyperlink{structsqlite3__file}{sqlite3\_file}}*,}
 \DoxyCodeLine{01497\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ flags,\ \textcolor{keywordtype}{int}\ *pOutFlags);}
-\DoxyCodeLine{01498\ \ \ int\ (*xDelete)(sqlite3\_vfs*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,\ \textcolor{keywordtype}{int}\ syncDir);}
-\DoxyCodeLine{01499\ \ \ int\ (*xAccess)(sqlite3\_vfs*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,\ \textcolor{keywordtype}{int}\ flags,\ \textcolor{keywordtype}{int}\ *pResOut);}
-\DoxyCodeLine{01500\ \ \ int\ (*xFullPathname)(sqlite3\_vfs*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,\ \textcolor{keywordtype}{int}\ nOut,\ \textcolor{keywordtype}{char}\ *zOut);}
-\DoxyCodeLine{01501\ \ \ \textcolor{keywordtype}{void}\ *(*xDlOpen)(sqlite3\_vfs*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zFilename);}
-\DoxyCodeLine{01502\ \ \ void\ (*xDlError)(sqlite3\_vfs*,\ \textcolor{keywordtype}{int}\ nByte,\ \textcolor{keywordtype}{char}\ *zErrMsg);}
-\DoxyCodeLine{01503\ \ \ void\ (*(*xDlSym)(sqlite3\_vfs*,\textcolor{keywordtype}{void}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zSymbol))(void);}
-\DoxyCodeLine{01504\ \ \ void\ (*xDlClose)(sqlite3\_vfs*,\ \textcolor{keywordtype}{void}*);}
-\DoxyCodeLine{01505\ \ \ int\ (*xRandomness)(sqlite3\_vfs*,\ \textcolor{keywordtype}{int}\ nByte,\ \textcolor{keywordtype}{char}\ *zOut);}
-\DoxyCodeLine{01506\ \ \ int\ (*xSleep)(sqlite3\_vfs*,\ \textcolor{keywordtype}{int}\ microseconds);}
-\DoxyCodeLine{01507\ \ \ int\ (*xCurrentTime)(sqlite3\_vfs*,\ \textcolor{keywordtype}{double}*);}
-\DoxyCodeLine{01508\ \ \ int\ (*xGetLastError)(sqlite3\_vfs*,\ int,\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{01498\ \ \ int\ (*xDelete)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,\ \textcolor{keywordtype}{int}\ syncDir);}
+\DoxyCodeLine{01499\ \ \ int\ (*xAccess)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,\ \textcolor{keywordtype}{int}\ flags,\ \textcolor{keywordtype}{int}\ *pResOut);}
+\DoxyCodeLine{01500\ \ \ int\ (*xFullPathname)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,\ \textcolor{keywordtype}{int}\ nOut,\ \textcolor{keywordtype}{char}\ *zOut);}
+\DoxyCodeLine{01501\ \ \ \textcolor{keywordtype}{void}\ *(*xDlOpen)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zFilename);}
+\DoxyCodeLine{01502\ \ \ void\ (*xDlError)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ \textcolor{keywordtype}{int}\ nByte,\ \textcolor{keywordtype}{char}\ *zErrMsg);}
+\DoxyCodeLine{01503\ \ \ void\ (*(*xDlSym)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\textcolor{keywordtype}{void}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zSymbol))(void);}
+\DoxyCodeLine{01504\ \ \ void\ (*xDlClose)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ \textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{01505\ \ \ int\ (*xRandomness)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ \textcolor{keywordtype}{int}\ nByte,\ \textcolor{keywordtype}{char}\ *zOut);}
+\DoxyCodeLine{01506\ \ \ int\ (*xSleep)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ \textcolor{keywordtype}{int}\ microseconds);}
+\DoxyCodeLine{01507\ \ \ int\ (*xCurrentTime)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ \textcolor{keywordtype}{double}*);}
+\DoxyCodeLine{01508\ \ \ int\ (*xGetLastError)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ int,\ \textcolor{keywordtype}{char}\ *);}
 \DoxyCodeLine{01509\ \ \ \textcolor{comment}{/*}}
 \DoxyCodeLine{01510\ \textcolor{comment}{\ \ **\ The\ methods\ above\ are\ in\ version\ 1\ of\ the\ sqlite\_vfs\ object}}
 \DoxyCodeLine{01511\ \textcolor{comment}{\ \ **\ definition.\ \ Those\ that\ follow\ are\ added\ in\ version\ 2\ or\ later}}
 \DoxyCodeLine{01512\ \textcolor{comment}{\ \ */}}
-\DoxyCodeLine{01513\ \ \ int\ (*xCurrentTimeInt64)(sqlite3\_vfs*,\ sqlite3\_int64*);}
+\DoxyCodeLine{01513\ \ \ int\ (*xCurrentTimeInt64)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ sqlite3\_int64*);}
 \DoxyCodeLine{01514\ \ \ \textcolor{comment}{/*}}
 \DoxyCodeLine{01515\ \textcolor{comment}{\ \ **\ The\ methods\ above\ are\ in\ versions\ 1\ and\ 2\ of\ the\ sqlite\_vfs\ object.}}
 \DoxyCodeLine{01516\ \textcolor{comment}{\ \ **\ Those\ below\ are\ for\ version\ 3\ and\ greater.}}
 \DoxyCodeLine{01517\ \textcolor{comment}{\ \ */}}
-\DoxyCodeLine{01518\ \ \ int\ (*xSetSystemCall)(sqlite3\_vfs*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,\ sqlite3\_syscall\_ptr);}
-\DoxyCodeLine{01519\ \ \ sqlite3\_syscall\_ptr\ (*xGetSystemCall)(sqlite3\_vfs*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName);}
-\DoxyCodeLine{01520\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*xNextSystemCall)(sqlite3\_vfs*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName);}
+\DoxyCodeLine{01518\ \ \ int\ (*xSetSystemCall)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,\ sqlite3\_syscall\_ptr);}
+\DoxyCodeLine{01519\ \ \ sqlite3\_syscall\_ptr\ (*xGetSystemCall)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName);}
+\DoxyCodeLine{01520\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *(*xNextSystemCall)(\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\_vfs}}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName);}
 \DoxyCodeLine{01521\ \ \ \textcolor{comment}{/*}}
 \DoxyCodeLine{01522\ \textcolor{comment}{\ \ **\ The\ methods\ above\ are\ in\ versions\ 1\ through\ 3\ of\ the\ sqlite\_vfs\ object.}}
 \DoxyCodeLine{01523\ \textcolor{comment}{\ \ **\ New\ fields\ may\ be\ appended\ in\ future\ versions.\ \ The\ iVersion}}
@@ -7523,43 +7523,43 @@
 \DoxyCodeLine{07519\ \textcolor{comment}{*/}}
 \DoxyCodeLine{07520\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsqlite3__module}{sqlite3\_module}}\ \{}
 \DoxyCodeLine{07521\ \ \ \textcolor{keywordtype}{int}\ iVersion;}
-\DoxyCodeLine{07522\ \ \ int\ (*xCreate)(sqlite3*,\ \textcolor{keywordtype}{void}\ *pAux,}
+\DoxyCodeLine{07522\ \ \ int\ (*xCreate)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\ \textcolor{keywordtype}{void}\ *pAux,}
 \DoxyCodeLine{07523\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ argc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keyword}{const}*argv,}
-\DoxyCodeLine{07524\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sqlite3\_vtab\ **ppVTab,\ \textcolor{keywordtype}{char}**);}
-\DoxyCodeLine{07525\ \ \ int\ (*xConnect)(sqlite3*,\ \textcolor{keywordtype}{void}\ *pAux,}
+\DoxyCodeLine{07524\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ **ppVTab,\ \textcolor{keywordtype}{char}**);}
+\DoxyCodeLine{07525\ \ \ int\ (*xConnect)(\mbox{\hyperlink{structsqlite3}{sqlite3}}*,\ \textcolor{keywordtype}{void}\ *pAux,}
 \DoxyCodeLine{07526\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ argc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keyword}{const}*argv,}
-\DoxyCodeLine{07527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sqlite3\_vtab\ **ppVTab,\ \textcolor{keywordtype}{char}**);}
-\DoxyCodeLine{07528\ \ \ int\ (*xBestIndex)(sqlite3\_vtab\ *pVTab,\ sqlite3\_index\_info*);}
-\DoxyCodeLine{07529\ \ \ int\ (*xDisconnect)(sqlite3\_vtab\ *pVTab);}
-\DoxyCodeLine{07530\ \ \ int\ (*xDestroy)(sqlite3\_vtab\ *pVTab);}
-\DoxyCodeLine{07531\ \ \ int\ (*xOpen)(sqlite3\_vtab\ *pVTab,\ sqlite3\_vtab\_cursor\ **ppCursor);}
-\DoxyCodeLine{07532\ \ \ int\ (*xClose)(sqlite3\_vtab\_cursor*);}
-\DoxyCodeLine{07533\ \ \ int\ (*xFilter)(sqlite3\_vtab\_cursor*,\ \textcolor{keywordtype}{int}\ idxNum,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *idxStr,}
-\DoxyCodeLine{07534\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ argc,\ sqlite3\_value\ **argv);}
-\DoxyCodeLine{07535\ \ \ int\ (*xNext)(sqlite3\_vtab\_cursor*);}
-\DoxyCodeLine{07536\ \ \ int\ (*xEof)(sqlite3\_vtab\_cursor*);}
-\DoxyCodeLine{07537\ \ \ int\ (*xColumn)(sqlite3\_vtab\_cursor*,\ sqlite3\_context*,\ int);}
-\DoxyCodeLine{07538\ \ \ int\ (*xRowid)(sqlite3\_vtab\_cursor*,\ sqlite3\_int64\ *pRowid);}
-\DoxyCodeLine{07539\ \ \ int\ (*xUpdate)(sqlite3\_vtab\ *,\ int,\ sqlite3\_value\ **,\ sqlite3\_int64\ *);}
-\DoxyCodeLine{07540\ \ \ int\ (*xBegin)(sqlite3\_vtab\ *pVTab);}
-\DoxyCodeLine{07541\ \ \ int\ (*xSync)(sqlite3\_vtab\ *pVTab);}
-\DoxyCodeLine{07542\ \ \ int\ (*xCommit)(sqlite3\_vtab\ *pVTab);}
-\DoxyCodeLine{07543\ \ \ int\ (*xRollback)(sqlite3\_vtab\ *pVTab);}
-\DoxyCodeLine{07544\ \ \ int\ (*xFindFunction)(sqlite3\_vtab\ *pVtab,\ \textcolor{keywordtype}{int}\ nArg,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,}
-\DoxyCodeLine{07545\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void\ (**pxFunc)(sqlite3\_context*,int,sqlite3\_value**),}
+\DoxyCodeLine{07527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ **ppVTab,\ \textcolor{keywordtype}{char}**);}
+\DoxyCodeLine{07528\ \ \ int\ (*xBestIndex)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVTab,\ \mbox{\hyperlink{structsqlite3__index__info}{sqlite3\_index\_info}}*);}
+\DoxyCodeLine{07529\ \ \ int\ (*xDisconnect)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVTab);}
+\DoxyCodeLine{07530\ \ \ int\ (*xDestroy)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVTab);}
+\DoxyCodeLine{07531\ \ \ int\ (*xOpen)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVTab,\ \mbox{\hyperlink{structsqlite3__vtab__cursor}{sqlite3\_vtab\_cursor}}\ **ppCursor);}
+\DoxyCodeLine{07532\ \ \ int\ (*xClose)(\mbox{\hyperlink{structsqlite3__vtab__cursor}{sqlite3\_vtab\_cursor}}*);}
+\DoxyCodeLine{07533\ \ \ int\ (*xFilter)(\mbox{\hyperlink{structsqlite3__vtab__cursor}{sqlite3\_vtab\_cursor}}*,\ \textcolor{keywordtype}{int}\ idxNum,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *idxStr,}
+\DoxyCodeLine{07534\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ argc,\ \mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}\ **argv);}
+\DoxyCodeLine{07535\ \ \ int\ (*xNext)(\mbox{\hyperlink{structsqlite3__vtab__cursor}{sqlite3\_vtab\_cursor}}*);}
+\DoxyCodeLine{07536\ \ \ int\ (*xEof)(\mbox{\hyperlink{structsqlite3__vtab__cursor}{sqlite3\_vtab\_cursor}}*);}
+\DoxyCodeLine{07537\ \ \ int\ (*xColumn)(\mbox{\hyperlink{structsqlite3__vtab__cursor}{sqlite3\_vtab\_cursor}}*,\ \mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,\ int);}
+\DoxyCodeLine{07538\ \ \ int\ (*xRowid)(\mbox{\hyperlink{structsqlite3__vtab__cursor}{sqlite3\_vtab\_cursor}}*,\ sqlite3\_int64\ *pRowid);}
+\DoxyCodeLine{07539\ \ \ int\ (*xUpdate)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *,\ int,\ \mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}\ **,\ sqlite3\_int64\ *);}
+\DoxyCodeLine{07540\ \ \ int\ (*xBegin)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVTab);}
+\DoxyCodeLine{07541\ \ \ int\ (*xSync)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVTab);}
+\DoxyCodeLine{07542\ \ \ int\ (*xCommit)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVTab);}
+\DoxyCodeLine{07543\ \ \ int\ (*xRollback)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVTab);}
+\DoxyCodeLine{07544\ \ \ int\ (*xFindFunction)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVtab,\ \textcolor{keywordtype}{int}\ nArg,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,}
+\DoxyCodeLine{07545\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ void\ (**pxFunc)(\mbox{\hyperlink{structsqlite3__context}{sqlite3\_context}}*,int,\mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}**),}
 \DoxyCodeLine{07546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ **ppArg);}
-\DoxyCodeLine{07547\ \ \ int\ (*xRename)(sqlite3\_vtab\ *pVtab,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zNew);}
+\DoxyCodeLine{07547\ \ \ int\ (*xRename)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVtab,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zNew);}
 \DoxyCodeLine{07548\ \ \ \textcolor{comment}{/*\ The\ methods\ above\ are\ in\ version\ 1\ of\ the\ sqlite\_module\ object.\ Those}}
 \DoxyCodeLine{07549\ \textcolor{comment}{\ \ **\ below\ are\ for\ version\ 2\ and\ greater.\ */}}
-\DoxyCodeLine{07550\ \ \ int\ (*xSavepoint)(sqlite3\_vtab\ *pVTab,\ int);}
-\DoxyCodeLine{07551\ \ \ int\ (*xRelease)(sqlite3\_vtab\ *pVTab,\ int);}
-\DoxyCodeLine{07552\ \ \ int\ (*xRollbackTo)(sqlite3\_vtab\ *pVTab,\ int);}
+\DoxyCodeLine{07550\ \ \ int\ (*xSavepoint)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVTab,\ int);}
+\DoxyCodeLine{07551\ \ \ int\ (*xRelease)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVTab,\ int);}
+\DoxyCodeLine{07552\ \ \ int\ (*xRollbackTo)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVTab,\ int);}
 \DoxyCodeLine{07553\ \ \ \textcolor{comment}{/*\ The\ methods\ above\ are\ in\ versions\ 1\ and\ 2\ of\ the\ sqlite\_module\ object.}}
 \DoxyCodeLine{07554\ \textcolor{comment}{\ \ **\ Those\ below\ are\ for\ version\ 3\ and\ greater.\ */}}
 \DoxyCodeLine{07555\ \ \ int\ (*xShadowName)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*);}
 \DoxyCodeLine{07556\ \ \ \textcolor{comment}{/*\ The\ methods\ above\ are\ in\ versions\ 1\ through\ 3\ of\ the\ sqlite\_module\ object.}}
 \DoxyCodeLine{07557\ \textcolor{comment}{\ \ **\ Those\ below\ are\ for\ version\ 4\ and\ greater.\ */}}
-\DoxyCodeLine{07558\ \ \ int\ (*xIntegrity)(sqlite3\_vtab\ *pVTab,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zSchema,}
+\DoxyCodeLine{07558\ \ \ int\ (*xIntegrity)(\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVTab,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zSchema,}
 \DoxyCodeLine{07559\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zTabName,\ \textcolor{keywordtype}{int}\ mFlags,\ \textcolor{keywordtype}{char}\ **pzErr);}
 \DoxyCodeLine{07560\ \};}
 \DoxyCodeLine{07561\ }
@@ -7848,7 +7848,7 @@
 \DoxyCodeLine{07844\ \textcolor{comment}{**\ freed\ by\ sqlite3\_free()\ and\ the\ zErrMsg\ field\ will\ be\ zeroed.}}
 \DoxyCodeLine{07845\ \textcolor{comment}{*/}}
 \DoxyCodeLine{07846\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ \{}
-\DoxyCodeLine{07847\ \ \ \textcolor{keyword}{const}\ sqlite3\_module\ *pModule;\ \ \textcolor{comment}{/*\ The\ module\ for\ this\ virtual\ table\ */}}
+\DoxyCodeLine{07847\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structsqlite3__module}{sqlite3\_module}}\ *pModule;\ \ \textcolor{comment}{/*\ The\ module\ for\ this\ virtual\ table\ */}}
 \DoxyCodeLine{07848\ \ \ \textcolor{keywordtype}{int}\ nRef;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Number\ of\ open\ cursors\ */}}
 \DoxyCodeLine{07849\ \ \ \textcolor{keywordtype}{char}\ *zErrMsg;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Error\ message\ from\ sqlite3\_mprintf()\ */}}
 \DoxyCodeLine{07850\ \ \ \textcolor{comment}{/*\ Virtual\ table\ implementations\ will\ typically\ add\ additional\ fields\ */}}
@@ -7872,7 +7872,7 @@
 \DoxyCodeLine{07868\ \textcolor{comment}{**\ are\ common\ to\ all\ implementations.}}
 \DoxyCodeLine{07869\ \textcolor{comment}{*/}}
 \DoxyCodeLine{07870\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsqlite3__vtab__cursor}{sqlite3\_vtab\_cursor}}\ \{}
-\DoxyCodeLine{07871\ \ \ sqlite3\_vtab\ *pVtab;\ \ \ \ \ \ \textcolor{comment}{/*\ Virtual\ table\ of\ this\ cursor\ */}}
+\DoxyCodeLine{07871\ \ \ \mbox{\hyperlink{structsqlite3__vtab}{sqlite3\_vtab}}\ *pVtab;\ \ \ \ \ \ \textcolor{comment}{/*\ Virtual\ table\ of\ this\ cursor\ */}}
 \DoxyCodeLine{07872\ \ \ \textcolor{comment}{/*\ Virtual\ table\ implementations\ will\ typically\ add\ additional\ fields\ */}}
 \DoxyCodeLine{07873\ \};}
 \DoxyCodeLine{07874\ }
@@ -8371,13 +8371,13 @@
 \DoxyCodeLine{08367\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsqlite3__mutex__methods}{sqlite3\_mutex\_methods}}\ \{}
 \DoxyCodeLine{08368\ \ \ int\ (*xMutexInit)(void);}
 \DoxyCodeLine{08369\ \ \ int\ (*xMutexEnd)(void);}
-\DoxyCodeLine{08370\ \ \ sqlite3\_mutex\ *(*xMutexAlloc)(int);}
-\DoxyCodeLine{08371\ \ \ void\ (*xMutexFree)(sqlite3\_mutex\ *);}
-\DoxyCodeLine{08372\ \ \ void\ (*xMutexEnter)(sqlite3\_mutex\ *);}
-\DoxyCodeLine{08373\ \ \ int\ (*xMutexTry)(sqlite3\_mutex\ *);}
-\DoxyCodeLine{08374\ \ \ void\ (*xMutexLeave)(sqlite3\_mutex\ *);}
-\DoxyCodeLine{08375\ \ \ int\ (*xMutexHeld)(sqlite3\_mutex\ *);}
-\DoxyCodeLine{08376\ \ \ int\ (*xMutexNotheld)(sqlite3\_mutex\ *);}
+\DoxyCodeLine{08370\ \ \ \mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}\ *(*xMutexAlloc)(int);}
+\DoxyCodeLine{08371\ \ \ void\ (*xMutexFree)(\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}\ *);}
+\DoxyCodeLine{08372\ \ \ void\ (*xMutexEnter)(\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}\ *);}
+\DoxyCodeLine{08373\ \ \ int\ (*xMutexTry)(\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}\ *);}
+\DoxyCodeLine{08374\ \ \ void\ (*xMutexLeave)(\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}\ *);}
+\DoxyCodeLine{08375\ \ \ int\ (*xMutexHeld)(\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}\ *);}
+\DoxyCodeLine{08376\ \ \ int\ (*xMutexNotheld)(\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\_mutex}}\ *);}
 \DoxyCodeLine{08377\ \};}
 \DoxyCodeLine{08378\ }
 \DoxyCodeLine{08379\ \textcolor{comment}{/*}}
@@ -9314,9 +9314,9 @@
 \DoxyCodeLine{09310\ \ \ sqlite3\_pcache\ *(*xCreate)(\textcolor{keywordtype}{int}\ szPage,\ \textcolor{keywordtype}{int}\ szExtra,\ \textcolor{keywordtype}{int}\ bPurgeable);}
 \DoxyCodeLine{09311\ \ \ void\ (*xCachesize)(sqlite3\_pcache*,\ \textcolor{keywordtype}{int}\ nCachesize);}
 \DoxyCodeLine{09312\ \ \ int\ (*xPagecount)(sqlite3\_pcache*);}
-\DoxyCodeLine{09313\ \ \ sqlite3\_pcache\_page\ *(*xFetch)(sqlite3\_pcache*,\ \textcolor{keywordtype}{unsigned}\ key,\ \textcolor{keywordtype}{int}\ createFlag);}
-\DoxyCodeLine{09314\ \ \ void\ (*xUnpin)(sqlite3\_pcache*,\ sqlite3\_pcache\_page*,\ \textcolor{keywordtype}{int}\ discard);}
-\DoxyCodeLine{09315\ \ \ void\ (*xRekey)(sqlite3\_pcache*,\ sqlite3\_pcache\_page*,}
+\DoxyCodeLine{09313\ \ \ \mbox{\hyperlink{structsqlite3__pcache__page}{sqlite3\_pcache\_page}}\ *(*xFetch)(sqlite3\_pcache*,\ \textcolor{keywordtype}{unsigned}\ key,\ \textcolor{keywordtype}{int}\ createFlag);}
+\DoxyCodeLine{09314\ \ \ void\ (*xUnpin)(sqlite3\_pcache*,\ \mbox{\hyperlink{structsqlite3__pcache__page}{sqlite3\_pcache\_page}}*,\ \textcolor{keywordtype}{int}\ discard);}
+\DoxyCodeLine{09315\ \ \ void\ (*xRekey)(sqlite3\_pcache*,\ \mbox{\hyperlink{structsqlite3__pcache__page}{sqlite3\_pcache\_page}}*,}
 \DoxyCodeLine{09316\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ oldKey,\ \textcolor{keywordtype}{unsigned}\ newKey);}
 \DoxyCodeLine{09317\ \ \ void\ (*xTruncate)(sqlite3\_pcache*,\ \textcolor{keywordtype}{unsigned}\ iLimit);}
 \DoxyCodeLine{09318\ \ \ void\ (*xDestroy)(sqlite3\_pcache*);}
@@ -11181,7 +11181,7 @@
 \DoxyCodeLine{11177\ \ \ \textcolor{keywordtype}{int}\ eWithin;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ OUT:\ Visibility\ */}}
 \DoxyCodeLine{11178\ \ \ sqlite3\_rtree\_dbl\ rScore;\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ OUT:\ Write\ the\ score\ here\ */}}
 \DoxyCodeLine{11179\ \ \ \textcolor{comment}{/*\ The\ following\ fields\ are\ only\ available\ in\ 3.8.11\ and\ later\ */}}
-\DoxyCodeLine{11180\ \ \ sqlite3\_value\ **apSqlParam;\ \ \ \ \ \ \ \textcolor{comment}{/*\ Original\ SQL\ values\ of\ parameters\ */}}
+\DoxyCodeLine{11180\ \ \ \mbox{\hyperlink{structsqlite3__value}{sqlite3\_value}}\ **apSqlParam;\ \ \ \ \ \ \ \textcolor{comment}{/*\ Original\ SQL\ values\ of\ parameters\ */}}
 \DoxyCodeLine{11181\ \};}
 \DoxyCodeLine{11182\ }
 \DoxyCodeLine{11183\ \textcolor{comment}{/*}}
@@ -13393,16 +13393,16 @@
 \DoxyCodeLine{13389\ \ \ int\ (*xColumnSize)(Fts5Context*,\ \textcolor{keywordtype}{int}\ iCol,\ \textcolor{keywordtype}{int}\ *pnToken);}
 \DoxyCodeLine{13390\ }
 \DoxyCodeLine{13391\ \ \ int\ (*xQueryPhrase)(Fts5Context*,\ \textcolor{keywordtype}{int}\ iPhrase,\ \textcolor{keywordtype}{void}\ *pUserData,}
-\DoxyCodeLine{13392\ \ \ \ \ int(*)(\textcolor{keyword}{const}\ Fts5ExtensionApi*,Fts5Context*,\textcolor{keywordtype}{void}*)}
+\DoxyCodeLine{13392\ \ \ \ \ int(*)(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_fts5_extension_api}{Fts5ExtensionApi}}*,Fts5Context*,\textcolor{keywordtype}{void}*)}
 \DoxyCodeLine{13393\ \ \ );}
 \DoxyCodeLine{13394\ \ \ int\ (*xSetAuxdata)(Fts5Context*,\ \textcolor{keywordtype}{void}\ *pAux,\ void(*xDelete)(\textcolor{keywordtype}{void}*));}
 \DoxyCodeLine{13395\ \ \ \textcolor{keywordtype}{void}\ *(*xGetAuxdata)(Fts5Context*,\ \textcolor{keywordtype}{int}\ bClear);}
 \DoxyCodeLine{13396\ }
-\DoxyCodeLine{13397\ \ \ int\ (*xPhraseFirst)(Fts5Context*,\ \textcolor{keywordtype}{int}\ iPhrase,\ Fts5PhraseIter*,\ \textcolor{keywordtype}{int}*,\ \textcolor{keywordtype}{int}*);}
-\DoxyCodeLine{13398\ \ \ void\ (*xPhraseNext)(Fts5Context*,\ Fts5PhraseIter*,\ \textcolor{keywordtype}{int}\ *piCol,\ \textcolor{keywordtype}{int}\ *piOff);}
+\DoxyCodeLine{13397\ \ \ int\ (*xPhraseFirst)(Fts5Context*,\ \textcolor{keywordtype}{int}\ iPhrase,\ \mbox{\hyperlink{struct_fts5_phrase_iter}{Fts5PhraseIter}}*,\ \textcolor{keywordtype}{int}*,\ \textcolor{keywordtype}{int}*);}
+\DoxyCodeLine{13398\ \ \ void\ (*xPhraseNext)(Fts5Context*,\ \mbox{\hyperlink{struct_fts5_phrase_iter}{Fts5PhraseIter}}*,\ \textcolor{keywordtype}{int}\ *piCol,\ \textcolor{keywordtype}{int}\ *piOff);}
 \DoxyCodeLine{13399\ }
-\DoxyCodeLine{13400\ \ \ int\ (*xPhraseFirstColumn)(Fts5Context*,\ \textcolor{keywordtype}{int}\ iPhrase,\ Fts5PhraseIter*,\ \textcolor{keywordtype}{int}*);}
-\DoxyCodeLine{13401\ \ \ void\ (*xPhraseNextColumn)(Fts5Context*,\ Fts5PhraseIter*,\ \textcolor{keywordtype}{int}\ *piCol);}
+\DoxyCodeLine{13400\ \ \ int\ (*xPhraseFirstColumn)(Fts5Context*,\ \textcolor{keywordtype}{int}\ iPhrase,\ \mbox{\hyperlink{struct_fts5_phrase_iter}{Fts5PhraseIter}}*,\ \textcolor{keywordtype}{int}*);}
+\DoxyCodeLine{13401\ \ \ void\ (*xPhraseNextColumn)(Fts5Context*,\ \mbox{\hyperlink{struct_fts5_phrase_iter}{Fts5PhraseIter}}*,\ \textcolor{keywordtype}{int}\ *piCol);}
 \DoxyCodeLine{13402\ }
 \DoxyCodeLine{13403\ \ \ \textcolor{comment}{/*\ Below\ this\ point\ are\ iVersion>=3\ only\ */}}
 \DoxyCodeLine{13404\ \ \ int\ (*xQueryToken)(Fts5Context*,}
@@ -13719,24 +13719,24 @@
 \DoxyCodeLine{13715\ }
 \DoxyCodeLine{13716\ \ \ \textcolor{comment}{/*\ Create\ a\ new\ tokenizer\ */}}
 \DoxyCodeLine{13717\ \ \ int\ (*xCreateTokenizer)(}
-\DoxyCodeLine{13718\ \ \ \ \ fts5\_api\ *pApi,}
+\DoxyCodeLine{13718\ \ \ \ \ \mbox{\hyperlink{structfts5__api}{fts5\_api}}\ *pApi,}
 \DoxyCodeLine{13719\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,}
 \DoxyCodeLine{13720\ \ \ \ \ \textcolor{keywordtype}{void}\ *pUserData,}
-\DoxyCodeLine{13721\ \ \ \ \ fts5\_tokenizer\ *pTokenizer,}
+\DoxyCodeLine{13721\ \ \ \ \ \mbox{\hyperlink{structfts5__tokenizer}{fts5\_tokenizer}}\ *pTokenizer,}
 \DoxyCodeLine{13722\ \ \ \ \ void\ (*xDestroy)(\textcolor{keywordtype}{void}*)}
 \DoxyCodeLine{13723\ \ \ );}
 \DoxyCodeLine{13724\ }
 \DoxyCodeLine{13725\ \ \ \textcolor{comment}{/*\ Find\ an\ existing\ tokenizer\ */}}
 \DoxyCodeLine{13726\ \ \ int\ (*xFindTokenizer)(}
-\DoxyCodeLine{13727\ \ \ \ \ fts5\_api\ *pApi,}
+\DoxyCodeLine{13727\ \ \ \ \ \mbox{\hyperlink{structfts5__api}{fts5\_api}}\ *pApi,}
 \DoxyCodeLine{13728\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,}
 \DoxyCodeLine{13729\ \ \ \ \ \textcolor{keywordtype}{void}\ **ppUserData,}
-\DoxyCodeLine{13730\ \ \ \ \ fts5\_tokenizer\ *pTokenizer}
+\DoxyCodeLine{13730\ \ \ \ \ \mbox{\hyperlink{structfts5__tokenizer}{fts5\_tokenizer}}\ *pTokenizer}
 \DoxyCodeLine{13731\ \ \ );}
 \DoxyCodeLine{13732\ }
 \DoxyCodeLine{13733\ \ \ \textcolor{comment}{/*\ Create\ a\ new\ auxiliary\ function\ */}}
 \DoxyCodeLine{13734\ \ \ int\ (*xCreateFunction)(}
-\DoxyCodeLine{13735\ \ \ \ \ fts5\_api\ *pApi,}
+\DoxyCodeLine{13735\ \ \ \ \ \mbox{\hyperlink{structfts5__api}{fts5\_api}}\ *pApi,}
 \DoxyCodeLine{13736\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,}
 \DoxyCodeLine{13737\ \ \ \ \ \textcolor{keywordtype}{void}\ *pUserData,}
 \DoxyCodeLine{13738\ \ \ \ \ fts5\_extension\_function\ xFunction,}
@@ -13747,19 +13747,19 @@
 \DoxyCodeLine{13743\ }
 \DoxyCodeLine{13744\ \ \ \textcolor{comment}{/*\ Create\ a\ new\ tokenizer\ */}}
 \DoxyCodeLine{13745\ \ \ int\ (*xCreateTokenizer\_v2)(}
-\DoxyCodeLine{13746\ \ \ \ \ fts5\_api\ *pApi,}
+\DoxyCodeLine{13746\ \ \ \ \ \mbox{\hyperlink{structfts5__api}{fts5\_api}}\ *pApi,}
 \DoxyCodeLine{13747\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,}
 \DoxyCodeLine{13748\ \ \ \ \ \textcolor{keywordtype}{void}\ *pUserData,}
-\DoxyCodeLine{13749\ \ \ \ \ fts5\_tokenizer\_v2\ *pTokenizer,}
+\DoxyCodeLine{13749\ \ \ \ \ \mbox{\hyperlink{structfts5__tokenizer__v2}{fts5\_tokenizer\_v2}}\ *pTokenizer,}
 \DoxyCodeLine{13750\ \ \ \ \ void\ (*xDestroy)(\textcolor{keywordtype}{void}*)}
 \DoxyCodeLine{13751\ \ \ );}
 \DoxyCodeLine{13752\ }
 \DoxyCodeLine{13753\ \ \ \textcolor{comment}{/*\ Find\ an\ existing\ tokenizer\ */}}
 \DoxyCodeLine{13754\ \ \ int\ (*xFindTokenizer\_v2)(}
-\DoxyCodeLine{13755\ \ \ \ \ fts5\_api\ *pApi,}
+\DoxyCodeLine{13755\ \ \ \ \ \mbox{\hyperlink{structfts5__api}{fts5\_api}}\ *pApi,}
 \DoxyCodeLine{13756\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *zName,}
 \DoxyCodeLine{13757\ \ \ \ \ \textcolor{keywordtype}{void}\ **ppUserData,}
-\DoxyCodeLine{13758\ \ \ \ \ fts5\_tokenizer\_v2\ **ppTokenizer}
+\DoxyCodeLine{13758\ \ \ \ \ \mbox{\hyperlink{structfts5__tokenizer__v2}{fts5\_tokenizer\_v2}}\ **ppTokenizer}
 \DoxyCodeLine{13759\ \ \ );}
 \DoxyCodeLine{13760\ \};}
 \DoxyCodeLine{13761\ }

@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"struct_vtab_ctx.html":[1,0,218],
+"struct_wal.html":[1,0,221],
+"struct_wal_ckpt_info.html":[1,0,222],
+"struct_wal_hash_loc.html":[1,0,223],
 "struct_wal_index_hdr.html":[1,0,224],
 "struct_wal_iterator.html":[1,0,225],
 "struct_wal_iterator_1_1_wal_segment.html":[1,0,225,0],
@@ -77,5 +81,14 @@ var NAVTREEINDEX1 =
 "structyy_stack_entry.html":[1,0,251],
 "union_vdbe_op_1_1p4union.html":[1,0,212,0],
 "union_y_y_m_i_n_o_r_t_y_p_e.html":[1,0,249],
-"unionsqlite3__value_1_1_mem_value.html":[1,0,174,0]
+"unionsqlite3__value_1_1_mem_value.html":[1,0,174,0],
+"utils_8c.html":[2,0,1,2],
+"utils_8c.html#a5e80e00de7657974e371872ae7e53a44":[2,0,1,2,1],
+"utils_8c.html#ab5ece65f60f62ae2c1da43371361871d":[2,0,1,2,2],
+"utils_8c.html#af5aeb846f6b77b1b15012baa2d8a9d75":[2,0,1,2,0],
+"utils_8h.html":[2,0,0,4],
+"utils_8h.html#a5e80e00de7657974e371872ae7e53a44":[2,0,0,4,1],
+"utils_8h.html#ab5ece65f60f62ae2c1da43371361871d":[2,0,0,4,2],
+"utils_8h.html#af5aeb846f6b77b1b15012baa2d8a9d75":[2,0,0,4,0],
+"utils_8h_source.html":[2,0,0,4]
 };
