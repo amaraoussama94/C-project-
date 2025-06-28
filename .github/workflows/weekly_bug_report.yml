@@ -1,0 +1,30 @@
+name: Weekly Bug Report
+
+on:
+  schedule:
+    - cron: '0 18 * * 5'  # Chaque vendredi à 18h UTC
+  workflow_dispatch:
+
+jobs:
+  bug-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install cppcheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cppcheck
+
+      - name: Generate bug report via Makefile
+        run: make bug-report
+
+      - name: Commit bug report
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add reports/bug_report_weekly.md
+          git commit -m "📋 Weekly bug report update [skip ci]" || echo "⚠️ No changes to commit."
+          git push
