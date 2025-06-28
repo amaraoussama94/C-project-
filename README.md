@@ -6,17 +6,17 @@ Ce projet est une application en langage **C** permettant la gestion simple et e
 
 Gérer un ensemble de produits avec leurs informations clés : ID, nom, quantité, prix
 
-Permettre l’ajout, la suppression, la modification et l’affichage des produits via une interface console
+Ajouter, supprimer, modifier et afficher les produits via une interface console
 
-Assurer la persistance des données à l’aide d’une base SQLite3 embarquée (plus de fichiers plats)
+Assurer la persistance des données avec SQLite3 (plus de fichiers plats)
 
-Illustrer la structuration modulaire d’un projet C avec :
+Structurer le projet de manière modulaire et professionnelle :
 
-    séparation des responsabilités (database, produit, main)
+*Séparation des responsabilités (database, produit, main)
 
-    compilation automatisée via Makefile
+*Compilation automatisée via Makefile
 
-    documentation générée avec Doxygen
+*Documentation générée avec Doxygen
 
 ## 🛠️ Structure du projet
 
@@ -51,6 +51,7 @@ gestion_stock_c/
 ├── Doxyfile
 
 └── README.md
+
 
 
 ## ✨ Fonctionnalités principales
@@ -99,6 +100,43 @@ Assurez-vous d’avoir gcc et make installés (via MinGW ou MSYS2).
 make        # Compile le projet
 make run    # Compile et exécute
 make clean  # Supprime les fichiers générés
+
+## 🧪 Tests & Couverture
+Le projet inclut des tests unitaires et d’intégration pour garantir la fiabilité du code :
+
+Tests unitaires : ciblent les fonctions critiques du module database
+
+Tests d’intégration : valident le bon fonctionnement global de l’application
+
+Valgrind : vérifie l’absence de fuites mémoire
+
+> ⚠️ Note : Valgrind n’est pas disponible sous Windows. Pour les tests mémoire, utilisez un environnement Linux ou WSL (Windows Subsystem for Linux).
+
+### 📦 Dépendances pour les tests
+
+Assurez-vous d’avoir installé les outils suivants :
+
+#### Sous Linux
+
+sudo apt update
+sudo apt install build-essential valgrind gcovr
+
+#### Sous Windows (via MSYS2 ou MinGW) :
+gcc (compilateur)
+
+make (outil de build)
+
+gcovr (à installer via Python : pip install gcovr)
+
+Valgrind indisponible — utilisez WSL pour les tests mémoire
+
+
+Sous Linux :
+Gcovr : génère un rapport de couverture HTML
+make test              # Exécute les tests unitaires
+make test-integration  # Exécute les tests d'intégration
+make valgrind-test     # Vérifie les fuites mémoire (Linux uniquement)
+make coverage          # Génère un rapport HTML de couverture dans build/coverage.html
 
 ## 🔧 Auto Build Process
 
