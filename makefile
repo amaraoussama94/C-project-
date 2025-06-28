@@ -1,7 +1,14 @@
+# Makefile pour le projet de gestion de stock
+# Ce Makefile compile le programme en C, gère les dépendances et crée un exécutable.
+# Il est conçu pour être utilisé sur Windows, mais peut être adapté pour d'autres systèmes.
+
 #Définit le compilateur utilisé (ici GCC).
-#Cela permet de surcharger le compilateur depuis le workflow avec 
-#CC=x86_64-w64-mingw32-gcc pour générer un vrai .exe Windows.
-CC ?= gcc
+# Check if the OS is Windows and set the compiler accordingly.
+ifeq ($(OS),Windows_NT)
+ CC := gcc
+else
+	CC ?= gcc
+endif
 
 # Définit la version du programme.
 BIN=build/gestion_stock_v$(VERSION)
@@ -58,4 +65,4 @@ run: all
 # CI build with embedded version macro and versioned binary
 ci-build:
 	@mkdir -p build
-	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -o $(BIN).exe $(SRC)
+	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -o $(BIN) $(SRC)
