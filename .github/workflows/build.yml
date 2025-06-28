@@ -23,6 +23,9 @@ jobs:
         echo "🔧 Installing build tools..."
         sudo apt-get update && sudo apt-get install -y build-essential make
         echo "✅ Build tools installed."
+    #Installs the MinGW cross-compiler, which allows you to compile C code for Windows on a Linux machine.
+    - name: Install MinGW cross-compiler
+      run: sudo apt-get install -y mingw-w64
 
     # Reads the current version from version.txt.
     # Parses and increments the minor version by 0.01.
@@ -43,12 +46,18 @@ jobs:
 
     # Runs your custom ci-build target from the Makefile, passing in the current version like 1.03. 
     # This generates a binary like gestion_stock_v1.03.
-    - name: Build with Makefile
+    - name: Build Linux binary
       run: |
         echo "🏗️ Starting build..."
         VERSION=$(cat version.txt | tr -d 'v')
         make ci-build VERSION=$VERSION
         echo "✅ Build completed."
+
+    #builds the Windows binary using the MinGW cross-compiler.
+    - name: Build Windows binary
+      run: |
+        VERSION=$(cat version.txt | tr -d 'v')
+        make ci-build CC=x86_64-w64-mingw32-gcc VERSION=$VERSION
 
     # Configures Git with a bot identity.
     # Stages and commits the updated version.txt.
@@ -82,32 +91,32 @@ jobs:
         else
           echo "ℹ️ Tag $TAG_NAME already exists. Skipping tag creation."
         fi
-    - name: Check binary exists
+    # Checks if the compiled binaries exist in the build directory.
+    - name: Check binaries exist
       run: |
-        FILE="build/gestion_stock_${{ steps.version.outputs.new_version }}.exe"
-        if [ ! -f "$FILE" ]; then
-          echo "Binary not found: $FILE"
-          exit 1
-        fi
-        echo "Binary found: $FILE"
-   
-    # Upload the compiled binary to the GitHub Release
-    - name: Upload binary to GitHub Release
+        VERSION=${{ steps.version.outputs.new_version }}
+        FILE_LINUX="build/gestion_stock_${VERSION}"
+        FILE_WIN="build/gestion_stock_${VERSION}.exe"
+        [ -f "$FILE_LINUX" ] || { echo "❌ Linux binary not found: $FILE_LINUX"; exit 1; }
+        [ -f "$FILE_WIN" ] || { echo "❌ Windows binary not found: $FILE_WIN"; exit 1; }
+        echo "✅ Both binaries found."
+   # Uploads the Linux and Windows binaries to a GitHub Release using the tag created earlier.
+    - name: Upload binaries to GitHub Release
       uses: softprops/action-gh-release@v2
       with:
         tag_name: PROD_VERSION_${{ steps.version.outputs.new_version }}
-        files: build/gestion_stock_${{ steps.version.outputs.new_version }}.exe
+        files: |
+            build/gestion_stock_${{ steps.version.outputs.new_version }}
+            build/gestion_stock_${{ steps.version.outputs.new_version }}.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # ^ Required to authenticate and upload to the release
-
-    # Uploads the compiled binary as an artifact of the workflow run.
-    # This allows you to download it later from the Actions tab.
-    - name: Upload binary as artifact
+# This step uploads the binaries as artifacts so you can download them later.
+    - name: Upload binaries as artifacts
       uses: actions/upload-artifact@v4
       with:
         name: gestion_stock_${{ steps.version.outputs.new_version }}
-        path: build/gestion_stock_${{ steps.version.outputs.new_version }}.exe
-
+        path: |
+          build/gestion_stock_${{ steps.version.outputs.new_version }}
+          build/gestion_stock_${{ steps.version.outputs.new_version }}.exe
 
 

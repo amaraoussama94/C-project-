@@ -1,5 +1,7 @@
 #Définit le compilateur utilisé (ici GCC).
-CC=gcc
+#Cela permet de surcharger le compilateur depuis le workflow avec 
+#CC=x86_64-w64-mingw32-gcc pour générer un vrai .exe Windows.
+CC ?= gcc
 
 # Définit la version du programme.
 BIN=build/gestion_stock_v$(VERSION)
