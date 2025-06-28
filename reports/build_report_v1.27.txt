@@ -1,0 +1,63 @@
+Build Report - gestion_stock
+Date: Sat Jun 28 23:03:06 UTC 2025
+Commit: ef3e0a2c083089110b172713107ac39502a09052
+Branch: master
+
+ Unit Tests:
+cc -Wall -Wextra -g -IInc -o build/test_database test/test_database.c sqlite-lib/sqlite3.c Src/database.c
+Exécution des tests unitaires...
+./build/test_database
+ Tous les tests ont réussi.
+
+ Integration Tests:
+cc -Wall -Wextra -g -IInc -o build/test_integration test/test_integration.c sqlite-lib/sqlite3.c Src/database.c Src/produit.c Src/utils.c
+Exécution du test d'intégration...
+./build/test_integration
+Test d'intégration réussi.
+
+ Valgrind (Unit Tests):
+==3383== Memcheck, a memory error detector
+==3383== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3383== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3383== Command: ./build/test_database
+==3383== 
+ Tous les tests ont réussi.
+==3383== 
+==3383== HEAP SUMMARY:
+==3383==     in use at exit: 0 bytes in 0 blocks
+==3383==   total heap usage: 228 allocs, 228 frees, 121,824 bytes allocated
+==3383== 
+==3383== All heap blocks were freed -- no leaks are possible
+==3383== 
+==3383== For lists of detected and suppressed errors, rerun with: -s
+==3383== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+ Valgrind (Integration Tests):
+==3385== Memcheck, a memory error detector
+==3385== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3385== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3385== Command: ./build/test_integration
+==3385== 
+Test d'intégration réussi.
+==3385== 
+==3385== HEAP SUMMARY:
+==3385==     in use at exit: 0 bytes in 0 blocks
+==3385==   total heap usage: 228 allocs, 228 frees, 121,824 bytes allocated
+==3385== 
+==3385== All heap blocks were freed -- no leaks are possible
+==3385== 
+==3385== For lists of detected and suppressed errors, rerun with: -s
+==3385== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+ Code Coverage Summary:
+Nettoyage...
+cc -Wall -Wextra -g -IInc -fprofile-arcs -ftest-coverage -g -O0 -o build/test_database test/test_database.c sqlite-lib/sqlite3.c Src/database.c
+Exécution des tests avec couverture...
+./build/test_database
+ Tous les tests ont réussi.
+Génération du rapport de couverture...
+gcovr -r . --html --html-details -o build/coverage.html
+(INFO) Reading coverage data...
+
+(INFO) Writing coverage report...
+
