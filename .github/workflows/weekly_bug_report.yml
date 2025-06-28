@@ -27,4 +27,5 @@ jobs:
           git config user.email "actions@github.com"
           git add reports/bug_report_weekly.md
           git commit -m "📋 Weekly bug report update [skip ci]" || echo "⚠️ No changes to commit."
+          git pull --rebase origin master
           git push
