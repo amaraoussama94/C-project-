@@ -21,6 +21,9 @@ else
  CC ?= gcc
 endif
 
+# Test sources and executable
+TEST_SRC = test/test_database.c
+TEST_EXEC = build/test_database$(EXEC_EXT)
 # Définit la version du programme.
 BIN = build/gestion_stock_v$(VERSION)$(EXEC_EXT)
 
@@ -46,6 +49,9 @@ OBJ=$(SRC:.c=.o)
 # Si le dossier build n'existe pas, il sera créé automatiquement.
 EXEC=build/gestion_stock$(EXEC_EXT)
 
+#	Fichiers de test d'intégration.
+TEST_INTEGRATION_SRC = test/test_integration.c
+TEST_INTEGRATION_EXEC = build/test_integration$(EXEC_EXT)
 #Cible par défaut : si tu tapes make, cela va construire l’exécutable.
 all: $(EXEC)
 
@@ -86,3 +92,54 @@ ci-build:
 ci-build-windows:
 	@mkdir -p build
 	x86_64-w64-mingw32-gcc $(CFLAGS) -DVERSION=\"$(VERSION)\" -o build/gestion_stock_v$(VERSION).exe $(SRC)
+
+# Test target
+test: $(TEST_EXEC)
+	@echo "Exécution des tests unitaires..."
+	./$(TEST_EXEC)
+
+# Build test executable
+$(TEST_EXEC): $(TEST_SRC) $(SRC_SQLITE) Src/database.c
+	@$(MKDIR)
+	$(CC) $(CFLAGS) -o $@ $^
+
+#	Cible pour exécuter les tests d'intégration.
+test-integration: $(TEST_INTEGRATION_EXEC)
+	@echo "Exécution du test d'intégration..."
+	./$(TEST_INTEGRATION_EXEC)
+
+$(TEST_INTEGRATION_EXEC): $(TEST_INTEGRATION_SRC) $(SRC_SQLITE) $(SRC_SRC)
+	@$(MKDIR)
+	$(CC) $(CFLAGS) -o $@ $^
+
+#	Cible pour exécuter les tests valgrind.
+ifeq ($(OS),Windows_NT)
+valgrind-test:
+	@echo "Valgrind n'est pas disponible sur Windows. Utilisez WSL ou CI."
+valgrind-integration:
+	@echo "Valgrind n'est pas disponible sur Windows. Utilisez WSL ou CI."
+else
+valgrind-test: $(TEST_EXEC)
+	valgrind --leak-check=full --error-exitcode=1 ./$(TEST_EXEC)
+
+valgrind-integration: $(TEST_INTEGRATION_EXEC)
+	valgrind --leak-check=full --error-exitcode=1 ./$(TEST_INTEGRATION_EXEC)
+endif
+
+#Code coverage tools track which lines of code are executed during tests. This helps you:
+#Spot dead or unused code
+#Identify untested branches or conditions
+#Improve test completeness
+COVERAGE_FLAGS = -fprofile-arcs -ftest-coverage -g -O0
+
+coverage: CFLAGS += $(COVERAGE_FLAGS)
+coverage: LDFLAGS += -lgcov
+coverage: clean $(TEST_EXEC)
+	@echo "Exécution des tests avec couverture..."
+	./$(TEST_EXEC)
+	@echo "Génération du rapport de couverture..."
+	gcovr -r . --html --html-details -o build/coverage.html
+
+
+
+
