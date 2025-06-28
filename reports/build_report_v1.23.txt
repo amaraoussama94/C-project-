@@ -1,0 +1,37 @@
+Build Report - gestion_stock
+Date: Sat Jun 28 18:40:17 UTC 2025
+Commit: 7e3f0ae2bb4aa985d8c1d9d56664c2b26fae91e8
+Branch: master
+
+ Unit Tests:
+cc -Wall -Wextra -g -IInc -o build/test_database test/test_database.c sqlite-lib/sqlite3.c Src/database.c
+Exécution des tests unitaires...
+./build/test_database
+ Tous les tests ont réussi.
+
+ Integration Tests:
+cc -Wall -Wextra -g -IInc -o build/test_integration test/test_integration.c sqlite-lib/sqlite3.c Src/database.c Src/produit.c Src/utils.c
+Exécution du test d'intégration...
+./build/test_integration
+Test d'intégration réussi.
+
+ Valgrind (Unit Tests):
+/home/runner/work/_temp/2e174d90-72fb-4c03-885e-49664fb68d2c.sh: line 3: valgrind: command not found
+❌ Valgrind failed.
+
+ Valgrind (Integration Tests):
+/home/runner/work/_temp/bfed4f30-c279-42a5-83e0-8c4997ccd150.sh: line 3: valgrind: command not found
+❌ Valgrind failed.
+
+ Code Coverage Summary:
+Nettoyage...
+cc -Wall -Wextra -g -IInc -fprofile-arcs -ftest-coverage -g -O0 -o build/test_database test/test_database.c sqlite-lib/sqlite3.c Src/database.c
+Exécution des tests avec couverture...
+./build/test_database
+ Tous les tests ont réussi.
+Génération du rapport de couverture...
+gcovr -r . --html --html-details -o build/coverage.html
+(INFO) Reading coverage data...
+
+(INFO) Writing coverage report...
+
