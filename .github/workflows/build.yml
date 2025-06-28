@@ -16,6 +16,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        #fix the ref to master branch and fetch all history for gcovr
+        with:
+          ref: master
+          fetch-depth: 0
 
       - name: Install gcovr
         run: pip install gcovr
@@ -85,6 +89,10 @@ jobs:
     # Downloads your code from GitHub into the runner so all files are accessible.
     - name: Checkout repository
       uses: actions/checkout@v3
+      #fix the ref to master branch and fetch all history for gcovr
+      with:
+        ref: master
+        fetch-depth: 0
 
     # Installs all the tools you need (compiler, make, etc.) on the Ubuntu runner. 
     # This is your build environment setup.
