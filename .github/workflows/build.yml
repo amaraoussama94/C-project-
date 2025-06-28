@@ -82,13 +82,21 @@ jobs:
         else
           echo "ℹ️ Tag $TAG_NAME already exists. Skipping tag creation."
         fi
-        
+    - name: Check binary exists
+      run: |
+        FILE="bin/gestion_stock_v${{ steps.version.outputs.new_version }}"
+        if [ ! -f "$FILE" ]; then
+          echo "Binary not found: $FILE"
+          exit 1
+        fi
+        echo "Binary found: $FILE"
+   
     # Upload the compiled binary to the GitHub Release
     - name: Upload binary to GitHub Release
       uses: softprops/action-gh-release@v2
       with:
         tag_name: PROD_VERSION_${{ steps.version.outputs.new_version }}
-        files: gestion_stock_v${{ steps.version.outputs.new_version }}
+        files: build/gestion_stock_v${{ steps.version.outputs.new_version }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # ^ Required to authenticate and upload to the release
