@@ -22,8 +22,9 @@ SRC_SQLITE = sqlite-lib/sqlite3.c
 #Convertit la liste de fichiers .c en fichiers .o (les objets intermédiaires).
 OBJ=$(SRC:.c=.o)
 
-#Nom de l’exécutable final.
-EXEC=gestion_stock.exe
+# Nom de l’exécutable final.
+# Si le dossier build n'existe pas, il sera créé automatiquement.
+EXEC=build/gestion_stock.exe
 
 #Cible par défaut : si tu tapes make, cela va construire l’exécutable.
 all: $(EXEC)
@@ -33,6 +34,7 @@ all: $(EXEC)
 #$^ = tous les fichiers .o (dépendances)
 $(EXEC): $(OBJ)
 	@if not exist build mkdir build
+	@echo "Compilation de l'exécutable $(EXEC)..."
 	$(CC) $(CFLAGS) -o $@ $^
 
 #Compile chaque fichier .c individuellement en .o.
@@ -53,4 +55,5 @@ run: all
 	$(EXEC)
 # CI build with embedded version macro and versioned binary
 ci-build:
+	@if not exist build mkdir build
 	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -o gestion_stock_v$(VERSION) $(SRC)
