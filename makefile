@@ -11,11 +11,13 @@ BIN=gestion_stock_v$(VERSION)
 CFLAGS=-Wall -Wextra -g -IInc
 
 #Liste des fichiers source principaux et supplémentaires.
-SRC=$(SRC_MAIN) $(SRC_SRC)
+SRC=$(SRC_MAIN) $(SRC_SRC) $(SRC_SQLITE)
 #SRC_MAIN est le fichier principal (main.c).
 SRC_MAIN=main.c
 #SRC_SRC contient tous les fichiers .c du dossier src.
 SRC_SRC=$(wildcard Src/*.c)
+#Ajoute le fichier SQLite3 source.
+SRC_SQLITE = lib/sqlite3.c
 
 #Convertit la liste de fichiers .c en fichiers .o (les objets intermédiaires).
 OBJ=$(SRC:.c=.o)
@@ -30,6 +32,7 @@ all: $(EXEC)
 #$@ = le nom de la cible (gestion_stock.exe)
 #$^ = tous les fichiers .o (dépendances)
 $(EXEC): $(OBJ)
+	@mkdir -p build
 	$(CC) $(CFLAGS) -o $@ $^
 
 #Compile chaque fichier .c individuellement en .o.
@@ -40,7 +43,7 @@ $(EXEC): $(OBJ)
 
 #Supprime les fichiers .o et l’exécutable .exe (Windows utilise del au lieu de rm).
 clean:
-	del /Q *.o $(EXEC)
+	del /Q *.o build\*.exe 2>nul || true
 
 #Compile et lance ton programme en une seule commande : make run
 run: all
