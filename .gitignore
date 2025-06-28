@@ -5,3 +5,4 @@
 *.db
 *.gcda
 *.gcno
+/build
