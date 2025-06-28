@@ -112,14 +112,33 @@ $(TEST_INTEGRATION_EXEC): $(TEST_INTEGRATION_SRC) $(SRC_SQLITE) $(SRC_SRC)
 	@$(MKDIR)
 	$(CC) $(CFLAGS) -o $@ $^
 
-#	Cible pour analyser la mémoire avec Valgrind.
+#	Cible pour exécuter les tests valgrind.
+ifeq ($(OS),Windows_NT)
+valgrind-test:
+	@echo "Valgrind n'est pas disponible sur Windows. Utilisez WSL ou CI."
+valgrind-integration:
+	@echo "Valgrind n'est pas disponible sur Windows. Utilisez WSL ou CI."
+else
 valgrind-test: $(TEST_EXEC)
-	@echo "Analyse mémoire avec Valgrind..."
 	valgrind --leak-check=full --error-exitcode=1 ./$(TEST_EXEC)
-#	Cible pour analyser la mémoire avec Valgrind pour les tests d'intégration.
+
 valgrind-integration: $(TEST_INTEGRATION_EXEC)
-	@echo "Analyse mémoire (intégration)..."
 	valgrind --leak-check=full --error-exitcode=1 ./$(TEST_INTEGRATION_EXEC)
+endif
+
+#Code coverage tools track which lines of code are executed during tests. This helps you:
+#Spot dead or unused code
+#Identify untested branches or conditions
+#Improve test completeness
+COVERAGE_FLAGS = -fprofile-arcs -ftest-coverage -g -O0
+
+coverage: CFLAGS += $(COVERAGE_FLAGS)
+coverage: LDFLAGS += -lgcov
+coverage: clean $(TEST_EXEC)
+	@echo "Exécution des tests avec couverture..."
+	./$(TEST_EXEC)
+	@echo "Génération du rapport de couverture..."
+	gcovr -r . --html --html-details -o build/coverage.html
 
 
 
