@@ -202,6 +202,12 @@ jobs:
           build/gestion_stock_${{ steps.version.outputs.new_version }}
           build/gestion_stock_${{ steps.version.outputs.new_version }}.exe
         # This step commits the build report to the repository.
+    - name: Download build report artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: build-report
+        path: .
+
     - name: Commit build report to repository
       run: |
         mkdir -p reports
