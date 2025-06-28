@@ -112,4 +112,15 @@ $(TEST_INTEGRATION_EXEC): $(TEST_INTEGRATION_SRC) $(SRC_SQLITE) $(SRC_SRC)
 	@$(MKDIR)
 	$(CC) $(CFLAGS) -o $@ $^
 
+#	Cible pour analyser la mémoire avec Valgrind.
+valgrind-test: $(TEST_EXEC)
+	@echo "Analyse mémoire avec Valgrind..."
+	valgrind --leak-check=full --error-exitcode=1 ./$(TEST_EXEC)
+#	Cible pour analyser la mémoire avec Valgrind pour les tests d'intégration.
+valgrind-integration: $(TEST_INTEGRATION_EXEC)
+	@echo "Analyse mémoire (intégration)..."
+	valgrind --leak-check=full --error-exitcode=1 ./$(TEST_INTEGRATION_EXEC)
+
+
+
 

@@ -8,9 +8,9 @@ on:
   pull_request:
 
 jobs:
-# This job runs unit and integration tests.
+# This job runs unit tests and integration tests using Valgrind to check for memory leaks.
   test:
-    name:  Run Unit and Integration Tests
+    name:  Run Unit, Integration, and Valgrind Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -22,11 +22,22 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y build-essential make
 
-
       - name: Run tests
-        run: make test
+        run:  |
+          echo "Running unit tests..."
+          make test
+          
+
       - name: Run integration tests
-        run: make test-integration
+        run:  |
+          echo "Running integration tests..."
+          make test-integration
+
+      - name: Run Valgrind on unit tests
+        run: make valgrind-test
+
+      - name: Run Valgrind on integration tests
+        run: make valgrind-integration
   build:
     name: Build and Release
     runs-on: ubuntu-latest
