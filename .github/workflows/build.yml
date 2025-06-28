@@ -84,7 +84,7 @@ jobs:
         fi
     - name: Check binary exists
       run: |
-        FILE="build/gestion_stock_${{ steps.version.outputs.new_version }}"
+        FILE="build/gestion_stock_${{ steps.version.outputs.new_version }}.exe"
         if [ ! -f "$FILE" ]; then
           echo "Binary not found: $FILE"
           exit 1
@@ -96,7 +96,7 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         tag_name: PROD_VERSION_${{ steps.version.outputs.new_version }}
-        files: build/gestion_stock_${{ steps.version.outputs.new_version }}
+        files: build/gestion_stock_${{ steps.version.outputs.new_version }}.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # ^ Required to authenticate and upload to the release
