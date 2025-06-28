@@ -5,13 +5,24 @@
 #Définit le compilateur utilisé (ici GCC).
 # Check if the OS is Windows and set the compiler accordingly.
 ifeq ($(OS),Windows_NT)
+#local	build settings for Windows
+ RM = del /S /Q
+ RMDIR = rmdir /S /Q
+ MKDIR = if not exist build mkdir build
+ EXEC_EXT = .exe
  CC := gcc
 else
-	CC ?= gcc
+#cross-platform settings
+#used for github actions
+ RM = rm -f
+ RMDIR = rm -rf
+ MKDIR = mkdir -p build
+ EXEC_EXT =
+ CC ?= gcc
 endif
 
 # Définit la version du programme.
-BIN=build/gestion_stock_v$(VERSION)
+BIN = build/gestion_stock_v$(VERSION)$(EXEC_EXT)
 
 #Options de compilation :
 #-Wall et -Wextra activent de nombreux avertissements utiles pour repérer les erreurs potentielles.
@@ -33,17 +44,18 @@ OBJ=$(SRC:.c=.o)
 
 # Nom de l’exécutable final.
 # Si le dossier build n'existe pas, il sera créé automatiquement.
-EXEC=build/gestion_stock.exe
+EXEC=build/gestion_stock$(EXEC_EXT)
 
 #Cible par défaut : si tu tapes make, cela va construire l’exécutable.
 all: $(EXEC)
 
 #Crée l’exécutable à partir des fichiers .o.
+#MKDIR crée le dossier build s'il n'existe pas.
 #$@ = le nom de la cible (gestion_stock.exe)
 #$^ = tous les fichiers .o (dépendances)
 $(EXEC): $(OBJ)
-	@if not exist build mkdir build
-	@echo "Compilation de l'exécutable $(EXEC)..."
+	@$(MKDIR)
+	@echo "🔧 Compilation de $(EXEC)..."
 	$(CC) $(CFLAGS) -o $@ $^
 
 #Compile chaque fichier .c individuellement en .o.
@@ -52,17 +64,25 @@ $(EXEC): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-#Supprime les fichiers .o et l’exécutable .exe (Windows utilise del au lieu de rm).
+#Cible pour nettoyer les fichiers intermédiaires et l'exécutable.
+#support for Windows and Unix-like systems.
 clean:
-	@echo "Nettoyage des fichiers objets et exécutables..."
-	@del /S /Q *.o 2>nul || exit 0
-	@del /S /Q *.exe 2>nul || exit 0
-	@if exist build rmdir /S /Q build
+	@echo "Nettoyage..."
+	-@$(RM) *.o
+	-@$(RM) build/*$(EXEC_EXT)
+	-@$(RMDIR) build
 
 #Compile et lance ton programme en une seule commande : make run
 run: all
-	$(EXEC)
-# CI build with embedded version macro and versioned binary
+
+	./$(EXEC)
+
+# CI build with embedded version macro and versioned binary for linux
 ci-build:
 	@mkdir -p build
-	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -o $(BIN) $(SRC)
+	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -o build/gestion_stock_v$(VERSION) $(SRC)
+	
+# CI build for Windows with embedded version macro and versioned binary
+ci-build-windows:
+	@mkdir -p build
+	x86_64-w64-mingw32-gcc $(CFLAGS) -DVERSION=\"$(VERSION)\" -o build/gestion_stock_v$(VERSION).exe $(SRC)
