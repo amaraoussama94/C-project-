@@ -2,7 +2,7 @@
 CC=gcc
 
 # Définit la version du programme.
-BIN=gestion_stock_v$(VERSION)
+BIN=build/gestion_stock_v$(VERSION)
 
 #Options de compilation :
 #-Wall et -Wextra activent de nombreux avertissements utiles pour repérer les erreurs potentielles.
@@ -56,4 +56,4 @@ run: all
 # CI build with embedded version macro and versioned binary
 ci-build:
 	@mkdir -p build
-	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -o gestion_stock_v$(VERSION) $(SRC)
+	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -o $(BIN) $(SRC)
