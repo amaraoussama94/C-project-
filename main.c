@@ -11,44 +11,7 @@
 
 #include <stdio.h>
 #include "database.h"
-
-/**
- * @brief Adds a new product to the database interactively.
- * 
- * Prompts the user for product details and inserts the new product into the database.
- * 
- * @param db Pointer to the SQLite database connection.
- */
-void ajouter_produit_interactif(sqlite3 *db);
-
-/**
- * @brief Modifies an existing product in the database interactively.
- * 
- * Prompts the user to select and update product details in the database.
- * 
- * @param db Pointer to the SQLite database connection.
- */
-void modifier_produit_interactif(sqlite3 *db);
- 
-
-/**
- * @brief Deletes a product from the database interactively.
- * 
- * Prompts the user to select a product to remove from the database.
- * 
- * @param db Pointer to the SQLite database connection.
- */
-void supprimer_produit_interactif(sqlite3 *db);
-
-
-/**
- * @brief Lists all products in the database interactively.
- * 
- * Retrieves and displays all products stored in the database.
- * 
- * @param db Pointer to the SQLite database connection.
- */
-void lister_produits_interactif(sqlite3 *db);
+#include "produit.h"
 
 /**
  * @brief Displays the main menu for the stock management system.
@@ -124,6 +87,7 @@ int main() {
             case 1:
                 clear_screen(); // Efface l'écran avant d'ajouter un produit
                 ajouter_produit_interactif(db);
+                pause_console(); // Pause pour permettre à l'utilisateur de lire la liste
                 break;
             case 2:
                 clear_screen(); // Efface l'écran avant de lister les produits
