@@ -131,27 +131,48 @@ documentation générée avec Doxygen
 <li>Persistance des données dans un fichier structuré</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
-🔄 Changements récents (Branche <span class="tt">dev_Refactorcode</span>)</h1>
+🔄 Changements récents (Branche <span class="tt">dev_RefactorSqlite</span>)</h1>
+<blockquote class="doxtable">
+<p>Cette branche marque une refonte complète du projet pour le rendre plus modulaire, maintenable et professionnel. </p>
+</blockquote>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+🧠 Architecture &amp; Refactorisation</h2>
 <ul>
-<li>Refactorisation complète du code source : séparation <span class="tt">.c</span> / <span class="tt">.h</span></li>
-<li>Ajout de commentaires <b>Doxygen</b> professionnels dans tous les fichiers</li>
-<li>Nettoyage du <span class="tt">Makefile</span> et ajout de règles plus propres</li>
-<li>Préparation d'une documentation automatique via Doxygen</li>
+<li>Suppression de l’ancienne logique basée sur fichiers plats (<span class="tt">fichier.c</span>, <span class="tt">fichier.h</span>)</li>
+<li>Intégration d’un module <span class="tt"><a class="el" href="database_8c.html" title="Implémentation des fonctions de gestion de la base de données SQLite.">database.c</a></span> utilisant <b>SQLite3</b> pour la persistance des données</li>
+<li>Création d’un module <span class="tt"><a class="el" href="produit_8c.html" title="fonctions de gestion des produits pour un système de gestion de stock. Les opérations incluent l&#39;ajou...">produit.c</a></span> dédié à l’interface utilisateur (saisie, affichage)</li>
+<li>Séparation claire des responsabilités entre <span class="tt">main</span>, <span class="tt">produit</span>, et <span class="tt">database</span></li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
-🚀 Compilation</h1>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+🗂️ Réorganisation du projet</h2>
+<ul>
+<li>Nouvelle structure modulaire : Inc/ → fichiers .h Src/ → fichiers .c sqlite-lib/ → sqlite3.c embarqué build/ → fichiers compilés</li>
+<li>Mise à jour du <span class="tt">Makefile</span> :</li>
+<li>Compatible Windows (sans <span class="tt">-p</span>)</li>
+<li>Nettoyage récursif avec <span class="tt">make clean</span></li>
+<li>Exécutable généré dans <span class="tt">build/</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+🧪 Fonctionnalités améliorées</h2>
+<ul>
+<li>Toutes les opérations (ajout, suppression, modification, affichage) passent par SQLite</li>
+<li>Plus de dépendance à des fichiers texte ou binaires</li>
+<li>Interface console plus robuste et modulaire</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+🚀 Compilation</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
 Pré-requis</h2>
 <ul>
 <li>Compilateur C (<span class="tt">gcc</span>)</li>
 <li><a href="https://www.doxygen.nl/">Doxygen (optionnel)</a></li>
 <li>Système compatible POSIX ou Windows avec MinGW</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
 Instructions</h2>
 <p>Assurez-vous d’avoir gcc et make installés (via MinGW ou MSYS2).</p>
 <p>make # Compile le projet make run # Compile et exécute make clean # Supprime les fichiers générés</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
 🔧 Auto Build Process</h1>
 <p>This project leverages an automated build pipeline to ensure every change is compiled, tested, and deployed efficiently. Here’s how it works:</p>
 <ol type="1">

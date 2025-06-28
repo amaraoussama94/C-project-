@@ -29,12 +29,16 @@ var NAVTREE =
       [ "🎯 Objectifs", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
       [ "🛠️ Structure du projet", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
       [ "✨ Fonctionnalités principales", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
-      [ "🔄 Changements récents (Branche <span class=\"tt\">dev_Refactorcode</span>)", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
-      [ "🚀 Compilation", "md__r_e_a_d_m_e.html#autotoc_md5", [
-        [ "Pré-requis", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
-        [ "Instructions", "md__r_e_a_d_m_e.html#autotoc_md7", null ]
+      [ "🔄 Changements récents (Branche <span class=\"tt\">dev_RefactorSqlite</span>)", "md__r_e_a_d_m_e.html#autotoc_md4", [
+        [ "🧠 Architecture &amp; Refactorisation", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
+        [ "🗂️ Réorganisation du projet", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
+        [ "🧪 Fonctionnalités améliorées", "md__r_e_a_d_m_e.html#autotoc_md7", null ]
       ] ],
-      [ "🔧 Auto Build Process", "md__r_e_a_d_m_e.html#autotoc_md8", null ]
+      [ "🚀 Compilation", "md__r_e_a_d_m_e.html#autotoc_md8", [
+        [ "Pré-requis", "md__r_e_a_d_m_e.html#autotoc_md9", null ],
+        [ "Instructions", "md__r_e_a_d_m_e.html#autotoc_md10", null ]
+      ] ],
+      [ "🔧 Auto Build Process", "md__r_e_a_d_m_e.html#autotoc_md11", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -57,7 +61,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"struct_wal_writer.html"
+"struct_wal_index_hdr.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

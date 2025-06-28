@@ -56,24 +56,41 @@ gestion\+\_\+stock\+\_\+c/
 \item Rechercher un produit par ID
 \item Supprimer ou modifier un produit existant
 \item Persistance des données dans un fichier structuré
-\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{🔄 Changements récents (Branche {\ttfamily dev\+\_\+\+Refactorcode})}{🔄 Changements récents (Branche {\ttfamily dev\+\_\+\+Refactorcode})}}\label{md__r_e_a_d_m_e_autotoc_md4}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{🔄 Changements récents (Branche {\ttfamily dev\+\_\+\+Refactor\+Sqlite})}{🔄 Changements récents (Branche {\ttfamily dev\+\_\+\+Refactor\+Sqlite})}}\label{md__r_e_a_d_m_e_autotoc_md4}
+\begin{quote}
+Cette branche marque une refonte complète du projet pour le rendre plus modulaire, maintenable et professionnel. \end{quote}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{\texorpdfstring{🧠 Architecture \& Refactorisation}{🧠 Architecture \& Refactorisation}}\label{md__r_e_a_d_m_e_autotoc_md5}
 
 \begin{DoxyItemize}
-\item Refactorisation complète du code source \+: séparation {\ttfamily .c} / {\ttfamily .h}
-\item Ajout de commentaires {\bfseries{Doxygen}} professionnels dans tous les fichiers
-\item Nettoyage du {\ttfamily Makefile} et ajout de règles plus propres
-\item Préparation d\textquotesingle{}une documentation automatique via Doxygen
-\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{🚀 Compilation}{🚀 Compilation}}\label{md__r_e_a_d_m_e_autotoc_md5}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\texorpdfstring{Pré-\/requis}{Pré-\/requis}}\label{md__r_e_a_d_m_e_autotoc_md6}
+\item Suppression de l’ancienne logique basée sur fichiers plats ({\ttfamily fichier.\+c}, {\ttfamily fichier.\+h})
+\item Intégration d’un module {\ttfamily \doxylink{database_8c}{database.\+c}} utilisant {\bfseries{SQLite3}} pour la persistance des données
+\item Création d’un module {\ttfamily \doxylink{produit_8c}{produit.\+c}} dédié à l’interface utilisateur (saisie, affichage)
+\item Séparation claire des responsabilités entre {\ttfamily main}, {\ttfamily produit}, et {\ttfamily database}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\texorpdfstring{🗂️ Réorganisation du projet}{🗂️ Réorganisation du projet}}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Nouvelle structure modulaire \+: Inc/ → fichiers .h Src/ → fichiers .c sqlite-\/lib/ → sqlite3.\+c embarqué build/ → fichiers compilés
+\item Mise à jour du {\ttfamily Makefile} \+:
+\item Compatible Windows (sans {\ttfamily -\/p})
+\item Nettoyage récursif avec {\ttfamily make clean}
+\item Exécutable généré dans {\ttfamily build/}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{\texorpdfstring{🧪 Fonctionnalités améliorées}{🧪 Fonctionnalités améliorées}}\label{md__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Toutes les opérations (ajout, suppression, modification, affichage) passent par SQLite
+\item Plus de dépendance à des fichiers texte ou binaires
+\item Interface console plus robuste et modulaire
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{🚀 Compilation}{🚀 Compilation}}\label{md__r_e_a_d_m_e_autotoc_md8}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{\texorpdfstring{Pré-\/requis}{Pré-\/requis}}\label{md__r_e_a_d_m_e_autotoc_md9}
 
 \begin{DoxyItemize}
 \item Compilateur C ({\ttfamily gcc})
 \item \href{https://www.doxygen.nl/}{\texttt{Doxygen (optionnel)}}
 \item Système compatible POSIX ou Windows avec Min\+GW
-\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{\texorpdfstring{Instructions}{Instructions}}\label{md__r_e_a_d_m_e_autotoc_md7}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{Instructions}{Instructions}}\label{md__r_e_a_d_m_e_autotoc_md10}
 Assurez-\/vous d’avoir gcc et make installés (via Min\+GW ou MSYS2).
 
-make \# Compile le projet make run \# Compile et exécute make clean \# Supprime les fichiers générés\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{🔧 Auto Build Process}{🔧 Auto Build Process}}\label{md__r_e_a_d_m_e_autotoc_md8}
+make \# Compile le projet make run \# Compile et exécute make clean \# Supprime les fichiers générés\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{\texorpdfstring{🔧 Auto Build Process}{🔧 Auto Build Process}}\label{md__r_e_a_d_m_e_autotoc_md11}
 This project leverages an automated build pipeline to ensure every change is compiled, tested, and deployed efficiently. Here’s how it works\+:
 
 

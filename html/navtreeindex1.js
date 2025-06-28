@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"struct_wal_index_hdr.html":[1,0,224],
+"struct_wal_iterator.html":[1,0,225],
+"struct_wal_iterator_1_1_wal_segment.html":[1,0,225,0],
 "struct_wal_writer.html":[1,0,227],
 "struct_walker.html":[1,0,226],
 "struct_where_and_info.html":[1,0,228],

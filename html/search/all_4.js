@@ -16,7 +16,7 @@ var searchData=
   ['dbpath_13',['DbPath',['../struct_db_path.html',1,'']]],
   ['de_20stock_14',['📦 Projet C - Gestion de Stock',['../md__r_e_a_d_m_e.html',1,'']]],
   ['decimal_15',['Decimal',['../struct_decimal.html',1,'']]],
-  ['dev_5frefactorcode_16',['🔄 Changements récents (Branche &lt;span class=&quot;tt&quot;&gt;dev_Refactorcode&lt;/span&gt;)',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]],
+  ['dev_5frefactorsqlite_16',['🔄 Changements récents (Branche &lt;span class=&quot;tt&quot;&gt;dev_RefactorSqlite&lt;/span&gt;)',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]],
   ['distinctctx_17',['DistinctCtx',['../struct_distinct_ctx.html',1,'']]],
-  ['du_20projet_18',['🛠️ Structure du projet',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]]
+  ['du_20projet_18',['du projet',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'🗂️ Réorganisation du projet'],['../md__r_e_a_d_m_e.html#autotoc_md2',1,'🛠️ Structure du projet']]]
 ];

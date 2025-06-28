@@ -15,7 +15,7 @@ var searchData=
   ['pgroup_12',['PGroup',['../struct_p_group.html',1,'']]],
   ['pmareader_13',['PmaReader',['../struct_pma_reader.html',1,'']]],
   ['pmawriter_14',['PmaWriter',['../struct_pma_writer.html',1,'']]],
-  ['pré_20requis_15',['Pré-requis',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]],
+  ['pré_20requis_15',['Pré-requis',['../md__r_e_a_d_m_e.html#autotoc_md9',1,'']]],
   ['pragmaname_16',['PragmaName',['../struct_pragma_name.html',1,'']]],
   ['pragmavtab_17',['PragmaVtab',['../struct_pragma_vtab.html',1,'']]],
   ['pragmavtabcursor_18',['PragmaVtabCursor',['../struct_pragma_vtab_cursor.html',1,'']]],
@@ -23,10 +23,10 @@ var searchData=
   ['principales_20',['✨ Fonctionnalités principales',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]],
   ['printfarguments_21',['PrintfArguments',['../struct_printf_arguments.html',1,'']]],
   ['prix_22',['prix',['../struct_produit.html#a42ef1d4887be85e601553ad082096263',1,'Produit']]],
-  ['process_23',['🔧 Auto Build Process',['../md__r_e_a_d_m_e.html#autotoc_md8',1,'']]],
+  ['process_23',['🔧 Auto Build Process',['../md__r_e_a_d_m_e.html#autotoc_md11',1,'']]],
   ['produit_24',['Produit',['../struct_produit.html',1,'']]],
   ['produit_2ec_25',['produit.c',['../produit_8c.html',1,'']]],
   ['produit_2eh_26',['produit.h',['../produit_8h.html',1,'']]],
-  ['projet_27',['🛠️ Structure du projet',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['projet_27',['projet',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'🗂️ Réorganisation du projet'],['../md__r_e_a_d_m_e.html#autotoc_md2',1,'🛠️ Structure du projet']]],
   ['projet_20c_20gestion_20de_20stock_28',['📦 Projet C - Gestion de Stock',['../md__r_e_a_d_m_e.html',1,'']]]
 ];

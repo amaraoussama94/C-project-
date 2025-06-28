@@ -61,12 +61,29 @@ gestion_stock_c/
 - Supprimer ou modifier un produit existant
 - Persistance des données dans un fichier structuré
 
-## 🔄 Changements récents (Branche `dev_Refactorcode`)
+## 🔄 Changements récents (Branche `dev_RefactorSqlite`)
 
-- Refactorisation complète du code source : séparation `.c` / `.h`
-- Ajout de commentaires **Doxygen** professionnels dans tous les fichiers
-- Nettoyage du `Makefile` et ajout de règles plus propres
-- Préparation d'une documentation automatique via Doxygen
+> Cette branche marque une refonte complète du projet pour le rendre plus modulaire, maintenable et professionnel.
+
+### 🧠 Architecture & Refactorisation
+- Suppression de l’ancienne logique basée sur fichiers plats (`fichier.c`, `fichier.h`)
+- Intégration d’un module `database.c` utilisant **SQLite3** pour la persistance des données
+- Création d’un module `produit.c` dédié à l’interface utilisateur (saisie, affichage)
+- Séparation claire des responsabilités entre `main`, `produit`, et `database`
+
+### 🗂️ Réorganisation du projet
+- Nouvelle structure modulaire :
+Inc/ → fichiers .h Src/ → fichiers .c sqlite-lib/ → sqlite3.c embarqué build/ → fichiers compilés
+
+- Mise à jour du `Makefile` :
+- Compatible Windows (sans `-p`)
+- Nettoyage récursif avec `make clean`
+- Exécutable généré dans `build/`
+
+### 🧪 Fonctionnalités améliorées
+- Toutes les opérations (ajout, suppression, modification, affichage) passent par SQLite
+- Plus de dépendance à des fichiers texte ou binaires
+- Interface console plus robuste et modulaire
 
 ## 🚀 Compilation
 
