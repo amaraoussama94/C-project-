@@ -49,6 +49,9 @@ OBJ=$(SRC:.c=.o)
 # Si le dossier build n'existe pas, il sera créé automatiquement.
 EXEC=build/gestion_stock$(EXEC_EXT)
 
+#	Fichiers de test d'intégration.
+TEST_INTEGRATION_SRC = test/test_integration.c
+TEST_INTEGRATION_EXEC = build/test_integration$(EXEC_EXT)
 #Cible par défaut : si tu tapes make, cela va construire l’exécutable.
 all: $(EXEC)
 
@@ -99,4 +102,14 @@ test: $(TEST_EXEC)
 $(TEST_EXEC): $(TEST_SRC) $(SRC_SQLITE) Src/database.c
 	@$(MKDIR)
 	$(CC) $(CFLAGS) -o $@ $^
+
+#	Cible pour exécuter les tests d'intégration.
+test-integration: $(TEST_INTEGRATION_EXEC)
+	@echo "Exécution du test d'intégration..."
+	./$(TEST_INTEGRATION_EXEC)
+
+$(TEST_INTEGRATION_EXEC): $(TEST_INTEGRATION_SRC) $(SRC_SQLITE) $(SRC_SRC)
+	@$(MKDIR)
+	$(CC) $(CFLAGS) -o $@ $^
+
 
