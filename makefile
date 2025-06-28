@@ -145,13 +145,13 @@ coverage: clean $(TEST_EXEC)
 # This target generates a weekly bug report using cppcheck.
 # It creates a markdown file with the results of static analysis.
 bug-report:
-    @mkdir -p reports
-    @echo "# 🐞 Weekly Bug Report" > reports/bug_report_weekly.md
-    @echo "" >> reports/bug_report_weekly$(VERSION).md
-    @echo "_Last updated: $$(date +%F)_\n" >> reports/bug_report_weekly$(VERSION).md
-    @echo "## 📁 Static Analysis (cppcheck)\n" >> reports/bug_report_weekly.md
-    @cppcheck --enable=all --inconclusive --quiet --std=c99 --language=c . 2> reports/cppcheck_raw.txt || true
-    @grep -E "warning|error" reports/cppcheck_raw.txt >> reports/bug_report_weekly$(VERSION).md || echo "✅ No issues found." >> reports/bug_report_weekly$(VERSION).md
+	@mkdir -p reports
+	@echo "# 🐞 Weekly Bug Report" > reports/bug_report_weekly.md
+	@echo "" >> reports/bug_report_weekly$(VERSION).md
+	@echo "_Last updated: $$(date +%F)_\n" >> reports/bug_report_weekly$(VERSION).md
+	@echo "## 📁 Static Analysis (cppcheck)\n" >> reports/bug_report_weekly.md
+	@cppcheck --enable=all --inconclusive --quiet --std=c99 --language=c . 2> reports/cppcheck_raw.txt || true
+	@grep -E "warning|error" reports/cppcheck_raw.txt >> reports/bug_report_weekly$(VERSION).md || echo "✅ No issues found." >> reports/bug_report_weekly$(VERSION)b.md
 
 
 
