@@ -11,35 +11,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "produit.h"
+#include "utils.h"
 
-/**
- * @brief Vérifie si un produit avec le nom donné existe dans la base de données.
- *
- * Cette fonction interroge la base de données pour vérifier si un produit
- * avec le nom spécifié existe déjà. Elle retourne 1 si le produit existe,
- * 0 sinon.
- *
- * @param db Pointeur vers la base de données SQLite.
- * @param nom Nom du produit à vérifier.
- * @return 1 si le produit existe, 0 sinon.
- */
-int db_produit_existe(sqlite3 *db, const char *nom) {
-    const char *sql = "SELECT COUNT(*) FROM produits WHERE nom = ?";
-    sqlite3_stmt *stmt;
-    int existe = 0;
-// Préparation de la requête SQL
-    if (sqlite3_prepare_v2(db, sql, -1, &stmt, NULL) != SQLITE_OK)
-        return 0;
-// Liaison du paramètre
-    sqlite3_bind_text(stmt, 1, nom, -1, SQLITE_STATIC);
-// Exécution de la requête
-    if (sqlite3_step(stmt) == SQLITE_ROW) {
-        existe = sqlite3_column_int(stmt, 0) > 0;
-    }
-// Libération des ressources
-    sqlite3_finalize(stmt);
-    return existe;
-}
 
 /**
  * @brief Adds a new product to the database interactively.
@@ -51,8 +24,10 @@ int db_produit_existe(sqlite3 *db, const char *nom) {
 void ajouter_produit_interactif(sqlite3 *db) {
     Produit p;
     printf("Nom : ");
-    scanf("%99s", p.nom);
-
+    if (lire_chaine(p.nom, sizeof(p.nom)) != 0) {
+        printf("Erreur de lecture du nom.\n");
+        return;
+    }
     // Vérification d'existence
     if (db_produit_existe(db, p.nom)) {
         printf("Le produit  existe déjà. voulez-vous le modifier via menu modifier ");
@@ -61,9 +36,17 @@ void ajouter_produit_interactif(sqlite3 *db) {
 
     // Si le produit n'existe pas, on continue l'ajout
     printf("Quantité : ");
-    scanf("%d", &p.quantite);
+    p.quantite = lire_entier();
+    if (p.quantite < 0) {
+        printf("Quantité invalide.\n");
+        return;
+    }
     printf("Prix : ");
-    scanf("%f", &p.prix);
+    p.prix = lire_flottant();
+    if (p.prix < 0) {
+        printf("Prix invalide.\n");
+        return;
+    }
 
     if (db_ajouter_produit(db, &p) == 0)
         printf("Produit ajouté avec succès.\n");
@@ -84,13 +67,29 @@ void ajouter_produit_interactif(sqlite3 *db) {
 void modifier_produit_interactif(sqlite3 *db) {
     Produit p;
     printf("ID du produit à modifier : ");
-    scanf("%d", &p.id);
+    p.id = lire_entier();
+    if (p.id < 0 || !db_produit_existe_par_id(db, p.id)) {
+        printf("ID invalide ou produit inexistant.\n");
+        return;
     printf("Nouveau nom : ");
-    scanf("%99s", p.nom);
+    if (lire_chaine(p.nom, sizeof(p.nom)) != 0) {
+        printf("Erreur de lecture du nom.\n");
+        return;
+    }
+
     printf("Nouvelle quantité : ");
-    scanf("%d", &p.quantite);
+    p.quantite = lire_entier();
+    if (p.quantite < 0) {
+        printf("Quantité invalide.\n");
+        return;
+    }
+
     printf("Nouveau prix : ");
-    scanf("%f", &p.prix);
+    p.prix = lire_flottant();
+    if (p.prix < 0) {
+        printf("Prix invalide.\n");
+        return;
+    }
 
     if (db_modifier_produit(db, &p) == 0)
         printf("Produit modifié avec succès.\n");
@@ -110,7 +109,10 @@ void modifier_produit_interactif(sqlite3 *db) {
 void supprimer_produit_interactif(sqlite3 *db) {
     int id;
     printf("ID du produit à supprimer : ");
-    scanf("%d", &id);
+    p.id = lire_entier();
+    if (p.id < 0 || !db_produit_existe_par_id(db, p.id)) {
+        printf("ID invalide ou produit inexistant.\n");
+        return;
 
     if (db_supprimer_produit(db, id) == 0)
         printf("Produit supprimé.\n");
@@ -131,3 +133,4 @@ void lister_produits_interactif(sqlite3 *db) {
     if (db_lister_produits(db) != 0)
         printf("Erreur lors de l'affichage des produits.\n");
 }
+

@@ -73,4 +73,30 @@ int db_supprimer_produit(sqlite3 *db, int id);
  */
 int db_modifier_produit(sqlite3 *db, const Produit *p);
 
+/**
+ * @brief Vérifie si un produit avec le nom donné existe dans la base de données.
+ *
+ * Cette fonction interroge la base de données pour vérifier si un produit
+ * avec le nom spécifié existe déjà. Elle retourne 1 si le produit existe,
+ * 0 sinon.
+ *
+ * @param db Pointeur vers la base de données SQLite.
+ * @param nom Nom du produit à vérifier.
+ * @return 1 si le produit existe, 0 sinon.
+ */
+int db_produit_existe(sqlite3 *db, const char *nom) ;
+
+/**
+ * @brief Vérifie si un produit avec le nom donné existe dans la base de données.
+ *
+ * Cette fonction interroge la base de données pour vérifier si un produit
+ * avec le nom spécifié existe déjà. Elle retourne 1 si le produit existe,
+ * 0 sinon.
+ *
+ * @param db Pointeur vers la base de données SQLite.
+ * @param nom Nom du produit à vérifier.
+ * @return 1 si le produit existe, 0 sinon.
+ */
+int db_produit_existe(sqlite3 *db, const char *nom) ;
+
 #endif
