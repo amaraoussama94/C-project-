@@ -1,0 +1,82 @@
+\doxysection{Wal Struct Reference}
+\hypertarget{struct_wal}{}\label{struct_wal}\index{Wal@{Wal}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_wal_a5431b060acbc998a7e3710587abaa11e}\label{struct_wal_a5431b060acbc998a7e3710587abaa11e} 
+\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Vfs}
+\item 
+\Hypertarget{struct_wal_a3a4d051c55228e554b36691c5095ed14}\label{struct_wal_a3a4d051c55228e554b36691c5095ed14} 
+\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Db\+Fd}
+\item 
+\Hypertarget{struct_wal_aea2a72ead42cfe57e3a6809e80884397}\label{struct_wal_aea2a72ead42cfe57e3a6809e80884397} 
+\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Wal\+Fd}
+\item 
+\Hypertarget{struct_wal_aae230a2317817739a5f08ebb28b644b0}\label{struct_wal_aae230a2317817739a5f08ebb28b644b0} 
+u32 {\bfseries i\+Callback}
+\item 
+\Hypertarget{struct_wal_a413f9f82c15d31627a2ed6eac9b6cc27}\label{struct_wal_a413f9f82c15d31627a2ed6eac9b6cc27} 
+i64 {\bfseries mx\+Wal\+Size}
+\item 
+\Hypertarget{struct_wal_ae3e69420adab92acd90dd7c03d37815f}\label{struct_wal_ae3e69420adab92acd90dd7c03d37815f} 
+int {\bfseries n\+Wi\+Data}
+\item 
+\Hypertarget{struct_wal_a901c02626270f4d51db89786e4994da9}\label{struct_wal_a901c02626270f4d51db89786e4994da9} 
+int {\bfseries sz\+First\+Block}
+\item 
+\Hypertarget{struct_wal_a2b0078e3adfd1fb21794561bb12bbfac}\label{struct_wal_a2b0078e3adfd1fb21794561bb12bbfac} 
+volatile u32 \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries ap\+Wi\+Data}
+\item 
+\Hypertarget{struct_wal_a771c3a8c81326babc7d623255a6034c5}\label{struct_wal_a771c3a8c81326babc7d623255a6034c5} 
+u32 {\bfseries sz\+Page}
+\item 
+\Hypertarget{struct_wal_a260550c859ac7224fbdad0586dca664a}\label{struct_wal_a260550c859ac7224fbdad0586dca664a} 
+i16 {\bfseries read\+Lock}
+\item 
+\Hypertarget{struct_wal_ac1382875f5fe049ccf09f1c2d370c429}\label{struct_wal_ac1382875f5fe049ccf09f1c2d370c429} 
+u8 {\bfseries sync\+Flags}
+\item 
+\Hypertarget{struct_wal_ada255c96ca65d9d8955bbf139af4e6f4}\label{struct_wal_ada255c96ca65d9d8955bbf139af4e6f4} 
+u8 {\bfseries exclusive\+Mode}
+\item 
+\Hypertarget{struct_wal_ad7f4ba84f07115b7ce3a6133479c9d24}\label{struct_wal_ad7f4ba84f07115b7ce3a6133479c9d24} 
+u8 {\bfseries write\+Lock}
+\item 
+\Hypertarget{struct_wal_a29153bfb37a9a32f1171e5c1d10994d2}\label{struct_wal_a29153bfb37a9a32f1171e5c1d10994d2} 
+u8 {\bfseries ckpt\+Lock}
+\item 
+\Hypertarget{struct_wal_a38f0810e34bdc89acdf27574473c0495}\label{struct_wal_a38f0810e34bdc89acdf27574473c0495} 
+u8 {\bfseries read\+Only}
+\item 
+\Hypertarget{struct_wal_a12870bbe7755271c94c3eb1fd0280c56}\label{struct_wal_a12870bbe7755271c94c3eb1fd0280c56} 
+u8 {\bfseries truncate\+On\+Commit}
+\item 
+\Hypertarget{struct_wal_ae3de9666170c103a835a2c767932d3f9}\label{struct_wal_ae3de9666170c103a835a2c767932d3f9} 
+u8 {\bfseries sync\+Header}
+\item 
+\Hypertarget{struct_wal_af10e79ca8fe617d7df706182ebdf7039}\label{struct_wal_af10e79ca8fe617d7df706182ebdf7039} 
+u8 {\bfseries pad\+To\+Sector\+Boundary}
+\item 
+\Hypertarget{struct_wal_a5f2961175582eb8c832263b88ca1ec55}\label{struct_wal_a5f2961175582eb8c832263b88ca1ec55} 
+u8 {\bfseries b\+Shm\+Unreliable}
+\item 
+\Hypertarget{struct_wal_adbeef9e632541fbf07c926652b165906}\label{struct_wal_adbeef9e632541fbf07c926652b165906} 
+\mbox{\hyperlink{struct_wal_index_hdr}{Wal\+Index\+Hdr}} {\bfseries hdr}
+\item 
+\Hypertarget{struct_wal_a8062e125a5a4393c34cd1d9758a82e74}\label{struct_wal_a8062e125a5a4393c34cd1d9758a82e74} 
+u32 {\bfseries min\+Frame}
+\item 
+\Hypertarget{struct_wal_a409c7d261a92893913e2e631974bf1aa}\label{struct_wal_a409c7d261a92893913e2e631974bf1aa} 
+u32 {\bfseries i\+Re\+Cksum}
+\item 
+\Hypertarget{struct_wal_ac54961758701702d67eaf3ce15c69ea5}\label{struct_wal_ac54961758701702d67eaf3ce15c69ea5} 
+const char \texorpdfstring{$\ast$}{*} {\bfseries z\+Wal\+Name}
+\item 
+\Hypertarget{struct_wal_a8fbe9b014342db76d8167b518b70acad}\label{struct_wal_a8fbe9b014342db76d8167b518b70acad} 
+u32 {\bfseries n\+Ckpt}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sqlite-\/lib/sqlite3.\+c\end{DoxyCompactItemize}

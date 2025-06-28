@@ -1,0 +1,56 @@
+\doxysection{Walker Struct Reference}
+\hypertarget{struct_walker}{}\label{struct_walker}\index{Walker@{Walker}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_walker_ac6e8e756b5da8f187b9cf6b94560f352}\label{struct_walker_ac6e8e756b5da8f187b9cf6b94560f352} 
+\mbox{\hyperlink{struct_parse}{Parse}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Parse}
+\item 
+\Hypertarget{struct_walker_a46cbdf0ccdcf736096a2f168218d28fe}\label{struct_walker_a46cbdf0ccdcf736096a2f168218d28fe} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Expr\+Callback} )(\mbox{\hyperlink{struct_walker}{Walker}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{struct_expr}{Expr}} \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{struct_walker_a76a2f8850bf1db17955fe85d65831cb0}\label{struct_walker_a76a2f8850bf1db17955fe85d65831cb0} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Select\+Callback} )(\mbox{\hyperlink{struct_walker}{Walker}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{struct_select}{Select}} \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{struct_walker_ad35c57031847321ab3db9b7c0946b5e7}\label{struct_walker_ad35c57031847321ab3db9b7c0946b5e7} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Select\+Callback2} )(\mbox{\hyperlink{struct_walker}{Walker}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{struct_select}{Select}} \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{struct_walker_a1183df46d2b0ecac73e76336067cf207}\label{struct_walker_a1183df46d2b0ecac73e76336067cf207} 
+int {\bfseries walker\+Depth}
+\item 
+\Hypertarget{struct_walker_a9b3b4c4db76d5c5a9c4eca60e347f5ee}\label{struct_walker_a9b3b4c4db76d5c5a9c4eca60e347f5ee} 
+u16 {\bfseries e\+Code}
+\item 
+\Hypertarget{struct_walker_ab0b60708a638a1a224518819d671ff28}\label{struct_walker_ab0b60708a638a1a224518819d671ff28} 
+u16 {\bfseries m\+WFlags}
+\item 
+\Hypertarget{struct_walker_aa812d5c007301d8252560cc2bd4cda06}\label{struct_walker_aa812d5c007301d8252560cc2bd4cda06} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{struct_name_context}{NameContext}} \texorpdfstring{$\ast$}{*} {\bfseries pNC}\\
+\>int {\bfseries n}\\
+\>int {\bfseries iCur}\\
+\>\mbox{\hyperlink{struct_src_list}{SrcList}} \texorpdfstring{$\ast$}{*} {\bfseries pSrcList}\\
+\>struct CCurHint \texorpdfstring{$\ast$}{*} {\bfseries pCCurHint}\\
+\>struct \mbox{\hyperlink{struct_ref_src_list}{RefSrcList}} \texorpdfstring{$\ast$}{*} {\bfseries pRefSrcList}\\
+\>int \texorpdfstring{$\ast$}{*} {\bfseries aiCol}\\
+\>struct \mbox{\hyperlink{struct_idx_cover}{IdxCover}} \texorpdfstring{$\ast$}{*} {\bfseries pIdxCover}\\
+\>\mbox{\hyperlink{struct_expr_list}{ExprList}} \texorpdfstring{$\ast$}{*} {\bfseries pGroupBy}\\
+\>\mbox{\hyperlink{struct_select}{Select}} \texorpdfstring{$\ast$}{*} {\bfseries pSelect}\\
+\>struct \mbox{\hyperlink{struct_window_rewrite}{WindowRewrite}} \texorpdfstring{$\ast$}{*} {\bfseries pRewrite}\\
+\>struct \mbox{\hyperlink{struct_where_const}{WhereConst}} \texorpdfstring{$\ast$}{*} {\bfseries pConst}\\
+\>struct \mbox{\hyperlink{struct_rename_ctx}{RenameCtx}} \texorpdfstring{$\ast$}{*} {\bfseries pRename}\\
+\>struct \mbox{\hyperlink{struct_table}{Table}} \texorpdfstring{$\ast$}{*} {\bfseries pTab}\\
+\>struct \mbox{\hyperlink{struct_covering_index_check}{CoveringIndexCheck}} \texorpdfstring{$\ast$}{*} {\bfseries pCovIdxCk}\\
+\>\mbox{\hyperlink{struct_src_item}{SrcItem}} \texorpdfstring{$\ast$}{*} {\bfseries pSrcItem}\\
+\>\mbox{\hyperlink{struct_db_fixer}{DbFixer}} \texorpdfstring{$\ast$}{*} {\bfseries pFix}\\
+\>\mbox{\hyperlink{structsqlite3__value}{Mem}} \texorpdfstring{$\ast$}{*} {\bfseries aMem}\\
+\} {\bfseries u}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sqlite-\/lib/sqlite3.\+c\end{DoxyCompactItemize}

@@ -1,33 +1,24 @@
 \doxysection{produit.\+h}
-\hypertarget{produit_8h_source}{}\label{produit_8h_source}\mbox{\hyperlink{produit_8h}{Go to the documentation of this file.}}
+\hypertarget{produit_8h_source}{}\label{produit_8h_source}\index{Inc/produit.h@{Inc/produit.h}}
+\mbox{\hyperlink{produit_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ PRODUIT\_H}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ PRODUIT\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ PRODUIT\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ PRODUIT\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <sqlite3.h>}}
 \DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Déclarations\ des\ Structure-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00017\ \textcolor{comment}{//\ Structure\ représentant\ un\ produit}}
-\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_produit_a9ae9ea02d99078d087dd12d2af1e2a57}{id}};}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_produit_a1b094470f36dc025a38c71fb908bf1fc}{nom}}[50];}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_produit_aded2c0a11f9d90d677e89b8170e4c904}{quantite}};}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_produit_a42ef1d4887be85e601553ad082096263}{prix}};}
-\DoxyCodeLine{00023\ \}\ \mbox{\hyperlink{struct_produit}{Produit}};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Déclarations\ des\ fonctions-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{produit_8h_a53c7b7c97df84c76ca7c5feb7bfd0f28}{ajouterProduit}}(\mbox{\hyperlink{struct_produit}{Produit}}\ p);}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{produit_8h_a29f37b3dbdbdc8a1a48c1430dffcd915}{afficherProduits}}();}
-\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{produit_8h_a2c493ad541bb67f70d15da9641fb125d}{ajouter\_produit\_interactif}}(\mbox{\hyperlink{structsqlite3}{sqlite3}}\ *db);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{produit_8h_ac14335164caf5461f506e1597dadfeea}{modifier\_produit\_interactif}}(\mbox{\hyperlink{structsqlite3}{sqlite3}}\ *db);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{produit_8h_a8c71446fe932bf9b2dbc80629b4c264e}{supprimer\_produit\_interactif}}(\mbox{\hyperlink{structsqlite3}{sqlite3}}\ *db);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{produit_8h_a75079172a17ab0dfbd145be61cc895fa}{lister\_produits\_interactif}}(\mbox{\hyperlink{structsqlite3}{sqlite3}}\ *db);}
 \DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{produit_8h_a53c7b7c97df84c76ca7c5feb7bfd0f28}{ajouterProduit}}();}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{produit_8h_a29f37b3dbdbdc8a1a48c1430dffcd915}{afficherProduits}}();}
-\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{produit_8h_a24826f66b22d9bbbd63a1fd884631609}{modifierProduit}}();}
-\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{produit_8h_a4f133f17909cf38ef7e9fdfd91a88416}{supprimerProduit}}();}
-\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{produit_8h_a4f7184e9bbb3dbe691a7b95f76aa2c5c}{chercherProduit}}();}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

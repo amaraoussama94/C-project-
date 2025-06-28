@@ -4,34 +4,53 @@ Ce projet est une application en langage **C** permettant la gestion simple et e
 
 ## 🎯 Objectifs
 
-- Gérer un ensemble de produits avec leurs informations clés (ID, nom, quantité, prix)
-- Permettre l’ajout, la suppression, la modification et l’affichage des produits
-- Sauvegarder les produits dans un fichier local pour assurer la persistance des données
-- Servir d’introduction à la structuration de projets C modulaires avec `Makefile` et documentation
+Gérer un ensemble de produits avec leurs informations clés : ID, nom, quantité, prix
+
+Permettre l’ajout, la suppression, la modification et l’affichage des produits via une interface console
+
+Assurer la persistance des données à l’aide d’une base SQLite3 embarquée (plus de fichiers plats)
+
+Illustrer la structuration modulaire d’un projet C avec :
+
+    séparation des responsabilités (database, produit, main)
+
+    compilation automatisée via Makefile
+
+    documentation générée avec Doxygen
 
 ## 🛠️ Structure du projet
 
-C-project-/ 
+gestion_stock_c/
 
-│ 
+├── Inc/              # Fichiers d'en-tête (.h)
 
-├── main.c # Point d'entrée du programme 
+│   ├── database.h
 
-├──src/
+│   ├── produit.h
 
-│   └── produit.c  # Logique métier pour gérer les produits 
+│   └── sqlite3.h
 
-│   └── fichier.c # Lecture et écriture des produits sur fichier 
+├── Src/              # Fichiers source (.c)
 
-├──Inc/ 
+│   ├── main.c
 
-│  └── produit.h # Logique métier pour gérer les produits 
+│   ├── database.c
 
-│   └──  fichier.h # Lecture et écriture des produits sur fichier    
+│   └── produit.c
 
-├── Makefile # Script de compilation 
+├── sqlite-lib/       # SQLite3 embarqué
 
-└── README.md # Documentation du projet
+│   └── sqlite3.c
+
+├── build/            # Fichiers compilés (.exe)
+
+├── doc/              # Documentation Doxygen
+
+├── Makefile
+
+├── Doxyfile
+
+└── README.md
 
 
 ## ✨ Fonctionnalités principales
@@ -42,12 +61,29 @@ C-project-/
 - Supprimer ou modifier un produit existant
 - Persistance des données dans un fichier structuré
 
-## 🔄 Changements récents (Branche `dev_Refactorcode`)
+## 🔄 Changements récents (Branche `dev_RefactorSqlite`)
 
-- Refactorisation complète du code source : séparation `.c` / `.h`
-- Ajout de commentaires **Doxygen** professionnels dans tous les fichiers
-- Nettoyage du `Makefile` et ajout de règles plus propres
-- Préparation d'une documentation automatique via Doxygen
+> Cette branche marque une refonte complète du projet pour le rendre plus modulaire, maintenable et professionnel.
+
+### 🧠 Architecture & Refactorisation
+- Suppression de l’ancienne logique basée sur fichiers plats (`fichier.c`, `fichier.h`)
+- Intégration d’un module `database.c` utilisant **SQLite3** pour la persistance des données
+- Création d’un module `produit.c` dédié à l’interface utilisateur (saisie, affichage)
+- Séparation claire des responsabilités entre `main`, `produit`, et `database`
+
+### 🗂️ Réorganisation du projet
+- Nouvelle structure modulaire :
+Inc/ → fichiers .h Src/ → fichiers .c sqlite-lib/ → sqlite3.c embarqué build/ → fichiers compilés
+
+- Mise à jour du `Makefile` :
+- Compatible Windows (sans `-p`)
+- Nettoyage récursif avec `make clean`
+- Exécutable généré dans `build/`
+
+### 🧪 Fonctionnalités améliorées
+- Toutes les opérations (ajout, suppression, modification, affichage) passent par SQLite
+- Plus de dépendance à des fichiers texte ou binaires
+- Interface console plus robuste et modulaire
 
 ## 🚀 Compilation
 

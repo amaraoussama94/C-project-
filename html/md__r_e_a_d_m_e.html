@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>gestion_stock: C-project-</title>
+<title>Gestion de stock: 📦 Projet C - Gestion de Stock</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gestion_stock<span id="projectnumber">&#160;v2.0</span>
+   <div id="projectname">Gestion de stock
    </div>
   </td>
  </tr>
@@ -88,14 +88,111 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html','',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">C-project- </div></div>
+  <div class="headertitle"><div class="title">📦 Projet C - Gestion de Stock </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
-<p>this project is about creating a dynamic database using file in c also, use struct ... It s be helpful if someone add some function or tell me how creat a front end in easy way to this project open source project enjoy I used Dev c++ for this project </p>
+<p>Ce projet est une application en langage <b>C</b> permettant la gestion simple et efficace d’un stock de produits via des fichiers texte. Il s'agit d'une base pour des systèmes de gestion plus avancés.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+🎯 Objectifs</h1>
+<p>Gérer un ensemble de produits avec leurs informations clés : ID, nom, quantité, prix</p>
+<p>Permettre l’ajout, la suppression, la modification et l’affichage des produits via une interface console</p>
+<p>Assurer la persistance des données à l’aide d’une base SQLite3 embarquée (plus de fichiers plats)</p>
+<p>Illustrer la structuration modulaire d’un projet C avec : </p><pre class="fragment">séparation des responsabilités (database, produit, main)
+
+compilation automatisée via Makefile
+
+documentation générée avec Doxygen
+</pre><h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+🛠️ Structure du projet</h1>
+<p>gestion_stock_c/</p>
+<p>├── Inc/ # Fichiers d'en-tête (.h)</p>
+<p>│ ├── <a class="el" href="database_8h.html" title="Interface pour la gestion de la base de données SQLite des produits.">database.h</a></p>
+<p>│ ├── <a class="el" href="produit_8h.html" title="Interface utilisateur pour la gestion interactive des produits.">produit.h</a></p>
+<p>│ └── <a class="el" href="sqlite3_8h_source.html">sqlite3.h</a></p>
+<p>├── Src/ # Fichiers source (.c)</p>
+<p>│ ├── <a class="el" href="main_8c.html" title="Ce programme permet à l&#39;utilisateur d&#39;ajouter, modifier, supprimer et lister des produits dans une ba...">main.c</a></p>
+<p>│ ├── <a class="el" href="database_8c.html" title="Implémentation des fonctions de gestion de la base de données SQLite.">database.c</a></p>
+<p>│ └── <a class="el" href="produit_8c.html" title="fonctions de gestion des produits pour un système de gestion de stock. Les opérations incluent l&#39;ajou...">produit.c</a></p>
+<p>├── sqlite-lib/ # SQLite3 embarqué</p>
+<p>│ └── sqlite3.c</p>
+<p>├── build/ # Fichiers compilés (.exe)</p>
+<p>├── doc/ # Documentation Doxygen</p>
+<p>├── Makefile</p>
+<p>├── Doxyfile</p>
+<p>└── README.md</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+✨ Fonctionnalités principales</h1>
+<ul>
+<li>Ajouter un produit</li>
+<li>Afficher la liste des produits</li>
+<li>Rechercher un produit par ID</li>
+<li>Supprimer ou modifier un produit existant</li>
+<li>Persistance des données dans un fichier structuré</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+🔄 Changements récents (Branche <span class="tt">dev_RefactorSqlite</span>)</h1>
+<blockquote class="doxtable">
+<p>Cette branche marque une refonte complète du projet pour le rendre plus modulaire, maintenable et professionnel. </p>
+</blockquote>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+🧠 Architecture &amp; Refactorisation</h2>
+<ul>
+<li>Suppression de l’ancienne logique basée sur fichiers plats (<span class="tt">fichier.c</span>, <span class="tt">fichier.h</span>)</li>
+<li>Intégration d’un module <span class="tt"><a class="el" href="database_8c.html" title="Implémentation des fonctions de gestion de la base de données SQLite.">database.c</a></span> utilisant <b>SQLite3</b> pour la persistance des données</li>
+<li>Création d’un module <span class="tt"><a class="el" href="produit_8c.html" title="fonctions de gestion des produits pour un système de gestion de stock. Les opérations incluent l&#39;ajou...">produit.c</a></span> dédié à l’interface utilisateur (saisie, affichage)</li>
+<li>Séparation claire des responsabilités entre <span class="tt">main</span>, <span class="tt">produit</span>, et <span class="tt">database</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+🗂️ Réorganisation du projet</h2>
+<ul>
+<li>Nouvelle structure modulaire : Inc/ → fichiers .h Src/ → fichiers .c sqlite-lib/ → sqlite3.c embarqué build/ → fichiers compilés</li>
+<li>Mise à jour du <span class="tt">Makefile</span> :</li>
+<li>Compatible Windows (sans <span class="tt">-p</span>)</li>
+<li>Nettoyage récursif avec <span class="tt">make clean</span></li>
+<li>Exécutable généré dans <span class="tt">build/</span></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+🧪 Fonctionnalités améliorées</h2>
+<ul>
+<li>Toutes les opérations (ajout, suppression, modification, affichage) passent par SQLite</li>
+<li>Plus de dépendance à des fichiers texte ou binaires</li>
+<li>Interface console plus robuste et modulaire</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+🚀 Compilation</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Pré-requis</h2>
+<ul>
+<li>Compilateur C (<span class="tt">gcc</span>)</li>
+<li><a href="https://www.doxygen.nl/">Doxygen (optionnel)</a></li>
+<li>Système compatible POSIX ou Windows avec MinGW</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Instructions</h2>
+<p>Assurez-vous d’avoir gcc et make installés (via MinGW ou MSYS2).</p>
+<p>make # Compile le projet make run # Compile et exécute make clean # Supprime les fichiers générés</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+🔧 Auto Build Process</h1>
+<p>This project leverages an automated build pipeline to ensure every change is compiled, tested, and deployed efficiently. Here’s how it works:</p>
+<ol type="1">
+<li><b><a class="el" href="struct_trigger.html">Trigger</a></b>: The build process is automatically triggered by a push to the <span class="tt">main</span> branch or upon the creation of a pull request.</li>
+<li><b>Build Environment</b>: A pre-configured virtual environment installs all necessary dependencies as specified in <span class="tt">requirements.txt</span> or <span class="tt">environment.yml</span>.</li>
+<li><b>Validation &amp; Tests</b>: Linting and unit tests are run to catch errors early and maintain code quality.</li>
+<li><b>Build &amp; Package</b>: The application is compiled (if necessary) and bundled for deployment.</li>
+<li><b>Deploy (Optional)</b>: If the build passes, the code is deployed to the specified environment (e.g. GitHub Pages, Docker Hub, or a cloud platform).</li>
+</ol>
+<p>All steps are defined in the <span class="tt">.github/workflows</span> directory using YAML configuration files. Comments within those files explain each stage of the pipeline. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

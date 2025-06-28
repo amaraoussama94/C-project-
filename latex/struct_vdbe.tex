@@ -1,0 +1,166 @@
+\doxysection{Vdbe Struct Reference}
+\hypertarget{struct_vdbe}{}\label{struct_vdbe}\index{Vdbe@{Vdbe}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_vdbe_a495366101a593999f4d2ed905e839029}\label{struct_vdbe_a495366101a593999f4d2ed905e839029} 
+\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*} {\bfseries db}
+\item 
+\Hypertarget{struct_vdbe_adc7f6986a75295f225e2738b6a60c424}\label{struct_vdbe_adc7f6986a75295f225e2738b6a60c424} 
+\mbox{\hyperlink{struct_vdbe}{Vdbe}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries pp\+VPrev}
+\item 
+\Hypertarget{struct_vdbe_a85c7941d3b9be89b6a80362f33477a13}\label{struct_vdbe_a85c7941d3b9be89b6a80362f33477a13} 
+\mbox{\hyperlink{struct_vdbe}{Vdbe}} \texorpdfstring{$\ast$}{*} {\bfseries p\+VNext}
+\item 
+\Hypertarget{struct_vdbe_a90fc4cdcc206a8f62c18e860b78f5cda}\label{struct_vdbe_a90fc4cdcc206a8f62c18e860b78f5cda} 
+\mbox{\hyperlink{struct_parse}{Parse}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Parse}
+\item 
+\Hypertarget{struct_vdbe_a2acd8f1fa65e19eb48fc62ddb6cb7569}\label{struct_vdbe_a2acd8f1fa65e19eb48fc62ddb6cb7569} 
+yn\+Var {\bfseries n\+Var}
+\item 
+\Hypertarget{struct_vdbe_a10a19309607617a75d3722219d3c7615}\label{struct_vdbe_a10a19309607617a75d3722219d3c7615} 
+int {\bfseries n\+Mem}
+\item 
+\Hypertarget{struct_vdbe_aa12a6a1075311bd5d89bc69eaefc6351}\label{struct_vdbe_aa12a6a1075311bd5d89bc69eaefc6351} 
+int {\bfseries n\+Cursor}
+\item 
+\Hypertarget{struct_vdbe_ace5722464070f2055f536b737955b9ad}\label{struct_vdbe_ace5722464070f2055f536b737955b9ad} 
+u32 {\bfseries cache\+Ctr}
+\item 
+\Hypertarget{struct_vdbe_ae25264a36877487fb58814608a46689c}\label{struct_vdbe_ae25264a36877487fb58814608a46689c} 
+int {\bfseries pc}
+\item 
+\Hypertarget{struct_vdbe_af82fb0227a5b8db9d3b9bdb03964a4a0}\label{struct_vdbe_af82fb0227a5b8db9d3b9bdb03964a4a0} 
+int {\bfseries rc}
+\item 
+\Hypertarget{struct_vdbe_ae38ff20a7164e66db09dec6c63dede6f}\label{struct_vdbe_ae38ff20a7164e66db09dec6c63dede6f} 
+i64 {\bfseries n\+Change}
+\item 
+\Hypertarget{struct_vdbe_ae2b5893f3d37e004acac58bffee1a229}\label{struct_vdbe_ae2b5893f3d37e004acac58bffee1a229} 
+int {\bfseries i\+Statement}
+\item 
+\Hypertarget{struct_vdbe_acae77663d67978b91566ced549035f03}\label{struct_vdbe_acae77663d67978b91566ced549035f03} 
+i64 {\bfseries i\+Current\+Time}
+\item 
+\Hypertarget{struct_vdbe_a7f46ff5e6b3dbf3632e941e27c82a485}\label{struct_vdbe_a7f46ff5e6b3dbf3632e941e27c82a485} 
+i64 {\bfseries n\+Fk\+Constraint}
+\item 
+\Hypertarget{struct_vdbe_ab6a710cd4796c6adc8967e7b5bf35757}\label{struct_vdbe_ab6a710cd4796c6adc8967e7b5bf35757} 
+i64 {\bfseries n\+Stmt\+Def\+Cons}
+\item 
+\Hypertarget{struct_vdbe_acc12695377eb8b25107876145704c496}\label{struct_vdbe_acc12695377eb8b25107876145704c496} 
+i64 {\bfseries n\+Stmt\+Def\+Imm\+Cons}
+\item 
+\Hypertarget{struct_vdbe_ac36776c53b6ec9054a2826ec83f29953}\label{struct_vdbe_ac36776c53b6ec9054a2826ec83f29953} 
+\mbox{\hyperlink{structsqlite3__value}{Mem}} \texorpdfstring{$\ast$}{*} {\bfseries a\+Mem}
+\item 
+\Hypertarget{struct_vdbe_a74fd4612c55ac2fde475096a4d2605b5}\label{struct_vdbe_a74fd4612c55ac2fde475096a4d2605b5} 
+\mbox{\hyperlink{structsqlite3__value}{Mem}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries ap\+Arg}
+\item 
+\Hypertarget{struct_vdbe_a8bd1b6ecdc16918e10ee1ae90b4e19ef}\label{struct_vdbe_a8bd1b6ecdc16918e10ee1ae90b4e19ef} 
+\mbox{\hyperlink{struct_vdbe_cursor}{Vdbe\+Cursor}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries ap\+Csr}
+\item 
+\Hypertarget{struct_vdbe_a8877b72591926e3597fa93e22f84b99c}\label{struct_vdbe_a8877b72591926e3597fa93e22f84b99c} 
+\mbox{\hyperlink{structsqlite3__value}{Mem}} \texorpdfstring{$\ast$}{*} {\bfseries a\+Var}
+\item 
+\Hypertarget{struct_vdbe_a1ba82f08947b275dd72a3e3095ad02d5}\label{struct_vdbe_a1ba82f08947b275dd72a3e3095ad02d5} 
+\mbox{\hyperlink{struct_vdbe_op}{Op}} \texorpdfstring{$\ast$}{*} {\bfseries a\+Op}
+\item 
+\Hypertarget{struct_vdbe_a81e72e6812c71e13651f81cc3a6ca1d0}\label{struct_vdbe_a81e72e6812c71e13651f81cc3a6ca1d0} 
+int {\bfseries n\+Op}
+\item 
+\Hypertarget{struct_vdbe_aa52020050ea42e10ad8be8ebdf470850}\label{struct_vdbe_aa52020050ea42e10ad8be8ebdf470850} 
+int {\bfseries n\+Op\+Alloc}
+\item 
+\Hypertarget{struct_vdbe_a900f557143e7d2ab8c560f7ada66d0f7}\label{struct_vdbe_a900f557143e7d2ab8c560f7ada66d0f7} 
+\mbox{\hyperlink{structsqlite3__value}{Mem}} \texorpdfstring{$\ast$}{*} {\bfseries a\+Col\+Name}
+\item 
+\Hypertarget{struct_vdbe_ac113c80f327fbaa54a5b0e1cf4928284}\label{struct_vdbe_ac113c80f327fbaa54a5b0e1cf4928284} 
+\mbox{\hyperlink{structsqlite3__value}{Mem}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Result\+Row}
+\item 
+\Hypertarget{struct_vdbe_add7679059dd1e3cd483ddcb9153ca844}\label{struct_vdbe_add7679059dd1e3cd483ddcb9153ca844} 
+char \texorpdfstring{$\ast$}{*} {\bfseries z\+Err\+Msg}
+\item 
+\Hypertarget{struct_vdbe_a4676092811a564b044383fe23c687429}\label{struct_vdbe_a4676092811a564b044383fe23c687429} 
+VList \texorpdfstring{$\ast$}{*} {\bfseries p\+VList}
+\item 
+\Hypertarget{struct_vdbe_a1de76a5c58ed36608a163bfdc2e9e8b7}\label{struct_vdbe_a1de76a5c58ed36608a163bfdc2e9e8b7} 
+i64 {\bfseries start\+Time}
+\item 
+\Hypertarget{struct_vdbe_a525830c709542b280d11c764e9a9994a}\label{struct_vdbe_a525830c709542b280d11c764e9a9994a} 
+u16 {\bfseries n\+Res\+Column}
+\item 
+\Hypertarget{struct_vdbe_a54aaac5fb09e3e2d53f7ea052b6b5681}\label{struct_vdbe_a54aaac5fb09e3e2d53f7ea052b6b5681} 
+u16 {\bfseries n\+Res\+Alloc}
+\item 
+\Hypertarget{struct_vdbe_ab2fde65c1d4728e92d100ce21313dcd3}\label{struct_vdbe_ab2fde65c1d4728e92d100ce21313dcd3} 
+u8 {\bfseries error\+Action}
+\item 
+\Hypertarget{struct_vdbe_a679ac87f7b835982cd7c1990fbc3605b}\label{struct_vdbe_a679ac87f7b835982cd7c1990fbc3605b} 
+u8 {\bfseries min\+Write\+File\+Format}
+\item 
+\Hypertarget{struct_vdbe_ad4dd5002743d865c7ad448b13ba49b04}\label{struct_vdbe_ad4dd5002743d865c7ad448b13ba49b04} 
+u8 {\bfseries prep\+Flags}
+\item 
+\Hypertarget{struct_vdbe_ab6205e9a166ec84207660bed7a818599}\label{struct_vdbe_ab6205e9a166ec84207660bed7a818599} 
+u8 {\bfseries e\+Vdbe\+State}
+\item 
+\Hypertarget{struct_vdbe_a1958421b98e6b660a86f58300e2d207d}\label{struct_vdbe_a1958421b98e6b660a86f58300e2d207d} 
+bft {\bfseries expired}\+:2
+\item 
+\Hypertarget{struct_vdbe_a9ea665c14b97cccb7ce08c129f5b38b6}\label{struct_vdbe_a9ea665c14b97cccb7ce08c129f5b38b6} 
+bft {\bfseries explain}\+:2
+\item 
+\Hypertarget{struct_vdbe_a2eafa7984a14e56f31e46fa4b90b0582}\label{struct_vdbe_a2eafa7984a14e56f31e46fa4b90b0582} 
+bft {\bfseries change\+Cnt\+On}\+:1
+\item 
+\Hypertarget{struct_vdbe_a4d1f6dfd3a6c17fa28e9ad1eac8e4839}\label{struct_vdbe_a4d1f6dfd3a6c17fa28e9ad1eac8e4839} 
+bft {\bfseries uses\+Stmt\+Journal}\+:1
+\item 
+\Hypertarget{struct_vdbe_accc1c66c5ff9524a8ad3051d754e798c}\label{struct_vdbe_accc1c66c5ff9524a8ad3051d754e798c} 
+bft {\bfseries read\+Only}\+:1
+\item 
+\Hypertarget{struct_vdbe_af090ad6018571a2487e8ba1616a8c5ce}\label{struct_vdbe_af090ad6018571a2487e8ba1616a8c5ce} 
+bft {\bfseries b\+Is\+Reader}\+:1
+\item 
+\Hypertarget{struct_vdbe_a4171ad7facd5b91d61abb00cd3ad027d}\label{struct_vdbe_a4171ad7facd5b91d61abb00cd3ad027d} 
+bft {\bfseries have\+Eqp\+Ops}\+:1
+\item 
+\Hypertarget{struct_vdbe_a82cb99588b3650e6f10583275392ce7c}\label{struct_vdbe_a82cb99588b3650e6f10583275392ce7c} 
+y\+Db\+Mask {\bfseries btree\+Mask}
+\item 
+\Hypertarget{struct_vdbe_a7de4b1df727c3d2d32778a77f5c5dd68}\label{struct_vdbe_a7de4b1df727c3d2d32778a77f5c5dd68} 
+y\+Db\+Mask {\bfseries lock\+Mask}
+\item 
+\Hypertarget{struct_vdbe_a818ccb403d24bedb658e91a1c9dd96e1}\label{struct_vdbe_a818ccb403d24bedb658e91a1c9dd96e1} 
+u32 {\bfseries a\+Counter} \mbox{[}9\mbox{]}
+\item 
+\Hypertarget{struct_vdbe_a5a61fd8f84ae0399ef73327e48048ae9}\label{struct_vdbe_a5a61fd8f84ae0399ef73327e48048ae9} 
+char \texorpdfstring{$\ast$}{*} {\bfseries z\+Sql}
+\item 
+\Hypertarget{struct_vdbe_a68dcaae5d4f061da3d7bb96c120fe9a4}\label{struct_vdbe_a68dcaae5d4f061da3d7bb96c120fe9a4} 
+void \texorpdfstring{$\ast$}{*} {\bfseries p\+Free}
+\item 
+\Hypertarget{struct_vdbe_afd754aaedd6cd5b229fbeff33177fe04}\label{struct_vdbe_afd754aaedd6cd5b229fbeff33177fe04} 
+\mbox{\hyperlink{struct_vdbe_frame}{Vdbe\+Frame}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Frame}
+\item 
+\Hypertarget{struct_vdbe_ab8f22136c8bdb4c02962a1ae081e9116}\label{struct_vdbe_ab8f22136c8bdb4c02962a1ae081e9116} 
+\mbox{\hyperlink{struct_vdbe_frame}{Vdbe\+Frame}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Del\+Frame}
+\item 
+\Hypertarget{struct_vdbe_a27fbd083a0335ac2b332d37ea2b90bdc}\label{struct_vdbe_a27fbd083a0335ac2b332d37ea2b90bdc} 
+int {\bfseries n\+Frame}
+\item 
+\Hypertarget{struct_vdbe_a5e22eedb6ee963a0bcf27fc9fd8b8e43}\label{struct_vdbe_a5e22eedb6ee963a0bcf27fc9fd8b8e43} 
+u32 {\bfseries expmask}
+\item 
+\Hypertarget{struct_vdbe_a9239ea72573142101328be15c90de62b}\label{struct_vdbe_a9239ea72573142101328be15c90de62b} 
+\mbox{\hyperlink{struct_sub_program}{Sub\+Program}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Program}
+\item 
+\Hypertarget{struct_vdbe_a43c515d3521658be7f7e33e4eb2aa136}\label{struct_vdbe_a43c515d3521658be7f7e33e4eb2aa136} 
+\mbox{\hyperlink{struct_aux_data}{Aux\+Data}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Aux\+Data}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sqlite-\/lib/sqlite3.\+c\end{DoxyCompactItemize}

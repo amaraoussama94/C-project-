@@ -1,0 +1,33 @@
+\doxysection{database.\+h}
+\hypertarget{database_8h_source}{}\label{database_8h_source}\index{Inc/database.h@{Inc/database.h}}
+\mbox{\hyperlink{database_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ DATABASE\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ DATABASE\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <sqlite3.h>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_produit_a9ae9ea02d99078d087dd12d2af1e2a57}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_produit_a8911ef835038a25ac346cf7cd4bda610}{nom}}[100];\ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_produit_aded2c0a11f9d90d677e89b8170e4c904}{quantite}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_produit_a42ef1d4887be85e601553ad082096263}{prix}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \}\ \mbox{\hyperlink{struct_produit}{Produit}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{database_8h_a408750fcc9af8d14bd2bbf287b584b67}{db\_init}}(\mbox{\hyperlink{structsqlite3}{sqlite3}}\ **db,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{database_8h_ae07af262c608d2e3de291268d923d24a}{db\_close}}(\mbox{\hyperlink{structsqlite3}{sqlite3}}\ *db);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{database_8h_a24f87cdb18f19d2c7ce064f6a56421ba}{db\_ajouter\_produit}}(\mbox{\hyperlink{structsqlite3}{sqlite3}}\ *db,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_produit}{Produit}}\ *p);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{database_8h_a42195505d310a0a6d65a715385f7e546}{db\_lister\_produits}}(\mbox{\hyperlink{structsqlite3}{sqlite3}}\ *db);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{database_8h_aa82e22b7b47ca0e7dad3a757763259f7}{db\_supprimer\_produit}}(\mbox{\hyperlink{structsqlite3}{sqlite3}}\ *db,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{database_8h_a432b4c1d45194b5c16adb90c6f9217af}{db\_modifier\_produit}}(\mbox{\hyperlink{structsqlite3}{sqlite3}}\ *db,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_produit}{Produit}}\ *p);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

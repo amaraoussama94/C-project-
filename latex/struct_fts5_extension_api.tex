@@ -1,0 +1,83 @@
+\doxysection{Fts5\+Extension\+Api Struct Reference}
+\hypertarget{struct_fts5_extension_api}{}\label{struct_fts5_extension_api}\index{Fts5ExtensionApi@{Fts5ExtensionApi}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_fts5_extension_api_af9c8f09c2e6f1373e6bce57ec9861682}\label{struct_fts5_extension_api_af9c8f09c2e6f1373e6bce57ec9861682} 
+int {\bfseries i\+Version}
+\item 
+\Hypertarget{struct_fts5_extension_api_a1f71f2622761df6f157e7201879bf5df}\label{struct_fts5_extension_api_a1f71f2622761df6f157e7201879bf5df} 
+void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} {\bfseries x\+User\+Data} )(Fts5\+Context \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{struct_fts5_extension_api_a33c1e050aa9e9b746205c192935f4a1d}\label{struct_fts5_extension_api_a33c1e050aa9e9b746205c192935f4a1d} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Column\+Count} )(Fts5\+Context \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{struct_fts5_extension_api_a7f82e336e97540cb7efb66bd27042e4f}\label{struct_fts5_extension_api_a7f82e336e97540cb7efb66bd27042e4f} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Row\+Count} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, sqlite3\+\_\+int64 \texorpdfstring{$\ast$}{*}pn\+Row)
+\item 
+\Hypertarget{struct_fts5_extension_api_acfc4e9d9879578a4b9347d7876d28963}\label{struct_fts5_extension_api_acfc4e9d9879578a4b9347d7876d28963} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Column\+Total\+Size} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int i\+Col, sqlite3\+\_\+int64 \texorpdfstring{$\ast$}{*}pn\+Token)
+\item 
+\Hypertarget{struct_fts5_extension_api_ae10d6563d3adc047eaba8db50eea1762}\label{struct_fts5_extension_api_ae10d6563d3adc047eaba8db50eea1762} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Tokenize} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}p\+Text, int n\+Text, void \texorpdfstring{$\ast$}{*}p\+Ctx, int(\texorpdfstring{$\ast$}{*}x\+Token)(void \texorpdfstring{$\ast$}{*}, int, const char \texorpdfstring{$\ast$}{*}, int, int, int))
+\item 
+\Hypertarget{struct_fts5_extension_api_a79916567d32f1933bb98d5939b8e0885}\label{struct_fts5_extension_api_a79916567d32f1933bb98d5939b8e0885} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Phrase\+Count} )(Fts5\+Context \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{struct_fts5_extension_api_a35442bdd54fd59f3a0d0eab74df50571}\label{struct_fts5_extension_api_a35442bdd54fd59f3a0d0eab74df50571} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Phrase\+Size} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int i\+Phrase)
+\item 
+\Hypertarget{struct_fts5_extension_api_a4095d1d4a90ee27fe3586b4dcca16151}\label{struct_fts5_extension_api_a4095d1d4a90ee27fe3586b4dcca16151} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Inst\+Count} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*}pn\+Inst)
+\item 
+\Hypertarget{struct_fts5_extension_api_af2f1796923ab2d48be770e860e7494cb}\label{struct_fts5_extension_api_af2f1796923ab2d48be770e860e7494cb} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Inst} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int i\+Idx, int \texorpdfstring{$\ast$}{*}pi\+Phrase, int \texorpdfstring{$\ast$}{*}pi\+Col, int \texorpdfstring{$\ast$}{*}pi\+Off)
+\item 
+\Hypertarget{struct_fts5_extension_api_aab4c236653ae8b3d1f306fc7af5c7ed1}\label{struct_fts5_extension_api_aab4c236653ae8b3d1f306fc7af5c7ed1} 
+sqlite3\+\_\+int64(\texorpdfstring{$\ast$}{*} {\bfseries x\+Rowid} )(Fts5\+Context \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{struct_fts5_extension_api_af1aedeaa82104e3e0495ed22610ad4bc}\label{struct_fts5_extension_api_af1aedeaa82104e3e0495ed22610ad4bc} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Column\+Text} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int i\+Col, const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pz, int \texorpdfstring{$\ast$}{*}pn)
+\item 
+\Hypertarget{struct_fts5_extension_api_ad1e249d1ce89ac0b05b77ea32a4da0cd}\label{struct_fts5_extension_api_ad1e249d1ce89ac0b05b77ea32a4da0cd} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Column\+Size} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int i\+Col, int \texorpdfstring{$\ast$}{*}pn\+Token)
+\item 
+\Hypertarget{struct_fts5_extension_api_a66af7d07783c18b2c59025f982b2bd92}\label{struct_fts5_extension_api_a66af7d07783c18b2c59025f982b2bd92} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Query\+Phrase} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int i\+Phrase, void \texorpdfstring{$\ast$}{*}p\+User\+Data, int(\texorpdfstring{$\ast$}{*})(const \mbox{\hyperlink{struct_fts5_extension_api}{Fts5\+Extension\+Api}} \texorpdfstring{$\ast$}{*}, Fts5\+Context \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}))
+\item 
+\Hypertarget{struct_fts5_extension_api_a466af4264428f467ee94408b64f408cb}\label{struct_fts5_extension_api_a466af4264428f467ee94408b64f408cb} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Set\+Auxdata} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}p\+Aux, void(\texorpdfstring{$\ast$}{*}x\+Delete)(void \texorpdfstring{$\ast$}{*}))
+\item 
+\Hypertarget{struct_fts5_extension_api_ab18b1cb62e84590f50c0e007366165fb}\label{struct_fts5_extension_api_ab18b1cb62e84590f50c0e007366165fb} 
+void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} {\bfseries x\+Get\+Auxdata} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int b\+Clear)
+\item 
+\Hypertarget{struct_fts5_extension_api_a0e7fb192d7ca28a5cc4f9ef025586761}\label{struct_fts5_extension_api_a0e7fb192d7ca28a5cc4f9ef025586761} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Phrase\+First} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int i\+Phrase, \mbox{\hyperlink{struct_fts5_phrase_iter}{Fts5\+Phrase\+Iter}} \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{struct_fts5_extension_api_a049c7163a39f20c675cf261fa181a9a1}\label{struct_fts5_extension_api_a049c7163a39f20c675cf261fa181a9a1} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Phrase\+Next} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{struct_fts5_phrase_iter}{Fts5\+Phrase\+Iter}} \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*}pi\+Col, int \texorpdfstring{$\ast$}{*}pi\+Off)
+\item 
+\Hypertarget{struct_fts5_extension_api_ac1936193fd724dd4cac4772add9a724b}\label{struct_fts5_extension_api_ac1936193fd724dd4cac4772add9a724b} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Phrase\+First\+Column} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int i\+Phrase, \mbox{\hyperlink{struct_fts5_phrase_iter}{Fts5\+Phrase\+Iter}} \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{struct_fts5_extension_api_aab6694c0e06fc2a5ecca0041a492f2b1}\label{struct_fts5_extension_api_aab6694c0e06fc2a5ecca0041a492f2b1} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Phrase\+Next\+Column} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{struct_fts5_phrase_iter}{Fts5\+Phrase\+Iter}} \texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*}pi\+Col)
+\item 
+\Hypertarget{struct_fts5_extension_api_a3f373d1fa89d0b510f4245106d1c1ae6}\label{struct_fts5_extension_api_a3f373d1fa89d0b510f4245106d1c1ae6} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Query\+Token} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int i\+Phrase, int i\+Token, const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+Token, int \texorpdfstring{$\ast$}{*}pn\+Token)
+\item 
+\Hypertarget{struct_fts5_extension_api_a7f7da66988b2fb90cf70091b3fde2516}\label{struct_fts5_extension_api_a7f7da66988b2fb90cf70091b3fde2516} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Inst\+Token} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int i\+Idx, int i\+Token, const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}, int \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{struct_fts5_extension_api_a764d518d8b19184b309ffbbff8972939}\label{struct_fts5_extension_api_a764d518d8b19184b309ffbbff8972939} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Column\+Locale} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, int i\+Col, const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pz, int \texorpdfstring{$\ast$}{*}pn)
+\item 
+\Hypertarget{struct_fts5_extension_api_aa1e8c0dc8fc6e4a968e52643c3a0feb9}\label{struct_fts5_extension_api_aa1e8c0dc8fc6e4a968e52643c3a0feb9} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Tokenize\+\_\+v2} )(Fts5\+Context \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}p\+Text, int n\+Text, const char \texorpdfstring{$\ast$}{*}p\+Locale, int n\+Locale, void \texorpdfstring{$\ast$}{*}p\+Ctx, int(\texorpdfstring{$\ast$}{*}x\+Token)(void \texorpdfstring{$\ast$}{*}, int, const char \texorpdfstring{$\ast$}{*}, int, int, int))
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sqlite-\/lib/sqlite3.\+c\item 
+Inc/sqlite3.\+h\end{DoxyCompactItemize}

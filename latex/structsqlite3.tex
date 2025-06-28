@@ -1,0 +1,294 @@
+\doxysection{sqlite3 Struct Reference}
+\hypertarget{structsqlite3}{}\label{structsqlite3}\index{sqlite3@{sqlite3}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsqlite3_1_1sqlite3_init_info}{sqlite3\+Init\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structsqlite3_a8ad0bcb473e4cb492165739acff918cd}\label{structsqlite3_a8ad0bcb473e4cb492165739acff918cd} 
+\mbox{\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Vfs}
+\item 
+\Hypertarget{structsqlite3_a596f0301f43c5e25575c2a1403f8b571}\label{structsqlite3_a596f0301f43c5e25575c2a1403f8b571} 
+struct \mbox{\hyperlink{struct_vdbe}{Vdbe}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Vdbe}
+\item 
+\Hypertarget{structsqlite3_a2e5d7e7ac07c33b11c936b181d07789a}\label{structsqlite3_a2e5d7e7ac07c33b11c936b181d07789a} 
+\mbox{\hyperlink{struct_coll_seq}{Coll\+Seq}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Dflt\+Coll}
+\item 
+\Hypertarget{structsqlite3_a6328497ac0393204ab5f5083f05731c9}\label{structsqlite3_a6328497ac0393204ab5f5083f05731c9} 
+\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\+\_\+mutex}} \texorpdfstring{$\ast$}{*} {\bfseries mutex}
+\item 
+\Hypertarget{structsqlite3_a0abe1dccdea5f43e6c49360b42749697}\label{structsqlite3_a0abe1dccdea5f43e6c49360b42749697} 
+\mbox{\hyperlink{struct_db}{Db}} \texorpdfstring{$\ast$}{*} {\bfseries a\+Db}
+\item 
+\Hypertarget{structsqlite3_a03d047bc289999b0e39d8637f0762489}\label{structsqlite3_a03d047bc289999b0e39d8637f0762489} 
+int {\bfseries n\+Db}
+\item 
+\Hypertarget{structsqlite3_a5440eb1d35a5b351f58afc31964c96a6}\label{structsqlite3_a5440eb1d35a5b351f58afc31964c96a6} 
+u32 {\bfseries m\+Db\+Flags}
+\item 
+\Hypertarget{structsqlite3_ada7b07091a8c201b19b31f25a5c3dd2f}\label{structsqlite3_ada7b07091a8c201b19b31f25a5c3dd2f} 
+u64 {\bfseries flags}
+\item 
+\Hypertarget{structsqlite3_a9fff52fc4eb087fbb3e3271994fa5198}\label{structsqlite3_a9fff52fc4eb087fbb3e3271994fa5198} 
+i64 {\bfseries last\+Rowid}
+\item 
+\Hypertarget{structsqlite3_a417e58ace305325f40894c14fbd8af0d}\label{structsqlite3_a417e58ace305325f40894c14fbd8af0d} 
+i64 {\bfseries sz\+Mmap}
+\item 
+\Hypertarget{structsqlite3_a57dddf2303cd94d5d2164417542ba751}\label{structsqlite3_a57dddf2303cd94d5d2164417542ba751} 
+u32 {\bfseries n\+Schema\+Lock}
+\item 
+\Hypertarget{structsqlite3_acfe8618d03dcd195a992886079c3b014}\label{structsqlite3_acfe8618d03dcd195a992886079c3b014} 
+unsigned int {\bfseries open\+Flags}
+\item 
+\Hypertarget{structsqlite3_a73adbb5395118bcbd9e4d705712966a2}\label{structsqlite3_a73adbb5395118bcbd9e4d705712966a2} 
+int {\bfseries err\+Code}
+\item 
+\Hypertarget{structsqlite3_a03b140f74cdbf7bcddb75611a17e231e}\label{structsqlite3_a03b140f74cdbf7bcddb75611a17e231e} 
+int {\bfseries err\+Byte\+Offset}
+\item 
+\Hypertarget{structsqlite3_a12541dafcf60cfce52fb60f84e42f152}\label{structsqlite3_a12541dafcf60cfce52fb60f84e42f152} 
+int {\bfseries err\+Mask}
+\item 
+\Hypertarget{structsqlite3_ace6e1a4f7d28246883bde14b3b12c26b}\label{structsqlite3_ace6e1a4f7d28246883bde14b3b12c26b} 
+int {\bfseries i\+Sys\+Errno}
+\item 
+\Hypertarget{structsqlite3_aa4a5c906aaec2a74d88505961a590d6b}\label{structsqlite3_aa4a5c906aaec2a74d88505961a590d6b} 
+u32 {\bfseries db\+Opt\+Flags}
+\item 
+\Hypertarget{structsqlite3_abad75b8b6663c237060656d1ae715e45}\label{structsqlite3_abad75b8b6663c237060656d1ae715e45} 
+u8 {\bfseries enc}
+\item 
+\Hypertarget{structsqlite3_a11baf5e051b2e4ea03c5d03c09bb624e}\label{structsqlite3_a11baf5e051b2e4ea03c5d03c09bb624e} 
+u8 {\bfseries auto\+Commit}
+\item 
+\Hypertarget{structsqlite3_acc46921b20f505ddce64526cac717af3}\label{structsqlite3_acc46921b20f505ddce64526cac717af3} 
+u8 {\bfseries temp\+\_\+store}
+\item 
+\Hypertarget{structsqlite3_a79beb0036337ba7fc2de5ccbb9225935}\label{structsqlite3_a79beb0036337ba7fc2de5ccbb9225935} 
+u8 {\bfseries malloc\+Failed}
+\item 
+\Hypertarget{structsqlite3_a10968de238e6e164e26bf336684aa80b}\label{structsqlite3_a10968de238e6e164e26bf336684aa80b} 
+u8 {\bfseries b\+Benign\+Malloc}
+\item 
+\Hypertarget{structsqlite3_af21b4bbd0d1cda779f2b9e8262e5deec}\label{structsqlite3_af21b4bbd0d1cda779f2b9e8262e5deec} 
+u8 {\bfseries dflt\+Lock\+Mode}
+\item 
+\Hypertarget{structsqlite3_a39dac5c9296edb15a46c458fb273bb11}\label{structsqlite3_a39dac5c9296edb15a46c458fb273bb11} 
+signed char {\bfseries next\+Autovac}
+\item 
+\Hypertarget{structsqlite3_ac6c776a68a0ce0cbacfc3c9fa5129252}\label{structsqlite3_ac6c776a68a0ce0cbacfc3c9fa5129252} 
+u8 {\bfseries suppress\+Err}
+\item 
+\Hypertarget{structsqlite3_acb957d1be62bc33b9f28201cd6dc4d5a}\label{structsqlite3_acb957d1be62bc33b9f28201cd6dc4d5a} 
+u8 {\bfseries vtab\+On\+Conflict}
+\item 
+\Hypertarget{structsqlite3_acaca2a1d41db7b83a0fe8a477bd22d1d}\label{structsqlite3_acaca2a1d41db7b83a0fe8a477bd22d1d} 
+u8 {\bfseries is\+Transaction\+Savepoint}
+\item 
+\Hypertarget{structsqlite3_a2eff859ef583decb4bc75ff34f632570}\label{structsqlite3_a2eff859ef583decb4bc75ff34f632570} 
+u8 {\bfseries m\+Trace}
+\item 
+\Hypertarget{structsqlite3_a9db82963a50d1cebd34108a658cdb266}\label{structsqlite3_a9db82963a50d1cebd34108a658cdb266} 
+u8 {\bfseries no\+Shared\+Cache}
+\item 
+\Hypertarget{structsqlite3_ade81cfca19daee0e1f9eb4bfcb73469c}\label{structsqlite3_ade81cfca19daee0e1f9eb4bfcb73469c} 
+u8 {\bfseries n\+Sql\+Exec}
+\item 
+\Hypertarget{structsqlite3_a842cbb83bb780889626907db38924f95}\label{structsqlite3_a842cbb83bb780889626907db38924f95} 
+u8 {\bfseries e\+Open\+State}
+\item 
+\Hypertarget{structsqlite3_aceb220475d2e2fc37b8bf896128b1f1e}\label{structsqlite3_aceb220475d2e2fc37b8bf896128b1f1e} 
+int {\bfseries next\+Pagesize}
+\item 
+\Hypertarget{structsqlite3_a0ba8547484fb7246961082d2ffa33076}\label{structsqlite3_a0ba8547484fb7246961082d2ffa33076} 
+i64 {\bfseries n\+Change}
+\item 
+\Hypertarget{structsqlite3_aca835bc27b096d1f6a01fa27013b986b}\label{structsqlite3_aca835bc27b096d1f6a01fa27013b986b} 
+i64 {\bfseries n\+Total\+Change}
+\item 
+\Hypertarget{structsqlite3_ad8acf663e1619905094c9dfe4125157b}\label{structsqlite3_ad8acf663e1619905094c9dfe4125157b} 
+int {\bfseries a\+Limit} \mbox{[}SQLITE\+\_\+\+N\+\_\+\+LIMIT\mbox{]}
+\item 
+\Hypertarget{structsqlite3_a06a472c979f5535d3f04e3b3598adb9a}\label{structsqlite3_a06a472c979f5535d3f04e3b3598adb9a} 
+int {\bfseries n\+Max\+Sorter\+Mmap}
+\item 
+\Hypertarget{structsqlite3_ad17ddd4c2d327accfe7b5dd76fad37b2}\label{structsqlite3_ad17ddd4c2d327accfe7b5dd76fad37b2} 
+struct \mbox{\hyperlink{structsqlite3_1_1sqlite3_init_info}{sqlite3\+::sqlite3\+Init\+Info}} {\bfseries init}
+\item 
+\Hypertarget{structsqlite3_a85eb6c33dd8531067bba7c4a8844da15}\label{structsqlite3_a85eb6c33dd8531067bba7c4a8844da15} 
+int {\bfseries n\+Vdbe\+Active}
+\item 
+\Hypertarget{structsqlite3_a321880eb620a917a0b509f5629612227}\label{structsqlite3_a321880eb620a917a0b509f5629612227} 
+int {\bfseries n\+Vdbe\+Read}
+\item 
+\Hypertarget{structsqlite3_aa63da8ce693d136df02033f1bdb85171}\label{structsqlite3_aa63da8ce693d136df02033f1bdb85171} 
+int {\bfseries n\+Vdbe\+Write}
+\item 
+\Hypertarget{structsqlite3_a4f4a211154ba0cfbd43c57e25640dfff}\label{structsqlite3_a4f4a211154ba0cfbd43c57e25640dfff} 
+int {\bfseries n\+Vdbe\+Exec}
+\item 
+\Hypertarget{structsqlite3_adfa504e8c5d87a41e191236d0ba80f0a}\label{structsqlite3_adfa504e8c5d87a41e191236d0ba80f0a} 
+int {\bfseries n\+VDestroy}
+\item 
+\Hypertarget{structsqlite3_aa57fc38ef27d8fa59221cb5c0e54f7fb}\label{structsqlite3_aa57fc38ef27d8fa59221cb5c0e54f7fb} 
+int {\bfseries n\+Extension}
+\item 
+\Hypertarget{structsqlite3_aa97954113d8e35c97f8a3af534703f7b}\label{structsqlite3_aa97954113d8e35c97f8a3af534703f7b} 
+void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries a\+Extension}
+\item 
+\Hypertarget{structsqlite3_a83641a5340021fdb7efa089652c56642}\label{structsqlite3_a83641a5340021fdb7efa089652c56642} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>void(\texorpdfstring{$\ast$}{*} {\bfseries xLegacy} )(void \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*})\\
+\>int(\texorpdfstring{$\ast$}{*} {\bfseries xV2} )(u32, void \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*})\\
+\} {\bfseries trace}\\
+
+\end{tabbing}\item 
+\Hypertarget{structsqlite3_ae0920576e4e92f1b736255fcfad649d1}\label{structsqlite3_ae0920576e4e92f1b736255fcfad649d1} 
+void \texorpdfstring{$\ast$}{*} {\bfseries p\+Trace\+Arg}
+\item 
+\Hypertarget{structsqlite3_ab0aefde204a9c4dead89396ba929e5ca}\label{structsqlite3_ab0aefde204a9c4dead89396ba929e5ca} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Profile} )(void \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}, u64)
+\item 
+\Hypertarget{structsqlite3_a931c234df9b701c78de38ddf22869062}\label{structsqlite3_a931c234df9b701c78de38ddf22869062} 
+void \texorpdfstring{$\ast$}{*} {\bfseries p\+Profile\+Arg}
+\item 
+\Hypertarget{structsqlite3_a355237725d3a535d702815b6ef8be75e}\label{structsqlite3_a355237725d3a535d702815b6ef8be75e} 
+void \texorpdfstring{$\ast$}{*} {\bfseries p\+Commit\+Arg}
+\item 
+\Hypertarget{structsqlite3_aafa01826b1329161f4fd7ed9a2579a93}\label{structsqlite3_aafa01826b1329161f4fd7ed9a2579a93} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Commit\+Callback} )(void \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{structsqlite3_a3215967241f15d4599132a8dc2adfb93}\label{structsqlite3_a3215967241f15d4599132a8dc2adfb93} 
+void \texorpdfstring{$\ast$}{*} {\bfseries p\+Rollback\+Arg}
+\item 
+\Hypertarget{structsqlite3_a695c32708202c35cdc35a30ca40e1b6f}\label{structsqlite3_a695c32708202c35cdc35a30ca40e1b6f} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Rollback\+Callback} )(void \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{structsqlite3_ab4269aa44fea9906fe94045336f13d2a}\label{structsqlite3_ab4269aa44fea9906fe94045336f13d2a} 
+void \texorpdfstring{$\ast$}{*} {\bfseries p\+Update\+Arg}
+\item 
+\Hypertarget{structsqlite3_ab562a95a332023d861369ece9591dc3a}\label{structsqlite3_ab562a95a332023d861369ece9591dc3a} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Update\+Callback} )(void \texorpdfstring{$\ast$}{*}, int, const char \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}, sqlite\+\_\+int64)
+\item 
+\Hypertarget{structsqlite3_a41504007c4677294fd6204c592b39a4c}\label{structsqlite3_a41504007c4677294fd6204c592b39a4c} 
+void \texorpdfstring{$\ast$}{*} {\bfseries p\+Autovac\+Pages\+Arg}
+\item 
+\Hypertarget{structsqlite3_a1a06e91f3812e9408aef5e7c4856c803}\label{structsqlite3_a1a06e91f3812e9408aef5e7c4856c803} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Autovac\+Destr} )(void \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{structsqlite3_ad00af951beefa2edc4ae80e632c90a5d}\label{structsqlite3_ad00af951beefa2edc4ae80e632c90a5d} 
+unsigned int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Autovac\+Pages} )(void \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}, u32, u32, u32)
+\item 
+\Hypertarget{structsqlite3_afe5d32ebfe9d07c09b7ce78ac82c2aef}\label{structsqlite3_afe5d32ebfe9d07c09b7ce78ac82c2aef} 
+\mbox{\hyperlink{struct_parse}{Parse}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Parse}
+\item 
+\Hypertarget{structsqlite3_a19a404745ce0b4f13cb29a445281288d}\label{structsqlite3_a19a404745ce0b4f13cb29a445281288d} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Wal\+Callback} )(void \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}, int)
+\item 
+\Hypertarget{structsqlite3_aa75309c2e522cf0f6ccbd7a3c38e1075}\label{structsqlite3_aa75309c2e522cf0f6ccbd7a3c38e1075} 
+void \texorpdfstring{$\ast$}{*} {\bfseries p\+Wal\+Arg}
+\item 
+\Hypertarget{structsqlite3_a3312d02b28a6743f2f703d363c7c4f9b}\label{structsqlite3_a3312d02b28a6743f2f703d363c7c4f9b} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Coll\+Needed} )(void \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}, int e\+Text\+Rep, const char \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{structsqlite3_a531dea6bd5cf5f13a8f17c66bf66ac92}\label{structsqlite3_a531dea6bd5cf5f13a8f17c66bf66ac92} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Coll\+Needed16} )(void \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}, int e\+Text\+Rep, const void \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{structsqlite3_addbc9c709cc728968132af5487d5c30c}\label{structsqlite3_addbc9c709cc728968132af5487d5c30c} 
+void \texorpdfstring{$\ast$}{*} {\bfseries p\+Coll\+Needed\+Arg}
+\item 
+\Hypertarget{structsqlite3_a90941a0c05641f623c257a7a65b22809}\label{structsqlite3_a90941a0c05641f623c257a7a65b22809} 
+\mbox{\hyperlink{structsqlite3__value}{sqlite3\+\_\+value}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Err}
+\item 
+\Hypertarget{structsqlite3_a8a46c32a50cdf16a4cf7456f0d425319}\label{structsqlite3_a8a46c32a50cdf16a4cf7456f0d425319} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>volatile int {\bfseries isInterrupted}\\
+\>double {\bfseries notUsed1}\\
+\} {\bfseries u1}\\
+
+\end{tabbing}\item 
+\Hypertarget{structsqlite3_a8a42788add62e1a59d0c930ecc190e87}\label{structsqlite3_a8a42788add62e1a59d0c930ecc190e87} 
+\mbox{\hyperlink{struct_lookaside}{Lookaside}} {\bfseries lookaside}
+\item 
+\Hypertarget{structsqlite3_a0be5994042272ecb4fbec9d9a417d38b}\label{structsqlite3_a0be5994042272ecb4fbec9d9a417d38b} 
+sqlite3\+\_\+xauth {\bfseries x\+Auth}
+\item 
+\Hypertarget{structsqlite3_a1c50e81c5e4a6e1faeea93489accd53f}\label{structsqlite3_a1c50e81c5e4a6e1faeea93489accd53f} 
+void \texorpdfstring{$\ast$}{*} {\bfseries p\+Auth\+Arg}
+\item 
+\Hypertarget{structsqlite3_a8f012471316c9725c2145a3b13dd5caa}\label{structsqlite3_a8f012471316c9725c2145a3b13dd5caa} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Progress} )(void \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{structsqlite3_a1731a4d0a73f57415d35ef2a2997971b}\label{structsqlite3_a1731a4d0a73f57415d35ef2a2997971b} 
+void \texorpdfstring{$\ast$}{*} {\bfseries p\+Progress\+Arg}
+\item 
+\Hypertarget{structsqlite3_aea053bf8f4c316fb2460a093e9ab32e7}\label{structsqlite3_aea053bf8f4c316fb2460a093e9ab32e7} 
+unsigned {\bfseries n\+Progress\+Ops}
+\item 
+\Hypertarget{structsqlite3_a895162274d29fcd0658901bc5dcce99b}\label{structsqlite3_a895162274d29fcd0658901bc5dcce99b} 
+int {\bfseries n\+VTrans}
+\item 
+\Hypertarget{structsqlite3_a1e03e1fdee6fb7cb7337628c7f9b37c4}\label{structsqlite3_a1e03e1fdee6fb7cb7337628c7f9b37c4} 
+\mbox{\hyperlink{struct_hash}{Hash}} {\bfseries a\+Module}
+\item 
+\Hypertarget{structsqlite3_a6c0dc858220431633ce44351a6ce2962}\label{structsqlite3_a6c0dc858220431633ce44351a6ce2962} 
+\mbox{\hyperlink{struct_vtab_ctx}{Vtab\+Ctx}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Vtab\+Ctx}
+\item 
+\Hypertarget{structsqlite3_a9628b6da0f4c7dbde32dcd1249d6a712}\label{structsqlite3_a9628b6da0f4c7dbde32dcd1249d6a712} 
+\mbox{\hyperlink{struct_v_table}{VTable}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries a\+VTrans}
+\item 
+\Hypertarget{structsqlite3_a048405f503316fad7d7116fd930299db}\label{structsqlite3_a048405f503316fad7d7116fd930299db} 
+\mbox{\hyperlink{struct_v_table}{VTable}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Disconnect}
+\item 
+\Hypertarget{structsqlite3_a11ae87b7bc32ee0bbecbdcbf8d69074f}\label{structsqlite3_a11ae87b7bc32ee0bbecbdcbf8d69074f} 
+\mbox{\hyperlink{struct_hash}{Hash}} {\bfseries a\+Func}
+\item 
+\Hypertarget{structsqlite3_a259afda236b21b947f6dc7e0b3e605c3}\label{structsqlite3_a259afda236b21b947f6dc7e0b3e605c3} 
+\mbox{\hyperlink{struct_hash}{Hash}} {\bfseries a\+Coll\+Seq}
+\item 
+\Hypertarget{structsqlite3_a5f50915803efe2ad40dc1a5e31763671}\label{structsqlite3_a5f50915803efe2ad40dc1a5e31763671} 
+\mbox{\hyperlink{struct_busy_handler}{Busy\+Handler}} {\bfseries busy\+Handler}
+\item 
+\Hypertarget{structsqlite3_ad99069213dff7fede71447b97d22d710}\label{structsqlite3_ad99069213dff7fede71447b97d22d710} 
+\mbox{\hyperlink{struct_db}{Db}} {\bfseries a\+Db\+Static} \mbox{[}2\mbox{]}
+\item 
+\Hypertarget{structsqlite3_a47f4fe21bba981ccd47ee7f873f48a07}\label{structsqlite3_a47f4fe21bba981ccd47ee7f873f48a07} 
+\mbox{\hyperlink{struct_savepoint}{Savepoint}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Savepoint}
+\item 
+\Hypertarget{structsqlite3_ab730d106e583e51b438bce38b73a6f33}\label{structsqlite3_ab730d106e583e51b438bce38b73a6f33} 
+int {\bfseries n\+Analysis\+Limit}
+\item 
+\Hypertarget{structsqlite3_a69237f7a2b079706c544f09255fd8905}\label{structsqlite3_a69237f7a2b079706c544f09255fd8905} 
+int {\bfseries busy\+Timeout}
+\item 
+\Hypertarget{structsqlite3_a51d1dc4f5668dbc2282162bdfdca96ec}\label{structsqlite3_a51d1dc4f5668dbc2282162bdfdca96ec} 
+int {\bfseries n\+Savepoint}
+\item 
+\Hypertarget{structsqlite3_a727c6da42aa4313c715de350303c90f6}\label{structsqlite3_a727c6da42aa4313c715de350303c90f6} 
+int {\bfseries n\+Statement}
+\item 
+\Hypertarget{structsqlite3_a1d74627daa6fe93811e99cffe9362c10}\label{structsqlite3_a1d74627daa6fe93811e99cffe9362c10} 
+i64 {\bfseries n\+Deferred\+Cons}
+\item 
+\Hypertarget{structsqlite3_a784716abd1e79a084257ad5c6da7ebb5}\label{structsqlite3_a784716abd1e79a084257ad5c6da7ebb5} 
+i64 {\bfseries n\+Deferred\+Imm\+Cons}
+\item 
+\Hypertarget{structsqlite3_a5559fb199b06ee59b635bb18f153fcf8}\label{structsqlite3_a5559fb199b06ee59b635bb18f153fcf8} 
+int \texorpdfstring{$\ast$}{*} {\bfseries pn\+Bytes\+Freed}
+\item 
+\Hypertarget{structsqlite3_a727e8d7b15e026e823c44fd2de6b8794}\label{structsqlite3_a727e8d7b15e026e823c44fd2de6b8794} 
+\mbox{\hyperlink{struct_db_client_data}{Db\+Client\+Data}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Db\+Data}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sqlite-\/lib/sqlite3.\+c\end{DoxyCompactItemize}

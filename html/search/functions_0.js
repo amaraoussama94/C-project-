@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['afficherproduits_0',['afficherProduits',['../produit_8c.html#a29f37b3dbdbdc8a1a48c1430dffcd915',1,'afficherProduits():&#160;produit.c'],['../produit_8h.html#a29f37b3dbdbdc8a1a48c1430dffcd915',1,'afficherProduits():&#160;produit.c']]],
-  ['ajouterproduit_1',['ajouterProduit',['../produit_8c.html#a53c7b7c97df84c76ca7c5feb7bfd0f28',1,'ajouterProduit():&#160;produit.c'],['../produit_8h.html#af52335792a6c7d883b4fbb525859c740',1,'ajouterProduit(Produit p):&#160;produit.h'],['../produit_8h.html#a53c7b7c97df84c76ca7c5feb7bfd0f28',1,'ajouterProduit():&#160;produit.c']]]
+  ['afficher_5fmenu_0',['afficher_menu',['../main_8c.html#a26f23b0a449e679f092983b1ef986fa2',1,'main.c']]],
+  ['ajouter_5fproduit_5finteractif_1',['ajouter_produit_interactif',['../main_8c.html#a2c493ad541bb67f70d15da9641fb125d',1,'ajouter_produit_interactif(sqlite3 *db):&#160;produit.c'],['../produit_8h.html#a2c493ad541bb67f70d15da9641fb125d',1,'ajouter_produit_interactif(sqlite3 *db):&#160;produit.c'],['../produit_8c.html#a2c493ad541bb67f70d15da9641fb125d',1,'ajouter_produit_interactif(sqlite3 *db):&#160;produit.c']]]
 ];
