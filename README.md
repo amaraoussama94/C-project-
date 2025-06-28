@@ -55,11 +55,11 @@ gestion_stock_c/
 
 ## ✨ Fonctionnalités principales
 
-- Ajouter un produit
-- Afficher la liste des produits
-- Rechercher un produit par ID
-- Supprimer ou modifier un produit existant
-- Persistance des données dans un fichier structuré
+- Ajout, suppression et modification de produits
+- Gestion des quantités et des prix
+- Sauvegarde des données via SQLite3
+- Interface console simple et efficace
+- Compilation multiplateforme (Linux & Windows)
 
 ## 🔄 Changements récents (Branche `dev_RefactorSqlite`)
 
@@ -111,6 +111,23 @@ This project leverages an automated build pipeline to ensure every change is com
 5. **Deploy (Optional)**: If the build passes, the code is deployed to the specified environment (e.g. GitHub Pages, Docker Hub, or a cloud platform).
 
 All steps are defined in the `.github/workflows` directory using YAML configuration files. Comments within those files explain each stage of the pipeline.
+
+## ⚙️ Intégration Continue
+Ce projet utilise GitHub Actions pour :
+
+Compiler automatiquement les binaires Linux et Windows
+
+Générer un tag Git (PROD_VERSION_x.xx)
+
+Publier les binaires dans les Releases GitHub
+
+Uploader les artefacts dans l’onglet Actions
+
+##Téléchargement des binaires
+Les dernières versions compilées sont disponibles ici :
+
+👉 [Voir les Releases](https://github.com/amaraoussama94/gestion_stock_c/releases)
+
 
 
 
