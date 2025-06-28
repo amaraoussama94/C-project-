@@ -56,4 +56,4 @@ run: all
 # CI build with embedded version macro and versioned binary
 ci-build:
 	@mkdir -p build
-	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -o $(BIN) $(SRC)
+	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -o $(BIN).exe $(SRC)
