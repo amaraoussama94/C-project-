@@ -21,6 +21,9 @@ else
  CC ?= gcc
 endif
 
+# Test sources and executable
+TEST_SRC = test/test_database.c
+TEST_EXEC = build/test_database$(EXEC_EXT)
 # Définit la version du programme.
 BIN = build/gestion_stock_v$(VERSION)$(EXEC_EXT)
 
@@ -86,3 +89,14 @@ ci-build:
 ci-build-windows:
 	@mkdir -p build
 	x86_64-w64-mingw32-gcc $(CFLAGS) -DVERSION=\"$(VERSION)\" -o build/gestion_stock_v$(VERSION).exe $(SRC)
+
+# Test target
+test: $(TEST_EXEC)
+	@echo "Exécution des tests unitaires..."
+	./$(TEST_EXEC)
+
+# Build test executable
+$(TEST_EXEC): $(TEST_SRC) $(SRC_SQLITE) Src/database.c
+	@$(MKDIR)
+	$(CC) $(CFLAGS) -o $@ $^
+
