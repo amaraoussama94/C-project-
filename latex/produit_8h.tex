@@ -1,101 +1,142 @@
-\doxysection{produit.\+h File Reference}
-\hypertarget{produit_8h}{}\label{produit_8h}\index{produit.h@{produit.h}}
+\doxysection{Inc/produit.h File Reference}
+\hypertarget{produit_8h}{}\label{produit_8h}\index{Inc/produit.h@{Inc/produit.h}}
 
 
-Déclarations des fonctions liées à la gestion des produits.  
+Interface utilisateur pour la gestion interactive des produits.  
 
 
-This graph shows which files directly or indirectly include this file\+:
-% FIG 0
-\doxysubsubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{struct_produit}{Produit}}
-\end{DoxyCompactItemize}
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{produit_8h_af52335792a6c7d883b4fbb525859c740}{ajouter\+Produit}} (\mbox{\hyperlink{struct_produit}{Produit}} p)
-\begin{DoxyCompactList}\small\item\em Ajoute un produit au stock. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{produit_8h_a29f37b3dbdbdc8a1a48c1430dffcd915}{afficher\+Produits}} ()
-\begin{DoxyCompactList}\small\item\em Affiche la liste des produits disponibles. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{produit_8h_a53c7b7c97df84c76ca7c5feb7bfd0f28}{ajouter\+Produit}} ()
-\item 
-void \mbox{\hyperlink{produit_8h_a24826f66b22d9bbbd63a1fd884631609}{modifier\+Produit}} ()
-\item 
-void \mbox{\hyperlink{produit_8h_a4f133f17909cf38ef7e9fdfd91a88416}{supprimer\+Produit}} ()
-\item 
-void \mbox{\hyperlink{produit_8h_a4f7184e9bbb3dbe691a7b95f76aa2c5c}{chercher\+Produit}} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{produit_8h_a2c493ad541bb67f70d15da9641fb125d}{ajouter\+\_\+produit\+\_\+interactif}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Demande à l\textquotesingle{}utilisateur les informations d\textquotesingle{}un produit et l\textquotesingle{}ajoute à la base. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produit_8h_ac14335164caf5461f506e1597dadfeea}{modifier\+\_\+produit\+\_\+interactif}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Demande à l\textquotesingle{}utilisateur un ID et les nouvelles infos, puis modifie le produit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produit_8h_a8c71446fe932bf9b2dbc80629b4c264e}{supprimer\+\_\+produit\+\_\+interactif}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Demande à l\textquotesingle{}utilisateur un ID et supprime le produit correspondant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{produit_8h_a75079172a17ab0dfbd145be61cc895fa}{lister\+\_\+produits\+\_\+interactif}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Affiche tous les produits de la base de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Déclarations des fonctions liées à la gestion des produits. 
-
-Ce fichier contient les prototypes des fonctions permettant d\textquotesingle{}ajouter, modifier, supprimer et afficher les produits dans le système de gestion de stock.
+Interface utilisateur pour la gestion interactive des produits. 
 
 \begin{DoxyAuthor}{Author}
 Oussama 
 \end{DoxyAuthor}
-\begin{DoxyVersion}{Version}
-1.\+0 
-\end{DoxyVersion}
 \begin{DoxyDate}{Date}
-2025-\/06-\/26 
+2024-\/06-\/28 
 \end{DoxyDate}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
 
 
 \label{doc-func-members}
 \Hypertarget{produit_8h_doc-func-members}
 \doxysubsection{Function Documentation}
-\Hypertarget{produit_8h_a29f37b3dbdbdc8a1a48c1430dffcd915}\index{produit.h@{produit.h}!afficherProduits@{afficherProduits}}
-\index{afficherProduits@{afficherProduits}!produit.h@{produit.h}}
-\doxysubsubsection{\texorpdfstring{afficherProduits()}{afficherProduits()}}
-{\footnotesize\ttfamily \label{produit_8h_a29f37b3dbdbdc8a1a48c1430dffcd915} 
-void afficher\+Produits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\Hypertarget{produit_8h_a2c493ad541bb67f70d15da9641fb125d}\index{produit.h@{produit.h}!ajouter\_produit\_interactif@{ajouter\_produit\_interactif}}
+\index{ajouter\_produit\_interactif@{ajouter\_produit\_interactif}!produit.h@{produit.h}}
+\doxysubsubsection{\texorpdfstring{ajouter\_produit\_interactif()}{ajouter\_produit\_interactif()}}
+{\footnotesize\ttfamily \label{produit_8h_a2c493ad541bb67f70d15da9641fb125d} 
+void ajouter\+\_\+produit\+\_\+interactif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
 
 
 
-Affiche la liste des produits disponibles. 
-
-Parcourt le fichier de données et affiche les informations de chaque produit. \Hypertarget{produit_8h_a53c7b7c97df84c76ca7c5feb7bfd0f28}\index{produit.h@{produit.h}!ajouterProduit@{ajouterProduit}}
-\index{ajouterProduit@{ajouterProduit}!produit.h@{produit.h}}
-\doxysubsubsection{\texorpdfstring{ajouterProduit()}{ajouterProduit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \label{produit_8h_a53c7b7c97df84c76ca7c5feb7bfd0f28} 
-void ajouter\+Produit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-\Hypertarget{produit_8h_af52335792a6c7d883b4fbb525859c740}\index{produit.h@{produit.h}!ajouterProduit@{ajouterProduit}}
-\index{ajouterProduit@{ajouterProduit}!produit.h@{produit.h}}
-\doxysubsubsection{\texorpdfstring{ajouterProduit()}{ajouterProduit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{produit_8h_af52335792a6c7d883b4fbb525859c740} 
-void ajouter\+Produit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_produit}{Produit}}}]{p}{}\end{DoxyParamCaption})}
-
-
-
-Ajoute un produit au stock. 
-
-Cette fonction permet d\textquotesingle{}enregistrer un nouveau produit avec ses informations dans le fichier de données.
+Demande à l\textquotesingle{}utilisateur les informations d\textquotesingle{}un produit et l\textquotesingle{}ajoute à la base. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em p} & Le produit à ajouter. \\
+{\em db} & Pointeur vers la base de données SQLite.\\
 \hline
 \end{DoxyParams}
-\Hypertarget{produit_8h_a4f7184e9bbb3dbe691a7b95f76aa2c5c}\index{produit.h@{produit.h}!chercherProduit@{chercherProduit}}
-\index{chercherProduit@{chercherProduit}!produit.h@{produit.h}}
-\doxysubsubsection{\texorpdfstring{chercherProduit()}{chercherProduit()}}
-{\footnotesize\ttfamily \label{produit_8h_a4f7184e9bbb3dbe691a7b95f76aa2c5c} 
-void chercher\+Produit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+Demande à l\textquotesingle{}utilisateur les informations d\textquotesingle{}un produit et l\textquotesingle{}ajoute à la base.
 
-\Hypertarget{produit_8h_a24826f66b22d9bbbd63a1fd884631609}\index{produit.h@{produit.h}!modifierProduit@{modifierProduit}}
-\index{modifierProduit@{modifierProduit}!produit.h@{produit.h}}
-\doxysubsubsection{\texorpdfstring{modifierProduit()}{modifierProduit()}}
-{\footnotesize\ttfamily \label{produit_8h_a24826f66b22d9bbbd63a1fd884631609} 
-void modifier\+Produit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+Adds a new product to the database interactively.
 
-\Hypertarget{produit_8h_a4f133f17909cf38ef7e9fdfd91a88416}\index{produit.h@{produit.h}!supprimerProduit@{supprimerProduit}}
-\index{supprimerProduit@{supprimerProduit}!produit.h@{produit.h}}
-\doxysubsubsection{\texorpdfstring{supprimerProduit()}{supprimerProduit()}}
-{\footnotesize\ttfamily \label{produit_8h_a4f133f17909cf38ef7e9fdfd91a88416} 
-void supprimer\+Produit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+Prompts the user to enter the product\textquotesingle{}s name, quantity, and price via standard input, then attempts to add the product to the database using \doxylink{database_8h_a24f87cdb18f19d2c7ce064f6a56421ba}{db\+\_\+ajouter\+\_\+produit()}. Displays a success or error message based on the result.
 
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the opened SQLite database connection. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{produit_8h_a75079172a17ab0dfbd145be61cc895fa}\index{produit.h@{produit.h}!lister\_produits\_interactif@{lister\_produits\_interactif}}
+\index{lister\_produits\_interactif@{lister\_produits\_interactif}!produit.h@{produit.h}}
+\doxysubsubsection{\texorpdfstring{lister\_produits\_interactif()}{lister\_produits\_interactif()}}
+{\footnotesize\ttfamily \label{produit_8h_a75079172a17ab0dfbd145be61cc895fa} 
+void lister\+\_\+produits\+\_\+interactif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+
+
+
+Affiche tous les produits de la base de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers la base de données SQLite.\\
+\hline
+\end{DoxyParams}
+Affiche tous les produits de la base de données.
+
+Lists all products in the database interactively.
+
+Cette fonction appelle db\+\_\+lister\+\_\+produits pour afficher tous les produits présents dans la base de données SQLite passée en paramètre. Si une erreur survient lors de l\textquotesingle{}affichage, un message d\textquotesingle{}erreur est affiché à l\textquotesingle{}utilisateur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers la base de données SQLite. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{produit_8h_ac14335164caf5461f506e1597dadfeea}\index{produit.h@{produit.h}!modifier\_produit\_interactif@{modifier\_produit\_interactif}}
+\index{modifier\_produit\_interactif@{modifier\_produit\_interactif}!produit.h@{produit.h}}
+\doxysubsubsection{\texorpdfstring{modifier\_produit\_interactif()}{modifier\_produit\_interactif()}}
+{\footnotesize\ttfamily \label{produit_8h_ac14335164caf5461f506e1597dadfeea} 
+void modifier\+\_\+produit\+\_\+interactif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+
+
+
+Demande à l\textquotesingle{}utilisateur un ID et les nouvelles infos, puis modifie le produit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers la base de données SQLite.\\
+\hline
+\end{DoxyParams}
+Demande à l\textquotesingle{}utilisateur un ID et les nouvelles infos, puis modifie le produit.
+
+Modifies an existing product in the database interactively.
+
+Prompts the user to enter the ID of the product to modify, then asks for the new name, quantity, and price. Updates the product in the database using the provided information. Displays a success or error message based on the outcome.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the opened SQLite database connection. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{produit_8h_a8c71446fe932bf9b2dbc80629b4c264e}\index{produit.h@{produit.h}!supprimer\_produit\_interactif@{supprimer\_produit\_interactif}}
+\index{supprimer\_produit\_interactif@{supprimer\_produit\_interactif}!produit.h@{produit.h}}
+\doxysubsubsection{\texorpdfstring{supprimer\_produit\_interactif()}{supprimer\_produit\_interactif()}}
+{\footnotesize\ttfamily \label{produit_8h_a8c71446fe932bf9b2dbc80629b4c264e} 
+void supprimer\+\_\+produit\+\_\+interactif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+
+
+
+Demande à l\textquotesingle{}utilisateur un ID et supprime le produit correspondant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers la base de données SQLite.\\
+\hline
+\end{DoxyParams}
+Demande à l\textquotesingle{}utilisateur un ID et supprime le produit correspondant.
+
+Deletes a product from the database interactively.
+
+Cette fonction demande à l\textquotesingle{}utilisateur de saisir l\textquotesingle{}identifiant (ID) du produit à supprimer, puis appelle la fonction db\+\_\+supprimer\+\_\+produit pour effectuer la suppression dans la base de données SQLite. Elle affiche un message indiquant si la suppression a réussi ou échoué.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers la base de données SQLite ouverte. \\
+\hline
+\end{DoxyParams}

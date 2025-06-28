@@ -1,7 +1,88 @@
-\chapter{C-\/project-\/ }
-\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{C-\/project-\/@{C-\/project-\/}}
+\chapter{📦 Projet C -\/ Gestion de Stock }
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{📦 Projet C -\/ Gestion de Stock@{📦 Projet C -\/ Gestion de Stock}}
 \label{md__r_e_a_d_m_e_autotoc_md0}%
 \Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
 
 
-this project is about creating a dynamic database using file in c also, use struct ... It s be helpful if someone add some function or tell me how creat a front end in easy way to this project open source project enjoy I used Dev c++ for this project 
+Ce projet est une application en langage {\bfseries{C}} permettant la gestion simple et efficace d’un stock de produits via des fichiers texte. Il s\textquotesingle{}agit d\textquotesingle{}une base pour des systèmes de gestion plus avancés.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{🎯 Objectifs}{🎯 Objectifs}}\label{md__r_e_a_d_m_e_autotoc_md1}
+Gérer un ensemble de produits avec leurs informations clés \+: ID, nom, quantité, prix
+
+Permettre l’ajout, la suppression, la modification et l’affichage des produits via une interface console
+
+Assurer la persistance des données à l’aide d’une base SQLite3 embarquée (plus de fichiers plats)
+
+Illustrer la structuration modulaire d’un projet C avec \+: \begin{DoxyVerb}séparation des responsabilités (database, produit, main)
+
+compilation automatisée via Makefile
+
+documentation générée avec Doxygen
+\end{DoxyVerb}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{🛠️ Structure du projet}{🛠️ Structure du projet}}\label{md__r_e_a_d_m_e_autotoc_md2}
+gestion\+\_\+stock\+\_\+c/
+
+├── Inc/ \# Fichiers d\textquotesingle{}en-\/tête (.h)
+
+│ ├── \doxylink{database_8h}{database.\+h}
+
+│ ├── \doxylink{produit_8h}{produit.\+h}
+
+│ └── \doxylink{sqlite3_8h_source}{sqlite3.\+h}
+
+├── Src/ \# Fichiers source (.c)
+
+│ ├── \doxylink{main_8c}{main.\+c}
+
+│ ├── \doxylink{database_8c}{database.\+c}
+
+│ └── \doxylink{produit_8c}{produit.\+c}
+
+├── sqlite-\/lib/ \# SQLite3 embarqué
+
+│ └── sqlite3.\+c
+
+├── build/ \# Fichiers compilés (.exe)
+
+├── doc/ \# Documentation Doxygen
+
+├── Makefile
+
+├── Doxyfile
+
+└── README.\+md\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{✨ Fonctionnalités principales}{✨ Fonctionnalités principales}}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Ajouter un produit
+\item Afficher la liste des produits
+\item Rechercher un produit par ID
+\item Supprimer ou modifier un produit existant
+\item Persistance des données dans un fichier structuré
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{🔄 Changements récents (Branche {\ttfamily dev\+\_\+\+Refactorcode})}{🔄 Changements récents (Branche {\ttfamily dev\+\_\+\+Refactorcode})}}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Refactorisation complète du code source \+: séparation {\ttfamily .c} / {\ttfamily .h}
+\item Ajout de commentaires {\bfseries{Doxygen}} professionnels dans tous les fichiers
+\item Nettoyage du {\ttfamily Makefile} et ajout de règles plus propres
+\item Préparation d\textquotesingle{}une documentation automatique via Doxygen
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{🚀 Compilation}{🚀 Compilation}}\label{md__r_e_a_d_m_e_autotoc_md5}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\texorpdfstring{Pré-\/requis}{Pré-\/requis}}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Compilateur C ({\ttfamily gcc})
+\item \href{https://www.doxygen.nl/}{\texttt{Doxygen (optionnel)}}
+\item Système compatible POSIX ou Windows avec Min\+GW
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{\texorpdfstring{Instructions}{Instructions}}\label{md__r_e_a_d_m_e_autotoc_md7}
+Assurez-\/vous d’avoir gcc et make installés (via Min\+GW ou MSYS2).
+
+make \# Compile le projet make run \# Compile et exécute make clean \# Supprime les fichiers générés\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{🔧 Auto Build Process}{🔧 Auto Build Process}}\label{md__r_e_a_d_m_e_autotoc_md8}
+This project leverages an automated build pipeline to ensure every change is compiled, tested, and deployed efficiently. Here’s how it works\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{\doxylink{struct_trigger}{Trigger}}}\+: The build process is automatically triggered by a push to the {\ttfamily main} branch or upon the creation of a pull request.
+\item {\bfseries{Build Environment}}\+: A pre-\/configured virtual environment installs all necessary dependencies as specified in {\ttfamily requirements.\+txt} or {\ttfamily environment.\+yml}.
+\item {\bfseries{Validation \& Tests}}\+: Linting and unit tests are run to catch errors early and maintain code quality.
+\item {\bfseries{Build \& Package}}\+: The application is compiled (if necessary) and bundled for deployment.
+\item {\bfseries{Deploy (Optional)}}\+: If the build passes, the code is deployed to the specified environment (e.\+g. Git\+Hub Pages, Docker Hub, or a cloud platform).
+\end{DoxyEnumerate}
+
+All steps are defined in the {\ttfamily .github/workflows} directory using YAML configuration files. Comments within those files explain each stage of the pipeline. 

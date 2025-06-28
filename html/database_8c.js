@@ -1,0 +1,9 @@
+var database_8c =
+[
+    [ "db_ajouter_produit", "database_8c.html#a24f87cdb18f19d2c7ce064f6a56421ba", null ],
+    [ "db_close", "database_8c.html#ae07af262c608d2e3de291268d923d24a", null ],
+    [ "db_init", "database_8c.html#a408750fcc9af8d14bd2bbf287b584b67", null ],
+    [ "db_lister_produits", "database_8c.html#a42195505d310a0a6d65a715385f7e546", null ],
+    [ "db_modifier_produit", "database_8c.html#a432b4c1d45194b5c16adb90c6f9217af", null ],
+    [ "db_supprimer_produit", "database_8c.html#aa82e22b7b47ca0e7dad3a757763259f7", null ]
+];

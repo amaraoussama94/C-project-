@@ -1,0 +1,85 @@
+\doxysection{Mem\+Page Struct Reference}
+\hypertarget{struct_mem_page}{}\label{struct_mem_page}\index{MemPage@{MemPage}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_mem_page_a3ab4ace46245be0fb2fb19eaa2862019}\label{struct_mem_page_a3ab4ace46245be0fb2fb19eaa2862019} 
+u8 {\bfseries is\+Init}
+\item 
+\Hypertarget{struct_mem_page_a46784c3c4708c7a582cff81a29c55323}\label{struct_mem_page_a46784c3c4708c7a582cff81a29c55323} 
+u8 {\bfseries int\+Key}
+\item 
+\Hypertarget{struct_mem_page_a7c30c56237c38e0b81842ae2a6bae9d7}\label{struct_mem_page_a7c30c56237c38e0b81842ae2a6bae9d7} 
+u8 {\bfseries int\+Key\+Leaf}
+\item 
+\Hypertarget{struct_mem_page_ad2b0c532abc799bbcf3b43df4f0b0546}\label{struct_mem_page_ad2b0c532abc799bbcf3b43df4f0b0546} 
+Pgno {\bfseries pgno}
+\item 
+\Hypertarget{struct_mem_page_af18504bd0a2e7d39d9b485d434af0447}\label{struct_mem_page_af18504bd0a2e7d39d9b485d434af0447} 
+u8 {\bfseries leaf}
+\item 
+\Hypertarget{struct_mem_page_a01967a1a593980fb71c8ccf3393ae156}\label{struct_mem_page_a01967a1a593980fb71c8ccf3393ae156} 
+u8 {\bfseries hdr\+Offset}
+\item 
+\Hypertarget{struct_mem_page_aeba10281fc255d9bbc0e31486f8fbd48}\label{struct_mem_page_aeba10281fc255d9bbc0e31486f8fbd48} 
+u8 {\bfseries child\+Ptr\+Size}
+\item 
+\Hypertarget{struct_mem_page_a79548547cafb0e6d8549006bdc553f0a}\label{struct_mem_page_a79548547cafb0e6d8549006bdc553f0a} 
+u8 {\bfseries max1byte\+Payload}
+\item 
+\Hypertarget{struct_mem_page_a3f7fa1a1eba3af840ef887e8ddd6d2cc}\label{struct_mem_page_a3f7fa1a1eba3af840ef887e8ddd6d2cc} 
+u8 {\bfseries n\+Overflow}
+\item 
+\Hypertarget{struct_mem_page_a36394b7c3abf4652e7a24be4ab314f13}\label{struct_mem_page_a36394b7c3abf4652e7a24be4ab314f13} 
+u16 {\bfseries max\+Local}
+\item 
+\Hypertarget{struct_mem_page_a95cab31aa57bf8b478be273557c5c807}\label{struct_mem_page_a95cab31aa57bf8b478be273557c5c807} 
+u16 {\bfseries min\+Local}
+\item 
+\Hypertarget{struct_mem_page_a324ed834d93c3ae72994fb5730940521}\label{struct_mem_page_a324ed834d93c3ae72994fb5730940521} 
+u16 {\bfseries cell\+Offset}
+\item 
+\Hypertarget{struct_mem_page_a900d41f1005b685817a49e9ff2f8337a}\label{struct_mem_page_a900d41f1005b685817a49e9ff2f8337a} 
+int {\bfseries n\+Free}
+\item 
+\Hypertarget{struct_mem_page_a35d1d8f836201b82b1eb778ce0e324f4}\label{struct_mem_page_a35d1d8f836201b82b1eb778ce0e324f4} 
+u16 {\bfseries n\+Cell}
+\item 
+\Hypertarget{struct_mem_page_aa3d64e8755cc9f431bbc8423a2b506ec}\label{struct_mem_page_aa3d64e8755cc9f431bbc8423a2b506ec} 
+u16 {\bfseries mask\+Page}
+\item 
+\Hypertarget{struct_mem_page_a4301e48076cae9e898a93d89c252a1d7}\label{struct_mem_page_a4301e48076cae9e898a93d89c252a1d7} 
+u16 {\bfseries ai\+Ovfl} \mbox{[}4\mbox{]}
+\item 
+\Hypertarget{struct_mem_page_a056ebeebc2fd0995e5aff71feee72a68}\label{struct_mem_page_a056ebeebc2fd0995e5aff71feee72a68} 
+u8 \texorpdfstring{$\ast$}{*} {\bfseries ap\+Ovfl} \mbox{[}4\mbox{]}
+\item 
+\Hypertarget{struct_mem_page_a949df1156f7392592eaeb64389068f99}\label{struct_mem_page_a949df1156f7392592eaeb64389068f99} 
+\mbox{\hyperlink{struct_bt_shared}{Bt\+Shared}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Bt}
+\item 
+\Hypertarget{struct_mem_page_a2d873eff563d2208be0c24959140a4b0}\label{struct_mem_page_a2d873eff563d2208be0c24959140a4b0} 
+u8 \texorpdfstring{$\ast$}{*} {\bfseries a\+Data}
+\item 
+\Hypertarget{struct_mem_page_ab5d2ecb95a84eaf4bd0ccef536bac6d7}\label{struct_mem_page_ab5d2ecb95a84eaf4bd0ccef536bac6d7} 
+u8 \texorpdfstring{$\ast$}{*} {\bfseries a\+Data\+End}
+\item 
+\Hypertarget{struct_mem_page_a6f391f110e68ede6e5234b4e9f678f99}\label{struct_mem_page_a6f391f110e68ede6e5234b4e9f678f99} 
+u8 \texorpdfstring{$\ast$}{*} {\bfseries a\+Cell\+Idx}
+\item 
+\Hypertarget{struct_mem_page_a0af9fdf5075be66cd5a4932b81072185}\label{struct_mem_page_a0af9fdf5075be66cd5a4932b81072185} 
+u8 \texorpdfstring{$\ast$}{*} {\bfseries a\+Data\+Ofst}
+\item 
+\Hypertarget{struct_mem_page_add322c1aed91e95d8dfe3ac3535d65b4}\label{struct_mem_page_add322c1aed91e95d8dfe3ac3535d65b4} 
+\mbox{\hyperlink{struct_pg_hdr}{Db\+Page}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Db\+Page}
+\item 
+\Hypertarget{struct_mem_page_aecb022d01630da5a48681f8a7e32a419}\label{struct_mem_page_aecb022d01630da5a48681f8a7e32a419} 
+u16(\texorpdfstring{$\ast$}{*} {\bfseries x\+Cell\+Size} )(\mbox{\hyperlink{struct_mem_page}{Mem\+Page}} \texorpdfstring{$\ast$}{*}, u8 \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{struct_mem_page_ac401be6009d535d9fef9cc48af734039}\label{struct_mem_page_ac401be6009d535d9fef9cc48af734039} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Parse\+Cell} )(\mbox{\hyperlink{struct_mem_page}{Mem\+Page}} \texorpdfstring{$\ast$}{*}, u8 \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{struct_cell_info}{Cell\+Info}} \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sqlite-\/lib/sqlite3.\+c\end{DoxyCompactItemize}

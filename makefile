@@ -17,7 +17,7 @@ SRC_MAIN=main.c
 #SRC_SRC contient tous les fichiers .c du dossier src.
 SRC_SRC=$(wildcard Src/*.c)
 #Ajoute le fichier SQLite3 source.
-SRC_SQLITE = lib/sqlite3.c
+SRC_SQLITE = sqlite-lib/sqlite3.c
 
 #Convertit la liste de fichiers .c en fichiers .o (les objets intermédiaires).
 OBJ=$(SRC:.c=.o)
@@ -32,7 +32,7 @@ all: $(EXEC)
 #$@ = le nom de la cible (gestion_stock.exe)
 #$^ = tous les fichiers .o (dépendances)
 $(EXEC): $(OBJ)
-	@mkdir -p build
+	@if not exist build mkdir build
 	$(CC) $(CFLAGS) -o $@ $^
 
 #Compile chaque fichier .c individuellement en .o.
@@ -43,7 +43,10 @@ $(EXEC): $(OBJ)
 
 #Supprime les fichiers .o et l’exécutable .exe (Windows utilise del au lieu de rm).
 clean:
-	del /Q *.o build\*.exe 2>nul || true
+	@echo "Nettoyage des fichiers objets et exécutables..."
+	@del /S /Q *.o 2>nul || exit 0
+	@del /S /Q *.exe 2>nul || exit 0
+	@if exist build rmdir /S /Q build
 
 #Compile et lance ton programme en une seule commande : make run
 run: all

@@ -1,0 +1,44 @@
+\doxysection{sqlite3\+\_\+pcache\+\_\+methods Struct Reference}
+\hypertarget{structsqlite3__pcache__methods}{}\label{structsqlite3__pcache__methods}\index{sqlite3\_pcache\_methods@{sqlite3\_pcache\_methods}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structsqlite3__pcache__methods_a90394a920f6a09dd13553aeb79bbed88}\label{structsqlite3__pcache__methods_a90394a920f6a09dd13553aeb79bbed88} 
+void \texorpdfstring{$\ast$}{*} {\bfseries p\+Arg}
+\item 
+\Hypertarget{structsqlite3__pcache__methods_ab5f54101f6060de1af0c87b2456231ad}\label{structsqlite3__pcache__methods_ab5f54101f6060de1af0c87b2456231ad} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Init} )(void \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{structsqlite3__pcache__methods_aa88bb238d288631e7e06f4da232c3dbb}\label{structsqlite3__pcache__methods_aa88bb238d288631e7e06f4da232c3dbb} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Shutdown} )(void \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{structsqlite3__pcache__methods_a36b1da95aeb7972c3c0d358aedf2a3d4}\label{structsqlite3__pcache__methods_a36b1da95aeb7972c3c0d358aedf2a3d4} 
+sqlite3\+\_\+pcache \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} {\bfseries x\+Create} )(int sz\+Page, int b\+Purgeable)
+\item 
+\Hypertarget{structsqlite3__pcache__methods_a9cf385dbec7f0d19793e2616a73a3b7f}\label{structsqlite3__pcache__methods_a9cf385dbec7f0d19793e2616a73a3b7f} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Cachesize} )(sqlite3\+\_\+pcache \texorpdfstring{$\ast$}{*}, int n\+Cachesize)
+\item 
+\Hypertarget{structsqlite3__pcache__methods_a0ab192dc811798e8f17c445dbf379989}\label{structsqlite3__pcache__methods_a0ab192dc811798e8f17c445dbf379989} 
+int(\texorpdfstring{$\ast$}{*} {\bfseries x\+Pagecount} )(sqlite3\+\_\+pcache \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{structsqlite3__pcache__methods_a2e054ad70c9672b504d3d7291e4eb487}\label{structsqlite3__pcache__methods_a2e054ad70c9672b504d3d7291e4eb487} 
+void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} {\bfseries x\+Fetch} )(sqlite3\+\_\+pcache \texorpdfstring{$\ast$}{*}, unsigned key, int create\+Flag)
+\item 
+\Hypertarget{structsqlite3__pcache__methods_ade2ab50cc6896be03ee86541877fa85e}\label{structsqlite3__pcache__methods_ade2ab50cc6896be03ee86541877fa85e} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Unpin} )(sqlite3\+\_\+pcache \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}, int discard)
+\item 
+\Hypertarget{structsqlite3__pcache__methods_adc5552190f1de86eb95d91e9cf8430e6}\label{structsqlite3__pcache__methods_adc5552190f1de86eb95d91e9cf8430e6} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Rekey} )(sqlite3\+\_\+pcache \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}, unsigned old\+Key, unsigned new\+Key)
+\item 
+\Hypertarget{structsqlite3__pcache__methods_aad73f9335999770bcd2dc6a2d914b4f0}\label{structsqlite3__pcache__methods_aad73f9335999770bcd2dc6a2d914b4f0} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Truncate} )(sqlite3\+\_\+pcache \texorpdfstring{$\ast$}{*}, unsigned i\+Limit)
+\item 
+\Hypertarget{structsqlite3__pcache__methods_aac18fc581d8d63550a6657016c24ba5d}\label{structsqlite3__pcache__methods_aac18fc581d8d63550a6657016c24ba5d} 
+void(\texorpdfstring{$\ast$}{*} {\bfseries x\+Destroy} )(sqlite3\+\_\+pcache \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sqlite-\/lib/sqlite3.\+c\item 
+Inc/sqlite3.\+h\end{DoxyCompactItemize}

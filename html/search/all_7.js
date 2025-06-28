@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quantite_0',['quantite',['../struct_produit.html#aded2c0a11f9d90d677e89b8170e4c904',1,'Produit']]]
+  ['gestion_20de_20stock_0',['📦 Projet C - Gestion de Stock',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['groupconcatctx_1',['GroupConcatCtx',['../struct_group_concat_ctx.html',1,'']]]
 ];

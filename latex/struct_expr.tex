@@ -1,0 +1,83 @@
+\doxysection{Expr Struct Reference}
+\hypertarget{struct_expr}{}\label{struct_expr}\index{Expr@{Expr}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_expr_a101c55ddb6c149d95f0327831eb78225}\label{struct_expr_a101c55ddb6c149d95f0327831eb78225} 
+u8 {\bfseries op}
+\item 
+\Hypertarget{struct_expr_ad8f1faf0b235ffa1aae90034e0d5c85d}\label{struct_expr_ad8f1faf0b235ffa1aae90034e0d5c85d} 
+char {\bfseries aff\+Expr}
+\item 
+\Hypertarget{struct_expr_a0eacba0a2a6977e434b096b1cb9d5b9e}\label{struct_expr_a0eacba0a2a6977e434b096b1cb9d5b9e} 
+u8 {\bfseries op2}
+\item 
+\Hypertarget{struct_expr_aebac9ee7e6aa7adca63969d3ba8d0ded}\label{struct_expr_aebac9ee7e6aa7adca63969d3ba8d0ded} 
+u32 {\bfseries flags}
+\item 
+\Hypertarget{struct_expr_affb60c0388cf0e3cac26d7c2fff7ac38}\label{struct_expr_affb60c0388cf0e3cac26d7c2fff7ac38} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>char \texorpdfstring{$\ast$}{*} {\bfseries zToken}\\
+\>int {\bfseries iValue}\\
+\} {\bfseries u}\\
+
+\end{tabbing}\item 
+\Hypertarget{struct_expr_a0a78282ae0d696f4a25013a12e38b1ba}\label{struct_expr_a0a78282ae0d696f4a25013a12e38b1ba} 
+\mbox{\hyperlink{struct_expr}{Expr}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Left}
+\item 
+\Hypertarget{struct_expr_aa08c218d5b0b6f8882e8bf9ec8822a08}\label{struct_expr_aa08c218d5b0b6f8882e8bf9ec8822a08} 
+\mbox{\hyperlink{struct_expr}{Expr}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Right}
+\item 
+\Hypertarget{struct_expr_a26dcbc4c648a131bccecdc450aa393d5}\label{struct_expr_a26dcbc4c648a131bccecdc450aa393d5} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{struct_expr_list}{ExprList}} \texorpdfstring{$\ast$}{*} {\bfseries pList}\\
+\>\mbox{\hyperlink{struct_select}{Select}} \texorpdfstring{$\ast$}{*} {\bfseries pSelect}\\
+\} {\bfseries x}\\
+
+\end{tabbing}\item 
+\Hypertarget{struct_expr_a5a893ea309f801f23404e7e5ac02732b}\label{struct_expr_a5a893ea309f801f23404e7e5ac02732b} 
+int {\bfseries n\+Height}
+\item 
+\Hypertarget{struct_expr_af8e273f4d7d173bfb5996ed09054611c}\label{struct_expr_af8e273f4d7d173bfb5996ed09054611c} 
+int {\bfseries i\+Table}
+\item 
+\Hypertarget{struct_expr_ad19251a8eb6db3cf0bdffe0dcb07eeba}\label{struct_expr_ad19251a8eb6db3cf0bdffe0dcb07eeba} 
+yn\+Var {\bfseries i\+Column}
+\item 
+\Hypertarget{struct_expr_a9fe0ed6360b0a4cf5b67ab8def922033}\label{struct_expr_a9fe0ed6360b0a4cf5b67ab8def922033} 
+i16 {\bfseries i\+Agg}
+\item 
+\Hypertarget{struct_expr_af7086dedc978f1a0c020fc19c305eb8c}\label{struct_expr_af7086dedc978f1a0c020fc19c305eb8c} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>int {\bfseries iJoin}\\
+\>int {\bfseries iOfst}\\
+\} {\bfseries w}\\
+
+\end{tabbing}\item 
+\Hypertarget{struct_expr_a4fde82477256ee85f3a906263549082a}\label{struct_expr_a4fde82477256ee85f3a906263549082a} 
+\mbox{\hyperlink{struct_agg_info}{Agg\+Info}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Agg\+Info}
+\item 
+\Hypertarget{struct_expr_a3a9bb48a1d6dee51f6a4b824f19ac7a0}\label{struct_expr_a3a9bb48a1d6dee51f6a4b824f19ac7a0} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{struct_table}{Table}} \texorpdfstring{$\ast$}{*} {\bfseries pTab}\\
+\>\mbox{\hyperlink{struct_window}{Window}} \texorpdfstring{$\ast$}{*} {\bfseries pWin}\\
+\>struct \{\\
+\>\>int {\bfseries iAddr}\\
+\>\>int {\bfseries regReturn}\\
+\>\} {\bfseries sub}\\
+\} {\bfseries y}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sqlite-\/lib/sqlite3.\+c\end{DoxyCompactItemize}

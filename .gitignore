@@ -1,4 +1,5 @@
-
+.vscode
 *.dat
 *.exe
 *.o
+*.db

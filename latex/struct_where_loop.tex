@@ -1,0 +1,77 @@
+\doxysection{Where\+Loop Struct Reference}
+\hypertarget{struct_where_loop}{}\label{struct_where_loop}\index{WhereLoop@{WhereLoop}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_where_loop_aa654af6ecff71bd43c4b0cd6046ccf4d}\label{struct_where_loop_aa654af6ecff71bd43c4b0cd6046ccf4d} 
+Bitmask {\bfseries prereq}
+\item 
+\Hypertarget{struct_where_loop_a0118b20be771241ee29de452ffead61e}\label{struct_where_loop_a0118b20be771241ee29de452ffead61e} 
+Bitmask {\bfseries mask\+Self}
+\item 
+\Hypertarget{struct_where_loop_a469ad31ae7f3b025667813e2d0aa9d01}\label{struct_where_loop_a469ad31ae7f3b025667813e2d0aa9d01} 
+u8 {\bfseries i\+Tab}
+\item 
+\Hypertarget{struct_where_loop_a35e725c988b2bcfb9633a259cd6eba58}\label{struct_where_loop_a35e725c988b2bcfb9633a259cd6eba58} 
+u8 {\bfseries i\+Sort\+Idx}
+\item 
+\Hypertarget{struct_where_loop_a5e28f2d1299993056255158d33baea33}\label{struct_where_loop_a5e28f2d1299993056255158d33baea33} 
+Log\+Est {\bfseries r\+Setup}
+\item 
+\Hypertarget{struct_where_loop_a1a67183b699c90c23940f540486b07d6}\label{struct_where_loop_a1a67183b699c90c23940f540486b07d6} 
+Log\+Est {\bfseries r\+Run}
+\item 
+\Hypertarget{struct_where_loop_aaef49d7d8188f3dd94d0c9fd0e727448}\label{struct_where_loop_aaef49d7d8188f3dd94d0c9fd0e727448} 
+Log\+Est {\bfseries n\+Out}
+\item 
+\Hypertarget{struct_where_loop_a5e6b32462b81a7891d9ce414ab1dba69}\label{struct_where_loop_a5e6b32462b81a7891d9ce414ab1dba69} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>u16 {\bfseries nEq}\\
+\>\>u16 {\bfseries nBtm}\\
+\>\>u16 {\bfseries nTop}\\
+\>\>u16 {\bfseries nDistinctCol}\\
+\>\>\mbox{\hyperlink{struct_index}{Index}} \texorpdfstring{$\ast$}{*} {\bfseries pIndex}\\
+\>\>\mbox{\hyperlink{struct_expr_list}{ExprList}} \texorpdfstring{$\ast$}{*} {\bfseries pOrderBy}\\
+\>\} {\bfseries btree}\\
+\>struct \{\\
+\>\>int {\bfseries idxNum}\\
+\>\>u32 {\bfseries needFree}: 1\\
+\>\>u32 {\bfseries bOmitOffset}: 1\\
+\>\>u32 {\bfseries bIdxNumHex}: 1\\
+\>\>i8 {\bfseries isOrdered}\\
+\>\>u16 {\bfseries omitMask}\\
+\>\>char \texorpdfstring{$\ast$}{*} {\bfseries idxStr}\\
+\>\>u32 {\bfseries mHandleIn}\\
+\>\} {\bfseries vtab}\\
+\} {\bfseries u}\\
+
+\end{tabbing}\item 
+\Hypertarget{struct_where_loop_a0cd1e9719a060631a647738bead23b8c}\label{struct_where_loop_a0cd1e9719a060631a647738bead23b8c} 
+u32 {\bfseries ws\+Flags}
+\item 
+\Hypertarget{struct_where_loop_aaab088ed5c23647675e5afb10eb09338}\label{struct_where_loop_aaab088ed5c23647675e5afb10eb09338} 
+u16 {\bfseries n\+LTerm}
+\item 
+\Hypertarget{struct_where_loop_aa6729780dfb942387abc2f1e0a6b94e7}\label{struct_where_loop_aa6729780dfb942387abc2f1e0a6b94e7} 
+u16 {\bfseries n\+Skip}
+\item 
+\Hypertarget{struct_where_loop_a286a5e96fcc56cc835958ec2cbf6852f}\label{struct_where_loop_a286a5e96fcc56cc835958ec2cbf6852f} 
+u16 {\bfseries n\+LSlot}
+\item 
+\Hypertarget{struct_where_loop_ad8ea95e5ef2717fbbe1c1732d3ce1a9b}\label{struct_where_loop_ad8ea95e5ef2717fbbe1c1732d3ce1a9b} 
+\mbox{\hyperlink{struct_where_term}{Where\+Term}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries a\+LTerm}
+\item 
+\Hypertarget{struct_where_loop_a568852114be14c3a23cef6f8a1c98f4f}\label{struct_where_loop_a568852114be14c3a23cef6f8a1c98f4f} 
+\mbox{\hyperlink{struct_where_loop}{Where\+Loop}} \texorpdfstring{$\ast$}{*} {\bfseries p\+Next\+Loop}
+\item 
+\Hypertarget{struct_where_loop_a1e0a39de75d4288c791c29e2ebf8103a}\label{struct_where_loop_a1e0a39de75d4288c791c29e2ebf8103a} 
+\mbox{\hyperlink{struct_where_term}{Where\+Term}} \texorpdfstring{$\ast$}{*} {\bfseries a\+LTerm\+Space} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sqlite-\/lib/sqlite3.\+c\end{DoxyCompactItemize}

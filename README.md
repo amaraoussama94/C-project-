@@ -4,34 +4,53 @@ Ce projet est une application en langage **C** permettant la gestion simple et e
 
 ## 🎯 Objectifs
 
-- Gérer un ensemble de produits avec leurs informations clés (ID, nom, quantité, prix)
-- Permettre l’ajout, la suppression, la modification et l’affichage des produits
-- Sauvegarder les produits dans un fichier local pour assurer la persistance des données
-- Servir d’introduction à la structuration de projets C modulaires avec `Makefile` et documentation
+Gérer un ensemble de produits avec leurs informations clés : ID, nom, quantité, prix
+
+Permettre l’ajout, la suppression, la modification et l’affichage des produits via une interface console
+
+Assurer la persistance des données à l’aide d’une base SQLite3 embarquée (plus de fichiers plats)
+
+Illustrer la structuration modulaire d’un projet C avec :
+
+    séparation des responsabilités (database, produit, main)
+
+    compilation automatisée via Makefile
+
+    documentation générée avec Doxygen
 
 ## 🛠️ Structure du projet
 
-C-project-/ 
+gestion_stock_c/
 
-│ 
+├── Inc/              # Fichiers d'en-tête (.h)
 
-├── main.c # Point d'entrée du programme 
+│   ├── database.h
 
-├──src/
+│   ├── produit.h
 
-│   └── produit.c  # Logique métier pour gérer les produits 
+│   └── sqlite3.h
 
-│   └── fichier.c # Lecture et écriture des produits sur fichier 
+├── Src/              # Fichiers source (.c)
 
-├──Inc/ 
+│   ├── main.c
 
-│  └── produit.h # Logique métier pour gérer les produits 
+│   ├── database.c
 
-│   └──  fichier.h # Lecture et écriture des produits sur fichier    
+│   └── produit.c
 
-├── Makefile # Script de compilation 
+├── sqlite-lib/       # SQLite3 embarqué
 
-└── README.md # Documentation du projet
+│   └── sqlite3.c
+
+├── build/            # Fichiers compilés (.exe)
+
+├── doc/              # Documentation Doxygen
+
+├── Makefile
+
+├── Doxyfile
+
+└── README.md
 
 
 ## ✨ Fonctionnalités principales

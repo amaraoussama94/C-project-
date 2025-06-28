@@ -1,0 +1,158 @@
+\doxysection{Src/database.c File Reference}
+\hypertarget{database_8c}{}\label{database_8c}\index{Src/database.c@{Src/database.c}}
+
+
+Implémentation des fonctions de gestion de la base de données SQLite.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}database.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{database_8c_a408750fcc9af8d14bd2bbf287b584b67}{db\+\_\+init}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}db, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Initialise la base de données SQLite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{database_8c_ae07af262c608d2e3de291268d923d24a}{db\+\_\+close}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Ferme la connexion à la base de données. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{database_8c_a24f87cdb18f19d2c7ce064f6a56421ba}{db\+\_\+ajouter\+\_\+produit}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db, const \mbox{\hyperlink{struct_produit}{Produit}} \texorpdfstring{$\ast$}{*}p)
+\begin{DoxyCompactList}\small\item\em Ajoute un produit à la base de données. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{database_8c_a42195505d310a0a6d65a715385f7e546}{db\+\_\+lister\+\_\+produits}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Affiche tous les produits de la base de données. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{database_8c_aa82e22b7b47ca0e7dad3a757763259f7}{db\+\_\+supprimer\+\_\+produit}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db, int id)
+\begin{DoxyCompactList}\small\item\em Supprime un produit de la base de données. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{database_8c_a432b4c1d45194b5c16adb90c6f9217af}{db\+\_\+modifier\+\_\+produit}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}db, const \mbox{\hyperlink{struct_produit}{Produit}} \texorpdfstring{$\ast$}{*}p)
+\begin{DoxyCompactList}\small\item\em Modifie un produit existant dans la base de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implémentation des fonctions de gestion de la base de données SQLite. 
+
+\begin{DoxyAuthor}{Author}
+Oussama Amara 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024-\/06-\/28 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\label{doc-func-members}
+\Hypertarget{database_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{database_8c_a24f87cdb18f19d2c7ce064f6a56421ba}\index{database.c@{database.c}!db\_ajouter\_produit@{db\_ajouter\_produit}}
+\index{db\_ajouter\_produit@{db\_ajouter\_produit}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{db\_ajouter\_produit()}{db\_ajouter\_produit()}}
+{\footnotesize\ttfamily \label{database_8c_a24f87cdb18f19d2c7ce064f6a56421ba} 
+int db\+\_\+ajouter\+\_\+produit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{, }\item[{const \mbox{\hyperlink{struct_produit}{Produit}} \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Ajoute un produit à la base de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers la base de données SQLite. \\
+\hline
+{\em p} & Pointeur vers la structure \doxylink{struct_produit}{Produit} à ajouter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 en cas de succès, -\/1 sinon. 
+\end{DoxyReturn}
+\Hypertarget{database_8c_ae07af262c608d2e3de291268d923d24a}\index{database.c@{database.c}!db\_close@{db\_close}}
+\index{db\_close@{db\_close}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{db\_close()}{db\_close()}}
+{\footnotesize\ttfamily \label{database_8c_ae07af262c608d2e3de291268d923d24a} 
+void db\+\_\+close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+
+
+
+Ferme la connexion à la base de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers la base de données SQLite. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{database_8c_a408750fcc9af8d14bd2bbf287b584b67}\index{database.c@{database.c}!db\_init@{db\_init}}
+\index{db\_init@{db\_init}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{db\_init()}{db\_init()}}
+{\footnotesize\ttfamily \label{database_8c_a408750fcc9af8d14bd2bbf287b584b67} 
+int db\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{db}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Initialise la base de données SQLite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers le pointeur de base de données SQLite. \\
+\hline
+{\em filename} & Nom du fichier de base de données. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 en cas de succès, code d\textquotesingle{}erreur SQLite sinon. 
+\end{DoxyReturn}
+\Hypertarget{database_8c_a42195505d310a0a6d65a715385f7e546}\index{database.c@{database.c}!db\_lister\_produits@{db\_lister\_produits}}
+\index{db\_lister\_produits@{db\_lister\_produits}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{db\_lister\_produits()}{db\_lister\_produits()}}
+{\footnotesize\ttfamily \label{database_8c_a42195505d310a0a6d65a715385f7e546} 
+int db\+\_\+lister\+\_\+produits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{}\end{DoxyParamCaption})}
+
+
+
+Affiche tous les produits de la base de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers la base de données SQLite. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 en cas de succès, -\/1 sinon. 
+\end{DoxyReturn}
+\Hypertarget{database_8c_a432b4c1d45194b5c16adb90c6f9217af}\index{database.c@{database.c}!db\_modifier\_produit@{db\_modifier\_produit}}
+\index{db\_modifier\_produit@{db\_modifier\_produit}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{db\_modifier\_produit()}{db\_modifier\_produit()}}
+{\footnotesize\ttfamily \label{database_8c_a432b4c1d45194b5c16adb90c6f9217af} 
+int db\+\_\+modifier\+\_\+produit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{, }\item[{const \mbox{\hyperlink{struct_produit}{Produit}} \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Modifie un produit existant dans la base de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers la base de données SQLite. \\
+\hline
+{\em p} & Pointeur vers la structure \doxylink{struct_produit}{Produit} contenant les nouvelles données. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 en cas de succès, -\/1 sinon. 
+\end{DoxyReturn}
+\Hypertarget{database_8c_aa82e22b7b47ca0e7dad3a757763259f7}\index{database.c@{database.c}!db\_supprimer\_produit@{db\_supprimer\_produit}}
+\index{db\_supprimer\_produit@{db\_supprimer\_produit}!database.c@{database.c}}
+\doxysubsubsection{\texorpdfstring{db\_supprimer\_produit()}{db\_supprimer\_produit()}}
+{\footnotesize\ttfamily \label{database_8c_aa82e22b7b47ca0e7dad3a757763259f7} 
+int db\+\_\+supprimer\+\_\+produit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} \texorpdfstring{$\ast$}{*}}]{db}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Supprime un produit de la base de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointeur vers la base de données SQLite. \\
+\hline
+{\em id} & Identifiant du produit à supprimer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 en cas de succès, -\/1 sinon. 
+\end{DoxyReturn}

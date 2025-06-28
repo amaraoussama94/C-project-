@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sauvegarderproduits_0',['sauvegarderProduits',['../fichier_8c.html#aaf4050ce3897de239dcd7bd82913ded1',1,'sauvegarderProduits(Produit *tableau, int taille):&#160;fichier.c'],['../fichier_8h.html#aaf4050ce3897de239dcd7bd82913ded1',1,'sauvegarderProduits(Produit *tableau, int taille):&#160;fichier.c']]],
-  ['supprimerproduit_1',['supprimerProduit',['../produit_8c.html#a4f133f17909cf38ef7e9fdfd91a88416',1,'supprimerProduit():&#160;produit.c'],['../produit_8h.html#a4f133f17909cf38ef7e9fdfd91a88416',1,'supprimerProduit():&#160;produit.c']]]
+  ['modifier_5fproduit_5finteractif_0',['modifier_produit_interactif',['../main_8c.html#ac14335164caf5461f506e1597dadfeea',1,'modifier_produit_interactif(sqlite3 *db):&#160;produit.c'],['../produit_8h.html#ac14335164caf5461f506e1597dadfeea',1,'modifier_produit_interactif(sqlite3 *db):&#160;produit.c'],['../produit_8c.html#ac14335164caf5461f506e1597dadfeea',1,'modifier_produit_interactif(sqlite3 *db):&#160;produit.c']]]
 ];

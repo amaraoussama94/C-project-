@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['chargerproduits_0',['chargerProduits',['../fichier_8c.html#a18ed3ef327b820ca3956af93c4497b35',1,'chargerProduits(Produit *tableau, int tailleMax):&#160;fichier.c'],['../fichier_8h.html#a18ed3ef327b820ca3956af93c4497b35',1,'chargerProduits(Produit *tableau, int tailleMax):&#160;fichier.c']]],
-  ['chercherproduit_1',['chercherProduit',['../produit_8c.html#a4f7184e9bbb3dbe691a7b95f76aa2c5c',1,'chercherProduit():&#160;produit.c'],['../produit_8h.html#a4f7184e9bbb3dbe691a7b95f76aa2c5c',1,'chercherProduit():&#160;produit.c']]]
+  ['db_5fajouter_5fproduit_0',['db_ajouter_produit',['../database_8h.html#a24f87cdb18f19d2c7ce064f6a56421ba',1,'db_ajouter_produit(sqlite3 *db, const Produit *p):&#160;database.c'],['../database_8c.html#a24f87cdb18f19d2c7ce064f6a56421ba',1,'db_ajouter_produit(sqlite3 *db, const Produit *p):&#160;database.c']]],
+  ['db_5fclose_1',['db_close',['../database_8h.html#ae07af262c608d2e3de291268d923d24a',1,'db_close(sqlite3 *db):&#160;database.c'],['../database_8c.html#ae07af262c608d2e3de291268d923d24a',1,'db_close(sqlite3 *db):&#160;database.c']]],
+  ['db_5finit_2',['db_init',['../database_8h.html#a408750fcc9af8d14bd2bbf287b584b67',1,'db_init(sqlite3 **db, const char *filename):&#160;database.c'],['../database_8c.html#a408750fcc9af8d14bd2bbf287b584b67',1,'db_init(sqlite3 **db, const char *filename):&#160;database.c']]],
+  ['db_5flister_5fproduits_3',['db_lister_produits',['../database_8h.html#a42195505d310a0a6d65a715385f7e546',1,'db_lister_produits(sqlite3 *db):&#160;database.c'],['../database_8c.html#a42195505d310a0a6d65a715385f7e546',1,'db_lister_produits(sqlite3 *db):&#160;database.c']]],
+  ['db_5fmodifier_5fproduit_4',['db_modifier_produit',['../database_8h.html#a432b4c1d45194b5c16adb90c6f9217af',1,'db_modifier_produit(sqlite3 *db, const Produit *p):&#160;database.c'],['../database_8c.html#a432b4c1d45194b5c16adb90c6f9217af',1,'db_modifier_produit(sqlite3 *db, const Produit *p):&#160;database.c']]],
+  ['db_5fsupprimer_5fproduit_5',['db_supprimer_produit',['../database_8h.html#aa82e22b7b47ca0e7dad3a757763259f7',1,'db_supprimer_produit(sqlite3 *db, int id):&#160;database.c'],['../database_8c.html#aa82e22b7b47ca0e7dad3a757763259f7',1,'db_supprimer_produit(sqlite3 *db, int id):&#160;database.c']]]
 ];

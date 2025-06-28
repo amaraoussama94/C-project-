@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>gestion_stock: Produit Struct Reference</title>
+<title>Gestion de stock: Produit Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">gestion_stock<span id="projectnumber">&#160;v2.0</span>
+   <div id="projectname">Gestion de stock
    </div>
   </td>
  </tr>
@@ -92,16 +92,21 @@ $(function(){initNavTree('struct_produit.html','','struct_produit-members'); });
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="produit_8h_source.html">produit.h</a>&gt;</code></p>
+<p>Structure représentant un produit en stock.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="database_8h_source.html">database.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a9ae9ea02d99078d087dd12d2af1e2a57" id="r_a9ae9ea02d99078d087dd12d2af1e2a57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ae9ea02d99078d087dd12d2af1e2a57">id</a></td></tr>
-<tr class="memitem:a1b094470f36dc025a38c71fb908bf1fc" id="r_a1b094470f36dc025a38c71fb908bf1fc"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b094470f36dc025a38c71fb908bf1fc">nom</a> [50]</td></tr>
+<tr class="memitem:a8911ef835038a25ac346cf7cd4bda610" id="r_a8911ef835038a25ac346cf7cd4bda610"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8911ef835038a25ac346cf7cd4bda610">nom</a> [100]</td></tr>
 <tr class="memitem:aded2c0a11f9d90d677e89b8170e4c904" id="r_aded2c0a11f9d90d677e89b8170e4c904"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aded2c0a11f9d90d677e89b8170e4c904">quantite</a></td></tr>
 <tr class="memitem:a42ef1d4887be85e601553ad082096263" id="r_a42ef1d4887be85e601553ad082096263"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42ef1d4887be85e601553ad082096263">prix</a></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Structure représentant un produit en stock. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a9ae9ea02d99078d087dd12d2af1e2a57" name="a9ae9ea02d99078d087dd12d2af1e2a57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ae9ea02d99078d087dd12d2af1e2a57">&#9670;&#160;</a></span>id</h2>
 
@@ -113,20 +118,22 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Identifiant unique du produit </p>
 
 </div>
 </div>
-<a id="a1b094470f36dc025a38c71fb908bf1fc" name="a1b094470f36dc025a38c71fb908bf1fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b094470f36dc025a38c71fb908bf1fc">&#9670;&#160;</a></span>nom</h2>
+<a id="a8911ef835038a25ac346cf7cd4bda610" name="a8911ef835038a25ac346cf7cd4bda610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8911ef835038a25ac346cf7cd4bda610">&#9670;&#160;</a></span>nom</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char Produit::nom[50]</td>
+          <td class="memname">char Produit::nom[100]</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Nom du produit </p>
 
 </div>
 </div>
@@ -141,6 +148,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Prix unitaire </p>
 
 </div>
 </div>
@@ -155,11 +163,12 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Quantité en stock </p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="produit_8h_source.html">produit.h</a></li>
+<li>Inc/<a class="el" href="database_8h_source.html">database.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
