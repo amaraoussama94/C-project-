@@ -32,40 +32,40 @@ jobs:
       - name: Prepare build report file
         run: |
           mkdir -p build
-          echo "Build Report - gestion_stock" > build/build_report.txt
-          echo "Date: $(date)" >> build/build_report.txt
-          echo "Commit: $GITHUB_SHA" >> build/build_report.txt
-          echo "Branch: $GITHUB_REF_NAME" >> build/build_report.txt
-          echo "" >> build/build_report.txt
+          echo "Build Report - gestion_stock" > build_report.txt
+          echo "Date: $(date)" >> build_report.txt
+          echo "Commit: $GITHUB_SHA" >> build_report.txt
+          echo "Branch: $GITHUB_REF_NAME" >> build_report.txt
+          echo "" >> build_report.txt
 
       - name: Run unit tests and capture output
         run: |
-          echo " Unit Tests:" >> build/build_report.txt
-          make test >> build/build_report.txt 2>&1 || echo " Unit tests failed." >> build/build_report.txt
+          echo " Unit Tests:" >> build_report.txt
+          make test >> build_report.txt 2>&1 || echo " Unit tests failed." >> build_report.txt
 
       - name: Run integration tests and capture output
         run: |
-          echo "" >> build/build_report.txt
-          echo " Integration Tests:" >> build/build_report.txt
-          make test-integration >> build/build_report.txt 2>&1 || echo " Integration tests failed." >> build/build_report.txt
+          echo "" >> build_report.txt
+          echo " Integration Tests:" >> build_report.txt
+          make test-integration >> build_report.txt 2>&1 || echo " Integration tests failed." >> build_report.txt
 
       - name: Run Valgrind on unit tests
         run: |
-          echo "" >> build/build_report.txt
-          echo " Valgrind (Unit Tests):" >> build/build_report.txt
-          valgrind --leak-check=full --error-exitcode=1 ./build/test_database >> build/build_report.txt 2>&1 || echo "❌ Valgrind failed." >> build/build_report.txt
+          echo "" >> build_report.txt
+          echo " Valgrind (Unit Tests):" >> build_report.txt
+          valgrind --leak-check=full --error-exitcode=1 ./build/test_database >> build_report.txt 2>&1 || echo "❌ Valgrind failed." >> build_report.txt
 
       - name: Run Valgrind on integration tests
         run: |
-          echo "" >> build/build_report.txt
-          echo " Valgrind (Integration Tests):" >> build/build_report.txt
-          valgrind --leak-check=full --error-exitcode=1 ./build/test_integration >> build/build_report.txt 2>&1 || echo "❌ Valgrind failed." >> build/build_report.txt
+          echo "" >> build_report.txt
+          echo " Valgrind (Integration Tests):" >> build_report.txt
+          valgrind --leak-check=full --error-exitcode=1 ./build/test_integration >> build_report.txt 2>&1 || echo "❌ Valgrind failed." >> build_report.txt
 
       - name: Generate code coverage report and append summary
         run: |
-          echo "" >> build/build_report.txt
-          echo " Code Coverage Summary:" >> build/build_report.txt
-          make coverage >> build/build_report.txt 2>&1 || echo " Coverage generation failed." >> build/build_report.txt
+          echo "" >> build_report.txt
+          echo " Code Coverage Summary:" >> build_report.txt
+          make coverage >> build_report.txt 2>&1 || echo " Coverage generation failed." >> build_report.txt
 
         
       - name: Upload coverage report
@@ -78,7 +78,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-report
-          path: build/build_report.txt
+          path: build_report.txt
 
   build:
     name: Build and Release
@@ -205,7 +205,7 @@ jobs:
     - name: Commit build report to repository
       run: |
         mkdir -p reports
-        cp build/build_report.txt reports/build_report_${{ steps.version.outputs.new_version }}.txt
+        cp build_report.txt reports/build_report_${{ steps.version.outputs.new_version }}.txt
         git config user.name "github-actions"
         git config user.email "actions@github.com"
         git add reports/
