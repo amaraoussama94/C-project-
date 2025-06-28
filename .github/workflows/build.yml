@@ -101,3 +101,12 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # ^ Required to authenticate and upload to the release
 
+    # Uploads the compiled binary as an artifact of the workflow run.
+    # This allows you to download it later from the Actions tab.
+    - name: Upload .exe to GitHub Packages (as artifact)
+      uses: actions/upload-artifact@v4
+      with:
+        name: gestion_stock_${{ steps.version.outputs.new_version }}
+        path: build/gestion_stock_v${{ steps.version.outputs.new_version }}.exe
+
+
