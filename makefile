@@ -140,18 +140,34 @@ coverage: clean $(TEST_EXEC)
 	@echo "Génération du rapport de couverture..."
 	gcovr -r . --html --html-details -o build/coverage.html
 
-#	Cible pour générer un rapport de couverture de code.
-.PHONY: bug-report
-# This target generates a weekly bug report using cppcheck.
-# It creates a markdown file with the results of static analysis.
-bug-report:
+#	Cible pour générer un rapport de bugs hebdomadaire.
+#	Le rapport inclut les résultats des tests, l'analyse statique et la couverture de code.
+#	Le rapport est généré dans le dossier reports avec un nom basé sur la date actuelle
+WEEKLY_DATE := $(shell date +%F)
+WEEKLY_REPORT = reports/weekly_report_$(WEEKLY_DATE).md
+BUG_REPORT_XML = reports/bug_report_raw.xml
+#	Assure that the reports directory exists
+.PHONY: weekly-report
+#	weekly-report: $(WEEKLY_REPORT)
+weekly-report:
+	@echo "Génération du rapport hebdomadaire..."
 	@mkdir -p reports
-	@echo "# 🐞 Weekly Bug Report" > reports/bug_report_weekly.md
-	@echo "" >> reports/bug_report_weekly$(VERSION).md
-	@echo "_Last updated: $$(date +%F)_\n" >> reports/bug_report_weekly$(VERSION).md
-	@echo "## 📁 Static Analysis (cppcheck)\n" >> reports/bug_report_weekly.md
-	@cppcheck --enable=all --inconclusive --quiet --std=c99 --language=c . 2> reports/cppcheck_raw.txt || true
-	@grep -E "warning|error" reports/cppcheck_raw.txt >> reports/bug_report_weekly$(VERSION).md || echo "✅ No issues found." >> reports/bug_report_weekly$(VERSION)b.md
-
+	@echo "#  Weekly Report - $(WEEKLY_DATE)" > $(WEEKLY_REPORT)
+	@echo "" >> $(WEEKLY_REPORT)
+	@echo "## Test Results" >> $(WEEKLY_REPORT)
+	@make test >> $(WEEKLY_REPORT) 2>&1 || echo " Unit tests failed." >> $(WEEKLY_REPORT)
+	@make test-integration >> $(WEEKLY_REPORT) 2>&1 || echo " Integration tests failed." >> $(WEEKLY_REPORT)
+	@echo "" >> $(WEEKLY_REPORT)
+	@echo "##  Valgrind" >> $(WEEKLY_REPORT)
+	@make valgrind-test >> $(WEEKLY_REPORT) 2>&1 || echo " Valgrind (unit) failed." >> $(WEEKLY_REPORT)
+	@make valgrind-integration >> $(WEEKLY_REPORT) 2>&1 || echo " Valgrind (integration) failed." >> $(WEEKLY_REPORT)
+	@echo "" >> $(WEEKLY_REPORT)
+	@echo "##  Code Coverage" >> $(WEEKLY_REPORT)
+	@make coverage >> $(WEEKLY_REPORT) 2>&1 || echo " Coverage generation failed." >> $(WEEKLY_REPORT)
+	@echo "" >> $(WEEKLY_REPORT)
+	@echo "##  Static Analysis (cppcheck)" >> $(WEEKLY_REPORT)
+	@cppcheck --enable=all --inconclusive --quiet --std=c99 --language=c --xml --xml-version=2 . 2> $(BUG_REPORT_XML) || true
+	@python3 scripts/format_bug_report.py $(BUG_REPORT_XML) >> $(WEEKLY_REPORT)
+	@echo " Rapport hebdomadaire généré : $(WEEKLY_REPORT)"
 
 
