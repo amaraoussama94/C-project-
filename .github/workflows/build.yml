@@ -136,10 +136,7 @@ jobs:
         git add reports/
         git commit -m "📄 Add build report for ${{ steps.version.outputs.new_version }}" || echo "⚠️ No changes to commit."
         git push
-    - name: Keep only last 3 reports
-      run: |
-        ls -tp reports/build_report_${{ steps.version.outputs.new_version }}.txt| grep -v '/$' | tail -n +4 | xargs -r rm --
-    
+
     
 
 
