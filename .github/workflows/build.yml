@@ -121,9 +121,9 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: gestion_stock_${{ steps.version.outputs.new_version }}
-      path: |
-        build/gestion_stock_${{ steps.version.outputs.new_version }}
-        build/gestion_stock_${{ steps.version.outputs.new_version }}.exe
+        path: |
+          build/gestion_stock_${{ steps.version.outputs.new_version }}
+          build/gestion_stock_${{ steps.version.outputs.new_version }}.exe
       # This step commits the build report to the repository.
 
     - name: Generate build report
