@@ -1,31 +1,45 @@
-name: Weekly Bug Report
+# .github/workflows/weekly-report.yml
+name: Weekly Unified Report
 
 on:
+# This workflow runs every Friday at 18:00 UTC and can also be triggered manually.
   schedule:
-    - cron: '0 18 * * 5'  # Chaque vendredi à 18h UTC
+    - cron: '0 18 * * 5'
+    # Allows manual triggering of the workflow
   workflow_dispatch:
 
 jobs:
-  bug-report:
+  weekly-report:
     runs-on: ubuntu-latest
-
+  # This job generates a unified weekly report by running cppcheck, gcovr, and other tools.
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install cppcheck
+      - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y cppcheck
+          sudo apt-get install -y cppcheck valgrind make build-essential
+          pip install gcovr
 
-      - name: Generate bug report via Makefile
-        run: make bug-report
+# This step runs the `make weekly-report` command, which generates a report that includes:
+        # - Code coverage using gcovr
+        # - Static analysis using cppcheck
+        # - Memory leak checks using Valgrind
 
-      - name: Commit bug report
+      - name: Generate unified weekly report
+        run: make weekly-report
+
+      - name: Keep only last 3 weekly reports
+        run: |
+          ls -tp reports/weekly_report_*.md | grep -v '/$$' | tail -n +4 | xargs -r rm --
+
+      - name: Commit weekly report
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add reports/bug_report_weekly.md
-          git commit -m "📋 Weekly bug report update [skip ci]" || echo "⚠️ No changes to commit."
+          git add reports/
+          git commit -m "📊 Weekly unified report [skip ci]" || echo "⚠️ No changes to commit."
           git pull --rebase origin master
           git push
+# This step uploads the weekly report as an artifact so you can download it later.

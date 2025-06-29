@@ -165,6 +165,8 @@ Uploader les artefacts dans l’onglet Actions
 Les dernières versions compilées sont disponibles ici :
 
 👉 [Voir les Releases](https://github.com/amaraoussama94/gestion_stock_c/releases)
+👉![Test Status](https://github.com/amaraoussama94/gestion_stock_c/actions/workflows/test.yml/badge.svg)
+
 
 
 
