@@ -121,21 +121,20 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: gestion_stock_${{ steps.version.outputs.new_version }}
-        path: |
-          build/gestion_stock_${{ steps.version.outputs.new_version }}
-          build/gestion_stock_${{ steps.version.outputs.new_version }}.exe
-        # This step commits the build report to the repository.
-        
-    - name: Commit build report to repository
+      path: |
+        build/gestion_stock_${{ steps.version.outputs.new_version }}
+        build/gestion_stock_${{ steps.version.outputs.new_version }}.exe
+      # This step commits the build report to the repository.
 
+    - name: Generate build report
       run: |
-        mkdir -p reports
-        cp build_report.txt reports/build_report_${{ steps.version.outputs.new_version }}.txt
-        git config user.name "github-actions"
-        git config user.email "actions@github.com"
-        git add reports/
-        git commit -m "📄 Add build report for ${{ steps.version.outputs.new_version }}" || echo "⚠️ No changes to commit."
-        git push
+        echo "📄 Build Report" > build_report.txt
+        echo "Version: ${{ steps.version.outputs.new_version }}" >> build_report.txt
+        echo "Date: $(date)" >> build_report.txt
+        echo "Linux binary: build/gestion_stock_${{ steps.version.outputs.new_version }}" >> build_report.txt
+        echo "Windows binary: build/gestion_stock_${{ steps.version.outputs.new_version }}.exe" >> build_report.txt
+        echo "✅ Build completed successfully." >> build_report.txt
+
 
     
 
