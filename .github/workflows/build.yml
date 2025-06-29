@@ -6,7 +6,7 @@ on:
     branches:
       - master
   pull_request:
-jobe:  
+jobs:  
   build:
     name: Build and Release
     runs-on: ubuntu-latest
