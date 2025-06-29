@@ -129,12 +129,7 @@ jobs:
           build/gestion_stock_${{ steps.version.outputs.new_version }}
           build/gestion_stock_${{ steps.version.outputs.new_version }}.exe
         # This step commits the build report to the repository.
-    - name: Download build report artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: build-report
-        path: .
-
+        
     - name: Keep only last 3 reports
       run: |
         ls -tp reports/build_report_${{ steps.version.outputs.new_version }}.txt| grep -v '/$' | tail -n +4 | xargs -r rm --
